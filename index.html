@@ -41,7 +41,7 @@
         <div class="carousel-caption">
          <h1>Example headline.</h1>
          <p>Note: If you're viewing this page via a <code>file://</code> URL, the "next" and "previous" Glyphicon buttons on the left and right might not load/display properly due to web browser security rules.</p>
-         <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
+         <p><a class="btn btn-lg btn-primary" role="button">Sign up today</a></p>
         </div>
        </div>
       </div>
@@ -51,7 +51,7 @@
         <div class="carousel-caption">
          <h1>Another example headline.</h1>
          <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-         <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
+         <p><a class="btn btn-lg btn-primary" role="button">Learn more</a></p>
         </div>
        </div>
       </div>
@@ -61,7 +61,7 @@
         <div class="carousel-caption">
          <h1>One more for good measure.</h1>
          <p>Cras justo ods inquam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-         <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
+         <p><a class="btn btn-lg btn-primary" role="button">Browse gallery</a></p>
         </div>
        </div>
       </div>
@@ -75,26 +75,26 @@
     <!-- VoCore Store Section
     ================================================== -->
 
-    <div class="container store">
+    <div id="tbStore" class="container store">
 
       <div class="row">
         <div class="col-sm-4">
           <img class="img-circle" src="img/pic1.jpg" alt="Generic placeholder image" width="140" height="140">
-          <h3>VoCore</h3>
+          <h3 id="lbItem1">VoCore</h3>
           <p>tiny size, mutli-interface, fit for developer.tiny size, mutli-interface, fit for developer.</p>
           <div class="dropdown">
            <div class="btn-group">
-            <button class="btn btn-default"><b><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>$19.99</b></button>
-            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-              x <b>0</b>
+            <button id="btnPrice1" class="btn btn-default"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span><b>$19.99</b></button>
+            <button class="btn btn-default dropdown-toggle" type="button" id="dbCountList1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+              &times; <b>0</b>
               <span class="caret"></span>
             </button>
-            <table class="table table-responsive dropdown-menu" aria-labelledby="dropdownMenu1">
-              <tr><td><a href="#">1</a></td><td><a href="#">2</a></td><td><a href="#">3</a></td><td><a href="#">4</a></td><td><a href="#">5</a></td></tr>
-              <tr><td><a href="#">6</a></td><td><a href="#">7</a></td><td><a href="#">8</a></td><td><a href="#">9</a></td><td><a href="#">10</a></td></tr>
-              <tr><td><a href="#">15</a></td><td><a href="#">20</a></td><td><a href="#">25</a></td><td><a href="#">30</a></td><td><a href="#">35</a></td></tr>
-              <tr><td><a href="#">40</a></td><td><a href="#">45</a></td><td><a href="#">50</a></td><td><a href="#">60</a></td><td><a href="#">70</a></td></tr>
-              <tr><td><a href="#">80</a></td><td><a href="#">90</a></td><td><a href="#">100</a></td><td><a href="#">150</a></td><td><a href="#">200</a></td></tr>
+            <table id="tbCount1" class="table table-responsive dropdown-menu" aria-labelledby="dbCountList1">
+              <tr><td><a>0</a></td><td><a>1</a></td><td><a>2</a></td><td><a>3</a></td><td><a>4</a></td></tr>
+              <tr><td><a>5</a></td><td><a>6</a></td><td><a>7</a></td><td><a>8</a></td><td><a>9</a></td></tr>
+              <tr><td><a>10</a></td><td><a>15</a></td><td><a>20</a></td><td><a>25</a></td><td><a>30</a></td></tr>
+              <tr><td><a>35</a></td><td><a>40</a></td><td><a>45</a></td><td><a>50</a></td><td><a>60</a></td></tr>
+              <tr><td><a>70</a></td><td><a>80</a></td><td><a>90</a></td><td><a>100</a></td><td><a>150</a></td></tr>
             </table>
            </div>
           </div>
@@ -102,21 +102,21 @@
 
         <div class="col-sm-4">
           <img class="img-circle" src="img/pic2.jpg" alt="Generic placeholder image" width="140" height="140">
-          <h3>VoCore+Dock</h3>
+          <h3 id="lbItem2">VoCore+Dock</h3>
           <p>tiny size, mutli-interface, fit for developer.tiny size, mutli-interface, fit for developer.</p>
           <div class="dropdown">
            <div class="btn-group">
-            <button class="btn btn-default"><b><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>$44.99</b></button>
-            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-              x <b>0</b>
+            <button id="btnPrice2" class="btn btn-default"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span><b>$44.99</b></button>
+            <button class="btn btn-default dropdown-toggle" type="button" id="dbCountList2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+              &times; <b>0</b>
               <span class="caret"></span>
             </button>
-            <table class="table table-responsive dropdown-menu" aria-labelledby="dropdownMenu1">
-              <tr><td><a href="#">1</a></td><td><a href="#">2</a></td><td><a href="#">3</a></td><td><a href="#">4</a></td><td><a href="#">5</a></td></tr>
-              <tr><td><a href="#">6</a></td><td><a href="#">7</a></td><td><a href="#">8</a></td><td><a href="#">9</a></td><td><a href="#">10</a></td></tr>
-              <tr><td><a href="#">15</a></td><td><a href="#">20</a></td><td><a href="#">25</a></td><td><a href="#">30</a></td><td><a href="#">35</a></td></tr>
-              <tr><td><a href="#">40</a></td><td><a href="#">45</a></td><td><a href="#">50</a></td><td><a href="#">60</a></td><td><a href="#">70</a></td></tr>
-              <tr><td><a href="#">80</a></td><td><a href="#">90</a></td><td><a href="#">100</a></td><td><a href="#">150</a></td><td><a href="#">200</a></td></tr>
+            <table id="tbCount2" class="table table-responsive dropdown-menu" aria-labelledby="dbCountList2">
+              <tr><td><a>0</a></td><td><a>1</a></td><td><a>2</a></td><td><a>3</a></td><td><a>4</a></td></tr>
+              <tr><td><a>5</a></td><td><a>6</a></td><td><a>7</a></td><td><a>8</a></td><td><a>9</a></td></tr>
+              <tr><td><a>10</a></td><td><a>15</a></td><td><a>20</a></td><td><a>25</a></td><td><a>30</a></td></tr>
+              <tr><td><a>35</a></td><td><a>40</a></td><td><a>45</a></td><td><a>50</a></td><td><a>60</a></td></tr>
+              <tr><td><a>70</a></td><td><a>80</a></td><td><a>90</a></td><td><a>100</a></td><td><a>150</a></td></tr>
             </table>
            </div>
           </div>
@@ -124,39 +124,38 @@
 
         <div class="col-sm-4">
           <img class="img-circle" src="img/pic3.jpg" alt="Generic placeholder image" width="140" height="140">
-          <h3>VoCam264</h3>
+          <h3 id="lbItem3">VoCam264</h3>
           <p>Donec sed odio dui. Cras jusibh, ut fermentum massa justo sit amet.</p>
           <div class="dropdown">
            <div class="btn-group">
-            <button class="btn btn-default"><b><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>$29.99</b></button>
-            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-              x <b>0</b>
+            <button id="btnPrice3" class="btn btn-default"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span><b>$29.99</b></button>
+            <button class="btn btn-default dropdown-toggle" type="button" id="dbCountList3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+              &times; <b>0</b>
               <span class="caret"></span>
             </button>
-            <table class="table table-responsive dropdown-menu" aria-labelledby="dropdownMenu1">
-              <tr><td><a href="#">1</a></td><td><a href="#">2</a></td><td><a href="#">3</a></td><td><a href="#">4</a></td><td><a href="#">5</a></td></tr>
-              <tr><td><a href="#">6</a></td><td><a href="#">7</a></td><td><a href="#">8</a></td><td><a href="#">9</a></td><td><a href="#">10</a></td></tr>
-              <tr><td><a href="#">15</a></td><td><a href="#">20</a></td><td><a href="#">25</a></td><td><a href="#">30</a></td><td><a href="#">35</a></td></tr>
-              <tr><td><a href="#">40</a></td><td><a href="#">45</a></td><td><a href="#">50</a></td><td><a href="#">60</a></td><td><a href="#">70</a></td></tr>
-              <tr><td><a href="#">80</a></td><td><a href="#">90</a></td><td><a href="#">100</a></td><td><a href="#">150</a></td><td><a href="#">200</a></td></tr>
+            <table id="tbCount3" class="table table-responsive dropdown-menu" aria-labelledby="dbCountList3">
+              <tr><td><a>0</a></td><td><a>1</a></td><td><a>2</a></td><td><a>3</a></td><td><a>4</a></td></tr>
+              <tr><td><a>5</a></td><td><a>6</a></td><td><a>7</a></td><td><a>8</a></td><td><a>9</a></td></tr>
+              <tr><td><a>10</a></td><td><a>15</a></td><td><a>20</a></td><td><a>25</a></td><td><a>30</a></td></tr>
+              <tr><td><a>35</a></td><td><a>40</a></td><td><a>45</a></td><td><a>50</a></td><td><a>60</a></td></tr>
+              <tr><td><a>70</a></td><td><a>80</a></td><td><a>90</a></td><td><a>100</a></td><td><a>150</a></td></tr>
             </table>
            </div>
           </div>
         </div><!-- /.col-sm-4 -->
       </div><!-- /.row -->
 
-
       <div class="row">
-        <button class="col-xs-6 col-xs-offset-3 col-md-4 col-md-offset-4 btn btn-lg btn-success btn-checkout" data-toggle="modal" data-target="#checkoutModal">
+        <button id="btnCheckOut" class="col-xs-6 col-xs-offset-3 col-md-4 col-md-offset-4 btn btn-lg btn-success btn-checkout" data-toggle="modal" data-target="#mdCheckOut">
           <span class="glyphicon glyphicon-credit-card" aria-hidden=true></span>Check Out
         </button>
       </div>
 
-      <div class="modal fade" id="checkoutModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal fade" id="mdCheckOut" tabindex="-1" role="dialog" aria-labelledby="checkoutModalLabel">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
 
-            <div class="modal-header">
+            <div class="modal-body">
               <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
             </div>
 
@@ -164,59 +163,51 @@
               <h4 class="modal-title" id="myModalLabel"><span class="glyphicon glyphicon-plane" aria-hidden="true"></span>&nbsp;Shipping</h4>
               <div class="radio">
                 <label>
-                  <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-                  Free Shipping by China Post.(10~50days)
+                  <input id="rbShipping1" type="radio" name="optionsRadios" value="option1" checked>
+                  Free Shipping by China Post.(10~40 bussiness days)
                 </label>
               </div>
               <div class="radio">
                 <label>
-                  <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-                  Shipping by Express.(3~7days)
+                  <input id="rbShipping2" type="radio" name="optionsRadios" value="option2">
+                  Shipping by Express.(3~7 bussiness days)
                 </label>
               </div>
-            </div>
+            </div><!-- /modal-header -->
 
             <div class="modal-header">
               <h4 class="modal-title" id="myModalLabel"><span class="glyphicon glyphicon-lock" aria-hidden="true"></span>&nbsp;Shipping Information</h4>
-              <div class="input-group fixed-width-input">
+
+              <div id="tbPhone" class="input-group fixed-width-input" data-toggle="tooltip" data-placement="bottom" data-title="Post office requires it for better delievery, if you do not want it show on your package please put '00000000' instead.">
                 <span class="input-group-btn">
-                  <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-phone"></span></button>
+                  <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-phone"></span></button>
                 </span>
-                <input type="text" class="form-control" placeholder="Your Phone Number">
+                <input id="edPhone" type="text" class="form-control" placeholder="Your Phone Number">
               </div><!-- /input-group -->
 
-              <div class="btn-group" role="group">
+              <div id="tbCountry" class="btn-group hide" data-toggle="tooltip" data-placement="top" data-title="If your country is not in the list, please contact our support.">
                 <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-globe"></span></button>
-                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <button id="edCountry" type="button" class="btn btn-default fixed-width-button dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   Your Country/Region
                   <span class="caret"></span>
                 </button>
-                <ul class="dropdown-menu">
-                  <li><a href="#">China</a></li>
-                  <li><a href="#">South Korean</a></li>
-                  <li><a href="#">Japan</a></li>
-                </ul>
-              </div><!-- btn-group-->
-            </div><!-- modal-header -->
+                <ul id="lstCountry" class="dropdown-menu"></ul>
+              </div><!-- /btn-group-->
+            </div><!-- /modal-header -->
 
             <div class="modal-header">
               <h4 class="modal-title" id="myModalLabel"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>&nbsp;Cart</h4>
-              <table class=table>
-                <thead>
-                  <tr><th>Description</th><th>Unit Price</th><th>Qty</th><th>Amount</th></tr>
-                </thead>
-                <tbody>
-                  <tr><th>VoCore</th><td>19.99</td> <td>1</td> <td>19.99</td></tr>
-                  <tr><th>VoCore + Dock</th><td>89.98</td><td>2</td><td>44.99</td></tr>
-                  <tr><th>VoCam264</th><td>29.99</td><td>1</td><td>29.99</td></tr>
-                  <tr><th>Express Delivery Services</th><td>20.00</td><td>1</td><td>20.00</td></tr>
-                  <tr><th>Paypal Fee</th><td>10.25</td><td>1</td><td>10.25</td></tr>
-                </tbody>
+              <table id="tbCartList" class=table>
+                <thead><tr><th>Description</th><th>Unit Price</th><th>Qty</th><th>Amount</th></tr></thead>
+                <tbody></tbody>
               </table>
 
-              <h4 class="pull-left"><b>Total: 162.36USD</b></h4>
-              <button type="button" class="btn btn-success pull-right">Continue<span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></button>
-            </div>
+              <h4 id="lbTotal" class="pull-left"><strong>Total: $</strong><b></b></h4>
+              <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+                <button id="btnContinue" type="submit" class="btn btn-success pull-right">Continue<span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></button>
+              </form>
+            </div><!-- /modal-header -->
+
           </div>
         </div>
       </div><!-- /.modal -->
@@ -226,7 +217,7 @@
     <hr/>
 
     <footer class="container">
-      <p class="pull-right"><a href="#"><span class="glyphicon glyphicon-arrow-up"></span>Back to top</a></p>
+      <p class="pull-right"><a><span class="glyphicon glyphicon-arrow-up"></span>Back to top</a></p>
       <p>Vonger Electronic Technology Co., Ltd. &copy; 2016 &middot; <b>Contact us:  <a href="mailto:support@vocore.io">support@vocore.io</a></b></p>
     </footer>
 
@@ -237,10 +228,167 @@
 
 <!-- script for the UI action -->
 <script type="text/javascript">
-$(document).ready(function(){
- $("#doit").click(function(){
-  alert("你好");
- });
+$(function() {
+  var STORE_ITEM_COUNT = 3;
+  var ca = "";      // express country/price.
+
+  $("[data-toggle='tooltip']").tooltip();  // enable tooltip.
+
+  // decode json data file and the current country/express price list.
+  $.getJSON("data/express.json", function(json) {
+    ca = json;
+
+    var list = "";
+    for(var i = 0; i < ca.length; i++)
+      list += "<li><a class='country-item'>" + ca[i][0] + "</a></li>";
+    $("#lstCountry").html(list);
+  }); 
+
+  // insert alert of warning before id.
+  function warning(id, cap, note, timeout) {
+    var d = "";
+    d += '<div class="alert alert-warning alert-dismissible fade in out" role="alert">';
+    d += '<button id="btnAlertClose" type="button" class="close" data-dismiss="alert" aria-label="Close">';
+    d += '<span aria-hidden="true">&times;</span></button>';
+    d += '<strong>' + cap + '  </strong>' + note + '</div>';
+    $(id).before(d);
+    // auto close the alert after 3 seconds.
+    setTimeout(function() { $("#btnAlertClose").click(); }, typeof(timeout) != "undefined" ? timeout : 3000);
+  }
+
+  // get the value from html code.
+  function getParameter(type, index) {
+    if(type == "count")
+      return $("#dbCountList" + index).find("b").html();
+    if(type == "name")
+      return $("#lbItem" + index).html();
+    if(type == "price")
+      return $("#btnPrice" + index).find("b").html();
+  }
+
+  function getExpressPrice(country) {
+    // search for the express price in the list.
+    for(var i = 0; i < ca.length; i++) {
+      if(ca[i][0] != country)
+        continue;
+      return parseFloat(ca[i][1]).toFixed(2);
+    }
+
+    // internal error: the country is not in the list.
+    return -1;
+  }
+
+  // calculate the cart list value.
+  function updateCartList() {
+    var cart = "", order = "", total = 0.0;
+
+    // basic items.
+    for(var i = 1; i <= STORE_ITEM_COUNT; i++) {
+      var price = getParameter("price", i);
+      var count = getParameter("count", i);
+      var name = getParameter("name", i);
+      var sum = parseFloat(price.substr(1, price.length - 1)) * parseInt(count);
+      if(count != 0) {
+        cart += "<tr><th>" + name + "</th><td>" + price + "</td><td>" + count + "</td><td>$" + sum.toFixed(2) + "</td></tr>";
+        order += '<input type="hidden" name="item_name_' + i + '" value="' + name + '">';
+        order += '<input type="hidden" name="amount_' + i + '" value="' + price + '">';
+        order += '<input type="hidden" name="quantity_' + i + '" value="' + count + '">';
+        total += sum;
+      }
+    }
+
+    // express shipping
+    var shipping = 0.0;
+    if($("#rbShipping2").prop("checked")) {
+      var country = $.trim($("#edCountry").text());
+      var express = getExpressPrice(country);
+      if(express > 0) {
+        shipping = parseFloat(express);
+        cart += "<tr id='trExpress'><th>" + "Express to " + country + "</th><td>$" + express + "</td><td>" + "1" + "</td><td>$" + express + "</td></tr>";
+        total += parseFloat(express);
+      }
+      $("#tbCountry").removeClass("hide");
+    } else {
+      $("#tbCountry").addClass("hide");
+      $("#trExpress").remove();
+    }
+
+    // paypal cost
+    var paypal = (total * 0.039 + 0.3) / (1.0 - 0.039);
+    cart += "<tr><th>" + "PayPal Fee" + "</th><td>$" + paypal.toFixed(2) + "</td><td>" + "1" + "</td><td>$" + paypal.toFixed(2) + "</td></tr>";
+    order += '<input type="hidden" name="shipping_1" value="' + (shipping + paypal).toFixed(2) + '">';
+    total += paypal;
+
+    $("#tbCartList").find("tbody").html(cart);
+    $("#lbTotal").find("b").html(total.toFixed(2));
+
+    $("#btnContinue").before('<input type="hidden" name="cmd" value="_cart">');
+    $("#btnContinue").before('<input type="hidden" name="upload" value="1">');
+    $("#btnContinue").before('<input type="hidden" name="business" value="sales@vocore.io">');
+    $("#btnContinue").before(order);
+  }
+
+  // update store item count dropdown table value.
+  $("#tbStore").on("click", "td", function() {
+    var table = $(this).parent().parent().parent().attr("id");
+    if(table.substr(0, table.length - 1) == "tbCount") {
+      var id = table.substr(table.length - 1, 1)
+      var count = $(this).find("a").html();
+      // update the count with selected number.
+      $("#dbCountList" + id).find("b").html(count);
+    }
+  });
+
+  // update country item list value.
+  $("#lstCountry").on("click", "a", function(event) {
+    $("#edCountry").html($.trim($(this).html()) + '\n<span class="caret"></span>');
+    updateCartList();
+  });
+
+  $("#mdCheckOut").on("show.bs.modal", function(event) {
+    var total = 0;
+
+    // check parameters.
+    for(var i = 1; i <= STORE_ITEM_COUNT; i++)
+      total += parseInt(getParameter("count", i));
+    if(total == 0) {
+      warning("#btnCheckOut", "Oh, there is something wrong...",
+        "  Please choose at least one item so we can move forward.");
+      // prevent display the box.
+      return false;
+    }
+
+    updateCartList();
+    return true;
+  });
+
+  $("#rbShipping1").on("click", function() {
+    updateCartList();
+  });
+  $("#rbShipping2").on("click", function() {
+    updateCartList();
+  });
+
+  $("#btnContinue").on("click", function() {
+    var phone = $.trim($("#edPhone").val());
+    if(phone.length == 0) {
+      warning("#tbPhone", "", "Please input your phone number.");
+      return false;
+    }
+
+    var country = $.trim($("#edCountry").text()), find = false;
+    for(var i = 0; i < ca.length; i++) {
+      if(country != ca[i][0])
+        continue;
+      find = true;
+      break;
+    }
+    if($("#rbShipping2").prop("checked") && !find) {
+      warning("#tbCountry", "", "Please select the country you ship to.");
+      return false;
+    }
+    return true;
+  });
 });
 </script>
 

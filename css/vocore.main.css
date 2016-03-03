@@ -12,27 +12,52 @@ hr {
     margin-right: 40px;
 }
 
+.alert {
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-bottom: 0px;
+}
+
+.tooltip .tooltip-inner {
+    background-color: #5cb85c;
+}
+
+.tooltip.top .tooltip-arrow {
+    border-top-color: #5cb85c;
+}
+
+.tooltip.bottom .tooltip-arrow {
+    border-bottom-color: #5cb85c;
+}
+
+.btn .caret {
+  margin-left: 5px;
+}
+
 .glyphicon {
   margin-right: 4px;
 }
 
-.modal-header {
+.modal .modal-header {
   border-bottom: 0px;
 }
 
-.modal-header h4 {
-  margin-left: 10px;
-  text-align: left;
+.modal .modal-header h4 {
+  margin-bottom: 10px;
 }
 
 .modal .modal-header .input-group {
   margin-left: 15px;
-  margin-top: 15px;
+  margin-top: 10px;
+}
+
+.modal .modal-header .form-control {
+  text-align: center;
 }
 
 .modal .modal-header .btn-group {
   margin-left: 15px;
-  margin-top: 15px;
+  margin-top: 5px;
   margin-bottom: 15px;
 }
 
@@ -40,14 +65,22 @@ hr {
   margin-left: 5px;
 }
 
-.modal .modal-header .fixed-width-input {
-  width: 205px;
+.modal .alert {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  margin-left: 15px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  min-width: 223px;
 }
 
-.modal .modal-header .fixed-width-drop {
-  width: 220px;
+.fixed-width-input {
+  width: 223px;
 }
 
+.fixed-width-button {
+  min-width: 180px;
+}
 
 /* Carousel base class */
 .carousel {
