@@ -283,17 +283,17 @@ $(function() {
     var cart = "", order = "", total = 0.0;
 
     // basic items.
-    for(var i = 1; i <= STORE_ITEM_COUNT; i++) {
+    for(var i = 1, j = 1; i <= STORE_ITEM_COUNT; i++) {
       var price = getParameter("price", i);
       var count = getParameter("count", i);
       var name = getParameter("name", i);
       var sum = parseFloat(price.substr(1, price.length - 1)) * parseInt(count);
       if(count != 0) {
         cart += "<tr><th>" + name + "</th><td>" + price + "</td><td>" + count + "</td><td>$" + sum.toFixed(2) + "</td></tr>";
-        order += '<input type="hidden" name="item_name_' + i + '" value="' + name + '">';
-        order += '<input type="hidden" name="amount_' + i + '" value="' + price + '">';
-        order += '<input type="hidden" name="quantity_' + i + '" value="' + count + '">';
-        total += sum;
+        order += '<input type="hidden" name="item_name_' + j + '" value="' + name + '">';
+        order += '<input type="hidden" name="amount_' + j + '" value="' + price + '">';
+        order += '<input type="hidden" name="quantity_' + j + '" value="' + count + '">';
+        total += sum; j++;
       }
     }
 
