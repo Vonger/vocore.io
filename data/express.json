@@ -1,1 +1,9 @@
-[["China", 10.99],["USA", 20.99], ["South Korea",6.99]]
+{
+    "express":[["China", 23.00, "SF", 10.00, "ZTO"],["USA", 20.99, "DHL", 24.99, "EMS"], ["South Korea", 6.99, "ETK", 7.99, "EMS"]],
+    "paypal":[0.039, 0.3],
+    "store":[
+        ["VoCore", "C", "19.99", "img/pic1.jpg", "This is a short describe for VoCore."],
+        ["VoCore+Dock", "B", "44.99", "img/pic2.jpg", "This is a short describe for VoCore+Dock."],
+        ["VoCam264", "C", "29.99", "img/pic3.jpg", "This is a short describe for VoCam264."]
+    ]
+}

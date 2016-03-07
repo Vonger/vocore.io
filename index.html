@@ -8,33 +8,37 @@
  <link rel="stylesheet" href="css/bootstrap.min.css">
  <link rel="stylesheet" href="css/vocore.main.css">
  <link rel="icon" href="favicon.ico">
-
-  <style type="text/css">
-  .v-ico{position:relative;height:96px;width:96px;background:white;box-sizing:border-box;border-radius:100%;position:absolute;margin:auto;}
-  .v1{left:60%;top:24%;width:20%;height:20%;position:absolute;margin:auto;background:gray;border-radius:100%;}
-  .v2{left:38%;top:48%;width:8%;height:50%;position:absolute;margin:auto;background:gray;border-radius:100px;-webkit-transform:rotate(110deg);}
-  </style>
 </head>
 
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/vocore.min.js"></script>
 
 <body>
-
-    <div class="navbar-wrapper container">
-          <div class="v-ico"><div class="v1"></div><div class="v2"></div></div>
+  <div class="navbar-wrapper">
+    <div class="container">
+      <nav class="navbar">
+        <img alt="VOCORE" src="img/logo.png">
+        <a class="pull-right" href="http://forum.vocore.io">
+          <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
+          <b>COMMUNITY</b>
+        </a>
+      </nav>
     </div>
+  </div>
 
-    <!-- VoCore Carousel Section
-    ================================================== -->
+  <!-- VoCore Carousel Section
+  ================================================== -->
 
-    <div id="vocoreCarousel" class="carousel slide" data-ride="carousel">
+  <div id="vocoreCarousel" class="carousel slide" data-ride="carousel">
 
-     <ol class="carousel-indicators">
+    <ol class="carousel-indicators">
       <li data-target="#vocoreCarousel" data-slide-to="0" class="active"></li>
       <li data-target="#vocoreCarousel" data-slide-to="1"></li>
       <li data-target="#vocoreCarousel" data-slide-to="2"></li>
-     </ol>
+    </ol>
 
-     <div class="carousel-inner" role="listbox">
+    <div class="carousel-inner" role="listbox">
 
       <div class="item active">
        <div class="container">
@@ -66,126 +70,112 @@
        </div>
       </div>
 
-     </div>
+    </div>
 
-    </div><!-- /.carousel -->
+  </div><!-- /.carousel -->
 
 
+  <!-- VoCore Store Section
+  ================================================== -->
 
-    <!-- VoCore Store Section
-    ================================================== -->
+  <div id="tbStore" class="container store">
 
-    <div id="tbStore" class="container store">
-
-      <div class="row">
-        <div class="col-sm-4">
-          <img class="img-circle" src="img/pic1.jpg" alt="Generic placeholder image" width="140" height="140">
-          <h3 id="lbItem1">VoCore</h3>
-          <p>tiny size, mutli-interface, fit for developer.tiny size, mutli-interface, fit for developer.</p>
-          <div class="dropdown">
-           <div class="btn-group">
-            <button id="btnPrice1" class="btn btn-default"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span><b>$19.99</b></button>
+    <div class="row">
+      <div class="col-sm-4">
+        <img id="lbImg1" class="img-circle" alt="Generic placeholder image" width="140" height="140">
+        <h3 id="lbItem1"></h3>
+        <p id="lbItemDet1"></p>
+        <div class="dropdown">
+          <div class="btn-group">
+            <button id="btnPrice1" class="btn btn-default">
+              <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
+              <b id="lbPrice1"></b>
+            </button>
             <button class="btn btn-default dropdown-toggle" type="button" id="dbCountList1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
               &times; <b>0</b>
               <span class="caret"></span>
             </button>
-            <table id="tbCount1" class="table table-responsive dropdown-menu" aria-labelledby="dbCountList1">
-              <tr><td><a>0</a></td><td><a>1</a></td><td><a>2</a></td><td><a>3</a></td><td><a>4</a></td></tr>
-              <tr><td><a>5</a></td><td><a>6</a></td><td><a>7</a></td><td><a>8</a></td><td><a>9</a></td></tr>
-              <tr><td><a>10</a></td><td><a>15</a></td><td><a>20</a></td><td><a>25</a></td><td><a>30</a></td></tr>
-              <tr><td><a>35</a></td><td><a>40</a></td><td><a>45</a></td><td><a>50</a></td><td><a>60</a></td></tr>
-              <tr><td><a>70</a></td><td><a>80</a></td><td><a>90</a></td><td><a>100</a></td><td><a>150</a></td></tr>
-            </table>
-           </div>
+            <table id="tbCount1" class="table table-responsive dropdown-menu" aria-labelledby="dbCountList1"></table>
           </div>
-        </div><!-- /.col-sm-4 -->
+        </div>
+      </div><!-- /.col-sm-4 -->
 
-        <div class="col-sm-4">
-          <img class="img-circle" src="img/pic2.jpg" alt="Generic placeholder image" width="140" height="140">
-          <h3 id="lbItem2">VoCore+Dock</h3>
-          <p>tiny size, mutli-interface, fit for developer.tiny size, mutli-interface, fit for developer.</p>
-          <div class="dropdown">
-           <div class="btn-group">
-            <button id="btnPrice2" class="btn btn-default"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span><b>$44.99</b></button>
+      <div class="col-sm-4">
+        <img id="lbImg2" class="img-circle" alt="Generic placeholder image" width="140" height="140">
+        <h3 id="lbItem2"></h3>
+        <p id="lbItemDet2"></p>
+        <div class="dropdown">
+          <div class="btn-group">
+            <button id="btnPrice2" class="btn btn-default">
+              <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
+              <b id="lbPrice2"></b>
+            </button>
             <button class="btn btn-default dropdown-toggle" type="button" id="dbCountList2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
               &times; <b>0</b>
               <span class="caret"></span>
             </button>
-            <table id="tbCount2" class="table table-responsive dropdown-menu" aria-labelledby="dbCountList2">
-              <tr><td><a>0</a></td><td><a>1</a></td><td><a>2</a></td><td><a>3</a></td><td><a>4</a></td></tr>
-              <tr><td><a>5</a></td><td><a>6</a></td><td><a>7</a></td><td><a>8</a></td><td><a>9</a></td></tr>
-              <tr><td><a>10</a></td><td><a>15</a></td><td><a>20</a></td><td><a>25</a></td><td><a>30</a></td></tr>
-              <tr><td><a>35</a></td><td><a>40</a></td><td><a>45</a></td><td><a>50</a></td><td><a>60</a></td></tr>
-              <tr><td><a>70</a></td><td><a>80</a></td><td><a>90</a></td><td><a>100</a></td><td><a>150</a></td></tr>
-            </table>
-           </div>
+            <table id="tbCount2" class="table table-responsive dropdown-menu" aria-labelledby="dbCountList2"></table>
           </div>
-        </div><!-- /.col-sm-4 -->
+        </div>
+      </div><!-- /.col-sm-4 -->
 
-        <div class="col-sm-4">
-          <img class="img-circle" src="img/pic3.jpg" alt="Generic placeholder image" width="140" height="140">
-          <h3 id="lbItem3">VoCam264</h3>
-          <p>Donec sed odio dui. Cras jusibh, ut fermentum massa justo sit amet.</p>
-          <div class="dropdown">
-           <div class="btn-group">
-            <button id="btnPrice3" class="btn btn-default"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span><b>$29.99</b></button>
+      <div class="col-sm-4">
+        <img id="lbImg3" class="img-circle" alt="Generic placeholder image" width="140" height="140">
+        <h3 id="lbItem3"></h3>
+        <p id="lbItemDet3"></p>
+        <div class="dropdown">
+          <div class="btn-group">
+            <button id="btnPrice3" class="btn btn-default"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span><b id="lbPrice3"></b></button>
             <button class="btn btn-default dropdown-toggle" type="button" id="dbCountList3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
               &times; <b>0</b>
               <span class="caret"></span>
             </button>
-            <table id="tbCount3" class="table table-responsive dropdown-menu" aria-labelledby="dbCountList3">
-              <tr><td><a>0</a></td><td><a>1</a></td><td><a>2</a></td><td><a>3</a></td><td><a>4</a></td></tr>
-              <tr><td><a>5</a></td><td><a>6</a></td><td><a>7</a></td><td><a>8</a></td><td><a>9</a></td></tr>
-              <tr><td><a>10</a></td><td><a>15</a></td><td><a>20</a></td><td><a>25</a></td><td><a>30</a></td></tr>
-              <tr><td><a>35</a></td><td><a>40</a></td><td><a>45</a></td><td><a>50</a></td><td><a>60</a></td></tr>
-              <tr><td><a>70</a></td><td><a>80</a></td><td><a>90</a></td><td><a>100</a></td><td><a>150</a></td></tr>
-            </table>
-           </div>
+            <table id="tbCount3" class="table table-responsive dropdown-menu" aria-labelledby="dbCountList3"></table>
           </div>
-        </div><!-- /.col-sm-4 -->
-      </div><!-- /.row -->
+        </div>
+      </div><!-- /.col-sm-4 -->
+    </div><!-- /.row -->
 
-      <div class="row">
-        <button id="btnCheckOut" class="col-xs-6 col-xs-offset-3 col-md-4 col-md-offset-4 btn btn-lg btn-success btn-checkout" data-toggle="modal" data-target="#mdCheckOut">
-          <span class="glyphicon glyphicon-credit-card" aria-hidden=true></span>Check Out
-        </button>
-      </div>
+    <div class="row">
+      <button id="btnCheckOut" class="col-xs-6 col-xs-offset-3 col-md-4 col-md-offset-4 btn btn-lg btn-success btn-checkout" data-toggle="modal" data-target="#mdCheckOut">
+        <span class="glyphicon glyphicon-credit-card" aria-hidden=true></span>Check Out
+      </button>
+    </div>
 
-      <div class="modal fade" id="mdCheckOut" tabindex="-1" role="dialog" aria-labelledby="checkoutModalLabel">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
+    <div class="modal fade" id="mdCheckOut" tabindex="-1" role="dialog" aria-labelledby="checkoutModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
 
-            <div class="modal-body">
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <div class="modal-body">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          </div>
+
+          <div class="modal-header">
+            <h4 class="modal-title" id="myModalLabel"><span class="glyphicon glyphicon-plane" aria-hidden="true"></span>&nbsp;Shipping</h4>
+            <div class="radio">
+              <label><input id="rbShipping1" type="radio" name="optionsRadios" value="option1" checked>
+                Free Shipping by China Post.(10~40 bussiness days)
+              </label>
             </div>
+            <div class="radio">
+              <label><input id="rbShipping2" type="radio" name="optionsRadios" value="option2">
+                  Shipping by Express.(3~6 bussiness days)
+              </label>
+            </div>
+          </div><!-- /modal-header -->
 
-            <div class="modal-header">
-              <h4 class="modal-title" id="myModalLabel"><span class="glyphicon glyphicon-plane" aria-hidden="true"></span>&nbsp;Shipping</h4>
-              <div class="radio">
-                <label>
-                  <input id="rbShipping1" type="radio" name="optionsRadios" value="option1" checked>
-                  Free Shipping by China Post.(10~40 bussiness days)
-                </label>
-              </div>
-              <div class="radio">
-                <label>
-                  <input id="rbShipping2" type="radio" name="optionsRadios" value="option2">
-                  Shipping by Express.(3~7 bussiness days)
-                </label>
-              </div>
-            </div><!-- /modal-header -->
+          <div class="modal-header">
+            <h4 class="modal-title" id="myModalLabel"><span class="glyphicon glyphicon-lock" aria-hidden="true"></span>&nbsp;Shipping Information</h4>
 
-            <div class="modal-header">
-              <h4 class="modal-title" id="myModalLabel"><span class="glyphicon glyphicon-lock" aria-hidden="true"></span>&nbsp;Shipping Information</h4>
+            <div id="tbPhone" class="input-group fixed-width-input" data-toggle="tooltip" data-placement="bottom" data-title="Post office requires it for better delievery, if you do not want it show on your package please put '00000000' instead.">
+              <span class="input-group-btn">
+                <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-phone"></span></button>
+              </span>
+              <input id="edPhone" type="text" class="form-control" placeholder="Your Phone Number">
+            </div><!-- /input-group -->
 
-              <div id="tbPhone" class="input-group fixed-width-input" data-toggle="tooltip" data-placement="bottom" data-title="Post office requires it for better delievery, if you do not want it show on your package please put '00000000' instead.">
-                <span class="input-group-btn">
-                  <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-phone"></span></button>
-                </span>
-                <input id="edPhone" type="text" class="form-control" placeholder="Your Phone Number">
-              </div><!-- /input-group -->
-
-              <div id="tbCountry" class="btn-group hide" data-toggle="tooltip" data-placement="top" data-title="If your country is not in the list, please contact our support.">
+            <div id="divExpress" class="hide">
+              <div id="tbCountry" class="btn-group" data-toggle="tooltip" data-placement="top" data-title="If your country is not in the list, please contact our support.">
                 <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-globe"></span></button>
                 <button id="edCountry" type="button" class="btn btn-default fixed-width-button dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   Your Country/Region
@@ -193,203 +183,56 @@
                 </button>
                 <ul id="lstCountry" class="dropdown-menu"></ul>
               </div><!-- /btn-group-->
-            </div><!-- /modal-header -->
+              <div></div>
+              <div class="under-btn-group" data-toggle="tooltip" data-placement="bottom" data-title="We will use EMS instead of DHL/FedEx/ARAMEX to ship your package, it costs 1~2 more days but able to reach every address.">
+                <input id="cbRemote" type="checkbox">
+                <small>shipping to remote area of my country.</small>
+              </div>
+            </div>
+          </div><!-- /modal-header -->
 
-            <div class="modal-header">
-              <h4 class="modal-title" id="myModalLabel"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>&nbsp;Cart</h4>
-              <table id="tbCartList" class=table>
-                <thead><tr><th>Description</th><th>Unit Price</th><th>Qty</th><th>Amount</th></tr></thead>
-                <tbody></tbody>
-              </table>
+          <div class="modal-header">
+            <h4 class="modal-title" id="myModalLabel"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>&nbsp;Cart</h4>
+            <table id="tbCartList" class=table>
+              <thead><tr><th>Description</th><th>Unit Price</th><th>Qty</th><th>Amount</th></tr></thead>
+              <tbody></tbody>
+            </table>
 
-              <h4 id="lbTotal" class="pull-left"><strong>Total: $</strong><b></b></h4>
-              <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
-                <button id="btnContinue" type="submit" class="btn btn-success pull-right">Continue<span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></button>
-              </form>
-            </div><!-- /modal-header -->
+            <h4 id="lbTotal" class="pull-left"><strong>Total: $</strong><b></b></h4>
+            <form id="fmPaypal" action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post">
+              <button id="btnContinue" type="submit" class="btn btn-success pull-right">Continue<span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></button>
+            </form>
+          </div><!-- /modal-header -->
 
-          </div>
         </div>
-      </div><!-- /.modal -->
+      </div>
+    </div><!-- /.modal -->
+  </div><!-- /.store -->
 
-    </div><!-- /.store -->
+  <div class="modal fade" id="mdSuccess" tabindex="-1" role="dialog" aria-labelledby="modalSuccess">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
 
-    <hr/>
+        <div class="modal-body">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        </div>
 
-    <footer class="container">
-      <p class="pull-right"><a><span class="glyphicon glyphicon-arrow-up"></span>Back to top</a></p>
-      <p>Vonger Electronic Technology Co., Ltd. &copy; 2016 &middot; <b>Contact us:  <a href="mailto:support@vocore.io">support@vocore.io</a></b></p>
-    </footer>
+        <div class="modal-header">
+          <h1 class="text-center"><span class="glyphicon glyphicon-check" aria-hidden="true"></span>&nbsp;Thank you !</h1>
+          <p class="text-center">We are preparing your package, it will be shipped in two bussiness days. Once it is shipped, we will send the trace number to your email.</p>
+        </div><!-- /modal-header -->
+
+      </div>
+    </div>
+  </div>
+
+  <hr/>
+
+  <footer class="container">
+    <p class="pull-right"><a href="#"><span class="glyphicon glyphicon-arrow-up"></span>Back to top</a></p>
+    <p class="footer-text"><small><b>VoCore Studio &copy; 2016 &middot; Contact us:  <a href="mailto:support@vocore.io">support@vocore.io</a></b></small></p>
+  </footer>
 
 </body>
-
-<script src="js/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-
-<!-- script for the UI action -->
-<script type="text/javascript">
-$(function() {
-  var STORE_ITEM_COUNT = 3;
-  var ca = "";      // express country/price.
-
-  $("[data-toggle='tooltip']").tooltip();  // enable tooltip.
-
-  // decode json data file and the current country/express price list.
-  $.getJSON("data/express.json", function(json) {
-    ca = json;
-
-    var list = "";
-    for(var i = 0; i < ca.length; i++)
-      list += "<li><a class='country-item'>" + ca[i][0] + "</a></li>";
-    $("#lstCountry").html(list);
-  }); 
-
-  // insert alert of warning before id.
-  function warning(id, cap, note, timeout) {
-    var d = "";
-    d += '<div class="alert alert-warning alert-dismissible fade in out" role="alert">';
-    d += '<button id="btnAlertClose" type="button" class="close" data-dismiss="alert" aria-label="Close">';
-    d += '<span aria-hidden="true">&times;</span></button>';
-    d += '<strong>' + cap + '  </strong>' + note + '</div>';
-    $(id).before(d);
-    // auto close the alert after 3 seconds.
-    setTimeout(function() { $("#btnAlertClose").click(); }, typeof(timeout) != "undefined" ? timeout : 3000);
-  }
-
-  // get the value from html code.
-  function getParameter(type, index) {
-    if(type == "count")
-      return $("#dbCountList" + index).find("b").html();
-    if(type == "name")
-      return $("#lbItem" + index).html();
-    if(type == "price")
-      return $("#btnPrice" + index).find("b").html();
-  }
-
-  function getExpressPrice(country) {
-    // search for the express price in the list.
-    for(var i = 0; i < ca.length; i++) {
-      if(ca[i][0] != country)
-        continue;
-      return parseFloat(ca[i][1]).toFixed(2);
-    }
-
-    // internal error: the country is not in the list.
-    return -1;
-  }
-
-  // calculate the cart list value.
-  function updateCartList() {
-    var cart = "", order = "", total = 0.0;
-
-    // basic items.
-    for(var i = 1, j = 1; i <= STORE_ITEM_COUNT; i++) {
-      var price = getParameter("price", i);
-      var count = getParameter("count", i);
-      var name = getParameter("name", i);
-      var sum = parseFloat(price.substr(1, price.length - 1)) * parseInt(count);
-      if(count != 0) {
-        cart += "<tr><th>" + name + "</th><td>" + price + "</td><td>" + count + "</td><td>$" + sum.toFixed(2) + "</td></tr>";
-        order += '<input type="hidden" name="item_name_' + j + '" value="' + name + '">';
-        order += '<input type="hidden" name="amount_' + j + '" value="' + price + '">';
-        order += '<input type="hidden" name="quantity_' + j + '" value="' + count + '">';
-        total += sum; j++;
-      }
-    }
-
-    // express shipping
-    var shipping = 0.0;
-    if($("#rbShipping2").prop("checked")) {
-      var country = $.trim($("#edCountry").text());
-      var express = getExpressPrice(country);
-      if(express > 0) {
-        shipping = parseFloat(express);
-        cart += "<tr id='trExpress'><th>" + "Express to " + country + "</th><td>$" + express + "</td><td>" + "1" + "</td><td>$" + express + "</td></tr>";
-        total += parseFloat(express);
-      }
-      $("#tbCountry").removeClass("hide");
-    } else {
-      $("#tbCountry").addClass("hide");
-      $("#trExpress").remove();
-    }
-
-    // paypal cost
-    var paypal = (total * 0.039 + 0.3) / (1.0 - 0.039);
-    cart += "<tr><th>" + "PayPal Fee" + "</th><td>$" + paypal.toFixed(2) + "</td><td>" + "1" + "</td><td>$" + paypal.toFixed(2) + "</td></tr>";
-    order += '<input type="hidden" name="shipping_1" value="' + (shipping + paypal).toFixed(2) + '">';
-    total += paypal;
-
-    $("#tbCartList").find("tbody").html(cart);
-    $("#lbTotal").find("b").html(total.toFixed(2));
-
-    $("#btnContinue").before('<input type="hidden" name="cmd" value="_cart">');
-    $("#btnContinue").before('<input type="hidden" name="upload" value="1">');
-    $("#btnContinue").before('<input type="hidden" name="business" value="sales@vocore.io">');
-    $("#btnContinue").before(order);
-  }
-
-  // update store item count dropdown table value.
-  $("#tbStore").on("click", "td", function() {
-    var table = $(this).parent().parent().parent().attr("id");
-    if(table.substr(0, table.length - 1) == "tbCount") {
-      var id = table.substr(table.length - 1, 1)
-      var count = $(this).find("a").html();
-      // update the count with selected number.
-      $("#dbCountList" + id).find("b").html(count);
-    }
-  });
-
-  // update country item list value.
-  $("#lstCountry").on("click", "a", function(event) {
-    $("#edCountry").html($.trim($(this).html()) + '\n<span class="caret"></span>');
-    updateCartList();
-  });
-
-  $("#mdCheckOut").on("show.bs.modal", function(event) {
-    var total = 0;
-
-    // check parameters.
-    for(var i = 1; i <= STORE_ITEM_COUNT; i++)
-      total += parseInt(getParameter("count", i));
-    if(total == 0) {
-      warning("#btnCheckOut", "Oh, there is something wrong...",
-        "  Please choose at least one item so we can move forward.");
-      // prevent display the box.
-      return false;
-    }
-
-    updateCartList();
-    return true;
-  });
-
-  $("#rbShipping1").on("click", function() {
-    updateCartList();
-  });
-  $("#rbShipping2").on("click", function() {
-    updateCartList();
-  });
-
-  $("#btnContinue").on("click", function() {
-    var phone = $.trim($("#edPhone").val());
-    if(phone.length == 0) {
-      warning("#tbPhone", "", "Please input your phone number.");
-      return false;
-    }
-
-    var country = $.trim($("#edCountry").text()), find = false;
-    for(var i = 0; i < ca.length; i++) {
-      if(country != ca[i][0])
-        continue;
-      find = true;
-      break;
-    }
-    if($("#rbShipping2").prop("checked") && !find) {
-      warning("#tbCountry", "", "Please select the country you ship to.");
-      return false;
-    }
-    return true;
-  });
-});
-</script>
 
 </html>
