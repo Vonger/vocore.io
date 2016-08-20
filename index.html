@@ -10,10 +10,6 @@
  <link rel="icon" href="favicon.ico">
 </head>
 
-<script src="js/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/vocore.min.js"></script>
-
 <body>
   <div class="navbar-wrapper">
     <div class="container">
@@ -79,58 +75,58 @@
   ================================================== -->
 
   <div id="tbStore" class="container store">
-
     <div class="row">
       <div class="col-sm-4">
-        <img id="lbImg1" class="img-circle" alt="Generic placeholder image" width="140" height="140">
-        <h3 id="lbItem1"></h3>
-        <p id="lbItemDet1"></p>
+	<img class="img-circle" src="img/pic1.jpg" width="140" height="140">
+	<h4 id="lbItem1">VoCore</h4><p>VoCore Details</p>
         <div class="dropdown">
           <div class="btn-group">
             <button id="btnPrice1" class="btn btn-default">
               <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
-              <b id="lbPrice1"></b>
+	      <b id="lbPrice1">$19.99</b>
             </button>
-            <button class="btn btn-default dropdown-toggle" type="button" id="dbCountList1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+	    <button class="btn btn-default dropdown-toggle" type="button" id="dbCount1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
               &times; <b>0</b>
               <span class="caret"></span>
             </button>
-            <table id="tbCount1" class="table table-responsive dropdown-menu" aria-labelledby="dbCountList1"></table>
-          </div>
+	    <table id="tbCount1" class="table table-responsive dropdown-menu" aria-labelledby="dbCount1"></table>
+	  </div>
         </div>
       </div><!-- /.col-sm-4 -->
 
       <div class="col-sm-4">
-        <img id="lbImg2" class="img-circle" alt="Generic placeholder image" width="140" height="140">
-        <h3 id="lbItem2"></h3>
-        <p id="lbItemDet2"></p>
+	<img class="img-circle" src="img/pic2.jpg" width="140" height="140">
+	<h4 id="lbItem2">VoCore + Dock</h4><p>VoCore + Dock Details</p>
         <div class="dropdown">
           <div class="btn-group">
             <button id="btnPrice2" class="btn btn-default">
               <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
-              <b id="lbPrice2"></b>
+	      <b id="lbPrice2">$44.99</b>
             </button>
-            <button class="btn btn-default dropdown-toggle" type="button" id="dbCountList2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+	    <button class="btn btn-default dropdown-toggle" type="button" id="dbCount2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
               &times; <b>0</b>
               <span class="caret"></span>
             </button>
-            <table id="tbCount2" class="table table-responsive dropdown-menu" aria-labelledby="dbCountList2"></table>
+	    <table id="tbCount2" class="table table-responsive dropdown-menu" aria-labelledby="dbCount2"></table>
           </div>
         </div>
       </div><!-- /.col-sm-4 -->
 
       <div class="col-sm-4">
-        <img id="lbImg3" class="img-circle" alt="Generic placeholder image" width="140" height="140">
-        <h3 id="lbItem3"></h3>
-        <p id="lbItemDet3"></p>
+	<img class="img-circle" src="img/pic3.jpg" width="140" height="140">
+	<h4 id="lbItem3">VoCam264</h4>
+	<p>VoCore USB h264 Camera<a href="http://www.baidu.com">Read More...</a></p>
         <div class="dropdown">
           <div class="btn-group">
-            <button id="btnPrice3" class="btn btn-default"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span><b id="lbPrice3"></b></button>
-            <button class="btn btn-default dropdown-toggle" type="button" id="dbCountList3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+	    <button id="btnPrice3" class="btn btn-default">
+	      <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
+	      <b id="lbPrice3">$29.99</b>
+	    </button>
+	    <button class="btn btn-default dropdown-toggle" type="button" id="dbCount3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
               &times; <b>0</b>
               <span class="caret"></span>
             </button>
-            <table id="tbCount3" class="table table-responsive dropdown-menu" aria-labelledby="dbCountList3"></table>
+	    <table id="tbCount3" class="table table-responsive dropdown-menu" aria-labelledby="dbCount3"></table>
           </div>
         </div>
       </div><!-- /.col-sm-4 -->
@@ -150,44 +146,28 @@
             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
           </div>
 
-          <div class="modal-header">
-            <h4 class="modal-title" id="myModalLabel"><span class="glyphicon glyphicon-plane" aria-hidden="true"></span>&nbsp;Shipping</h4>
-            <div class="radio">
-              <label><input id="rbShipping1" type="radio" name="optionsRadios" value="option1" checked>
-                Free Shipping by China Post.(10~40 bussiness days)
-              </label>
-            </div>
-            <div class="radio">
-              <label><input id="rbShipping2" type="radio" name="optionsRadios" value="option2">
-                  Shipping by Express.(3~6 bussiness days)
-              </label>
-            </div>
-          </div><!-- /modal-header -->
+      <div class="modal-header">
+	<h4 class="modal-title" id="myModalLabel"><span class="glyphicon glyphicon-lock" aria-hidden="true"></span>&nbsp;Shipping to</h4>
+	<div id="divExpress">
+	  <div id="tbCountry" class="btn-group" data-toggle="tooltip" data-placement="top" data-title="If your country/region is not in the list, please contact us.">
+	    <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-globe"></span></button>
+	    <button id="edCountry" type="button" class="btn btn-default fixed-width-button dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	      Your Country/Region<span class="caret"></span>
+	    </button>
+	    <ul id="lstCountry" class="dropdown-menu"></ul>
+	  </div><!-- /btn-group-->
+	</div>
+      </div><!-- /modal-header -->
 
           <div class="modal-header">
-            <h4 class="modal-title" id="myModalLabel"><span class="glyphicon glyphicon-lock" aria-hidden="true"></span>&nbsp;Shipping Information</h4>
-
-            <div id="tbPhone" class="input-group fixed-width-input" data-toggle="tooltip" data-placement="bottom" data-title="Post office requires it for better delievery, if you do not want it show on your package please put '00000000' instead.">
-              <span class="input-group-btn">
-                <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-phone"></span></button>
-              </span>
-              <input id="edPhone" type="text" class="form-control" placeholder="Your Phone Number">
-            </div><!-- /input-group -->
-
-            <div id="divExpress" class="hide">
-              <div id="tbCountry" class="btn-group" data-toggle="tooltip" data-placement="top" data-title="If your country/region is not in the list, please use free shipping.">
-                <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-globe"></span></button>
-                <button id="edCountry" type="button" class="btn btn-default fixed-width-button dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Your Country/Region
-                  <span class="caret"></span>
-                </button>
-                <ul id="lstCountry" class="dropdown-menu"></ul>
-              </div><!-- /btn-group-->
-              <div></div>
-              <div class="under-btn-group" data-toggle="tooltip" data-placement="bottom" data-title="If your city/region do not have DHL/UPS/FedEx/ARAMEX, please check this, it takes 2~3 more days.">
-                <input id="cbRemote" type="checkbox">
-                <small>shipping to remote area of my country.</small>
-              </div>
+	    <h4 class="modal-title" id="myModalLabel"><span class="glyphicon glyphicon-plane" aria-hidden="true"></span>&nbsp;Carrier</h4>
+            <div class="radio">
+	      <label><input id="rbShipping1" type="radio" name="optionsRadios" value="option1" checked>Shipping by Post.(10~20 bussiness days)</label>
+            </div>
+            <div class="radio">
+	      <label data-toggle="tooltip" data-placement="bottom" data-title="We will use post when express can not reach your city and refund the difference if any.">
+		<input id="rbShipping2" type="radio" name="optionsRadios" value="option2">Shipping by Express.(3~7 bussiness days)
+	      </label>
             </div>
           </div><!-- /modal-header -->
 
@@ -234,5 +214,9 @@
   </footer>
 
 </body>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/vocore.min.js"></script>
 
 </html>
