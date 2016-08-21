@@ -58,7 +58,9 @@ hr {
 }
 
 .btn .caret {
+  margin-top: 8px;
   margin-left: 5px;
+  float:right;
 }
 
 .glyphicon {
@@ -205,7 +207,7 @@ hr {
 
 .store .dropdown-menu tr a:hover {
   text-decoration: none;
-  background-color:#f5f5f5
+  background-color:#f5f5f5;
 }
 
 
