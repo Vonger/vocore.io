@@ -150,7 +150,13 @@ hr {
 .carousel h3 {
   margin-top: 0px;
 }
-
+.carousel a {
+  color: white;
+}
+.carousel a:hover {
+  color: #f80;
+  text-decoration:none;
+}
 .carousel-right {
   margin-left: 60px;
 }
