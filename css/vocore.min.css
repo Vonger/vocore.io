@@ -29,13 +29,14 @@ hr {
 .navbar-wrapper .navbar {
   padding-right: 15px;
   padding-left: 15px;
-  min-height: 64px;
+  margin-bottom: 0px;
 }
 .navbar-wrapper a {
-  padding-top: 25px;
-  padding-bottom: 25px;
+  padding-top: 8px;
+  padding-bottom: 4px;
+  padding-left: 20px;
   color: white;
-  font-size: 15px;
+  font-size: 14px;
   text-decoration: none;
   text-shadow: 0 1px 2px rgba(0,0,0,.6);
 }
@@ -138,10 +139,21 @@ hr {
 
 /* Since positioning the image, we need to help out the caption */
 .carousel-caption {
+  top: 120px;
   z-index: 10;
 }
 
 /* Declare heights because of positioning of img element */
+.carousel h1 {
+  margin-top: 0px;
+}
+.carousel h3 {
+  margin-top: 0px;
+}
+
+.carousel-right {
+  margin-left: 60px;
+}
 .carousel .item {
   height: 500px;
   background: linear-gradient(to bottom, #55b38b 0%, #76b93d 100%);
@@ -152,18 +164,6 @@ hr {
   left: 0;
   min-width: 100%;
   height: 500px;
-}
-.carousel-indicators li {
-  margin-left: 8px;
-  margin-right: 8px;
-  padding-left: 6px;
-  padding-right: 6px;
-}
-.carousel-indicators li.active {
-  margin-left: 8px;
-  margin-right: 8px;
-  padding-left: 6px;
-  padding-right: 6px;
 }
 
 /* Center align the text within the three columns below the carousel */
