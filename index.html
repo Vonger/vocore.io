@@ -15,9 +15,9 @@
     <div class="container">
       <nav class="navbar">
 	<img alt="VOCORE" src="img/logo.png" width="113" height="32" >
-	<a class="pull-right" href="http://forum.vocore.io"><b>ABOUT</b></a>
 	<a class="pull-right" href="http://vonger.cn"><b>BLOG</b></a>
 	<a class="pull-right" href="http://forum.vocore.io"><b>FORUM</b></a>
+	<a class="pull-right" href="#store"><b>STORE</b></a>
       </nav>
     </div>
   </div>
@@ -37,10 +37,10 @@
 
       <div class="item active">
        <div class="container">
-        <div class="carousel-caption">
-	 <img src="img/split1.png" width="288" height="208">
+	<div class="carousel-caption">
 	 <h1>VoCore2</h1>
 	 <a href="https://igg.me/at/vocore2"><h3>Crowdfunding on Indiegogo!</h3></a>
+	 <img src="img/split1.png" height="208">
         </div>
        </div>
       </div>
@@ -48,16 +48,10 @@
       <div class="item">
        <div class="container">
         <div class="carousel-caption">
-	<div class="col-xs-4">
-	 <img src="img/split2.png" width="300" height="300">
+	 <img src="img/split2.png" height="240">
+	 <h2>VoCore2 Ultimate</h2>
+	 <h4>All-In-One 28mm Box!</h4>
 	</div>
-	<div class="col-xs-6">
-	 <h3>&nbsp;</h3>
-	 <h3>&nbsp;</h3>
-	 <h1 class="carousel-right">VoCore2 Ultimate</h1>
-	 <p class="carousel-right">wireless audio, file server, remote control a camera, all in one 28mm box!</p>
-	</div>
-        </div>
        </div>
       </div>
 
@@ -65,12 +59,14 @@
        <div class="container">
         <div class="carousel-caption">
 	 <div class="col-xs-6">
-	  <h3>&nbsp;</h3>
-	  <h2>Full source code</h2>
-	  <h2>Full layout design</h2>
-	  <h2>Open for Everyone</h2>
+	  <div class="vertical-center">
+	   <h1>&nbsp;</h1>
+	   <h3>Full source code</h3>
+	   <h3>Full layout design</h3>
+	   <h3>Open for Everyone</h3>
+	  </div>
 	 </div>
-	 <div class="col-xs-4">
+	 <div class="col-xs-6">
 	  <img src="img/split3.png" width="280" height="280">
 	 </div>
         </div>
@@ -81,17 +77,45 @@
 
   </div><!-- /.carousel -->
 
+  <div class="container">
+   <div class="col-md-6">
+    <h2>Welcome to <b class="head-text">VoCore</b></h2>
+    <p><small>VoCore is open hardware and runs OpenWrt. It has WIFI, USB, UART, 20+ GPIOs but is only one inch square. It will help you to make a smart house, study embedded system or even make the tiniest router in the world.</small></p>
+    <p><small>You will not only get the VoCore but also its full hardware design including schematic, circuit board, bill of materials; full source code (including boot loader), operating system (openwrt) and applications. You are able to control <b>EVERY BIT</b> of your VoCore. </small></p>
+    <p><small>We invite you join us, help our community improve this open source hardware and use your creative skills to make a more wonderful <b>Internet of Things</b>!</small></p>
+   </div>
+   <div class="col-md-6"><img src="img/head1.png" height=240></img></div>
+   <p>&nbsp;</p>
+  </div>
+
+  <hr/>
+
+  <div class="container">
+   <div class="col-md-6"><img src="img/head2.png" height=240></img></div>
+   <div class="col-md-6">
+    <h2>Why <b class="head-text">VoCore</b></h2>
+    <p><small><b>Tiny Size:</b> One square inch, easy to embed to devices.</small></p>
+    <p><small><b>OpenWrt/LEDE:</b> Easy to code, compile; stable system.</small></p>
+    <p><small><b>Low Cost:</b> $4~$15 for each, unmatched performance.</small></p>
+    <p><small><b>Interfaces:</b> Hardware support USB, Ethernet, I2C, SPI etc.</small></p>
+    <p><small><b>OpenSource:</b> Both software and hardware, totally <b>FREE</b></small></p>
+   </div>
+   <p>&nbsp;</p>
+  </div>
+
+  <hr/>
 
   <!-- VoCore Store Section
   ================================================== -->
-
+  <a name="store"></a>
   <div id="tbStore" class="container store">
     <div class="row">
       <div class="col-sm-4">
-	<a href="v2" data-toggle="tooltip" data-placement="bottom" data-original-title="Click to read more">
+	<a href="v2.html" data-toggle="tooltip" data-placement="bottom" data-original-title="Click to read more">
 	  <img class="img-circle" src="img/pic1.jpg" width="140" height="140">
 	</a>
-	<h4 id="lbItem1">VoCore2</h4><p>Free Shipping Worldwide.</p>
+	<a href="v2.html"><h4 id="lbItem1">VoCore2</h4></a>
+	<p>Free Shipping Worldwide.</p>
         <div class="dropdown">
           <div class="btn-group">
             <button id="btnPrice1" class="btn btn-default">
@@ -108,10 +132,11 @@
       </div><!-- /.col-sm-4 -->
 
       <div class="col-sm-4">
-	<a href="v2u" data-toggle="tooltip" data-placement="bottom" data-original-title="Click to read more">
+	<a href="v2u.html" data-toggle="tooltip" data-placement="bottom" data-original-title="Click to read more">
 	  <img class="img-circle" src="img/pic2.jpg" width="140" height="140">
 	</a>
-	<h4 id="lbItem2">VoCore2 Ultimate</h4><p>Free Shipping Worldwide.</p>
+	<a href="v2u.html"><h4 id="lbItem2">VoCore2 Ultimate</h4></a>
+	<p>Free Shipping Worldwide.</p>
         <div class="dropdown">
           <div class="btn-group">
             <button id="btnPrice2" class="btn btn-default">
@@ -128,10 +153,10 @@
       </div><!-- /.col-sm-4 -->
 
       <div class="col-sm-4">
-	<a href="camera" data-toggle="tooltip" data-placement="bottom" data-original-title="Click to read more">
+	<a href="camera.html" data-toggle="tooltip" data-placement="bottom" data-original-title="Click to read more">
 	  <img class="img-circle" src="img/pic3.jpg" width="140" height="140">
 	</a>
-	<h4 id="lbItem3">VoCore Camera</h4>
+	<a href="camera.html"><h4 id="lbItem3">VoCore Camera</h4></a>
 	<p>Free Shipping Worldwide.</p>
         <div class="dropdown">
           <div class="btn-group">
@@ -225,10 +250,11 @@
     </div>
   </div>
 
+  <h6><small>Looking for old version? Please contact us.</small></h6>
   <hr/>
 
   <footer class="container">
-    <p class="footer-text"><small><b>VoCore Studio &copy; 2016 &middot; Contact us:  <a href="mailto:support@vocore.io">support@vocore.io</a></b></small></p>
+    <center><p class="footer-text"><small><b>VoCore Studio &copy; 2016 &middot; Contact us:  <a href="mailto:support@vocore.io">support@vocore.io</a></b></small></p></center>
   </footer>
 
 </body>
