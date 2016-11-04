@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="utf-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <title>VoCore2 | Coin-sized Linux Computer</title>
+ <link rel="stylesheet" href="css/bootstrap.min.css">
+ <link rel="stylesheet" href="css/vocore.min.css">
+ <link rel="icon" href="favicon.ico">
+</head>
+
+<body>
+
+  <center><h1>VoCore (old version)</h1></center>
+  <center><h3><small>The Coin-sized Linux Computer - stable since 2014</small></h3></center>
+
+  <div class="container">
+   <center><img class="thumbnail" src="img/v1.head.jpg" height="400"></center>
+  </div>
+
+  <hr/>
+
+  <div class="container">
+   <h3>Parameters</h3>
+   <table class="table table-bordered table-striped">
+    <thead><tr><th></th><th>Details</th></tr></thead>
+    <tbody>
+     <tr><th class=text-nowrap scope=row>SIZE</th><td>25.6mm x 25.6mm x 3.0mm</td></tr>
+     <tr><th class=text-nowrap scope=row>CPU</th><td>RT5350, 360 MHz, MIPS 24K</td></tr>
+     <tr><th class=text-nowrap scope=row>MEMORY</th><td>32MB, SDRAM</td></tr>
+     <tr><th class=text-nowrap scope=row>STORAGE</th><td>16M NOR on board</td></tr>
+     <tr><th class=text-nowrap scope=row>WIRELESS</th><td>802.11n, 1T1R, speed up to 75Mbps.</td></tr>
+     <tr><th class=text-nowrap scope=row>ANTENNA</th><td>one on board antenna.</td></tr>
+     <tr><th class=text-nowrap scope=row>ETHERNET</th><td>5 ports, up to 100Mbps.</td></tr>
+     <tr><th class=text-nowrap scope=row>USB</th><td>Support USB 2.0, up to 480MHz.</td></tr>
+     <tr><th class=text-nowrap scope=row>GPIO</th><td>>=30 (pinmux)</td></tr>
+     <tr><th class=text-nowrap scope=row>UART</th><td>x2 (UART1 for debug console)</td></tr>
+     <tr><th class=text-nowrap scope=row>POWER SUPPLY</th><td>3.6V ~ 6.0V</td></tr>
+     <tr><th class=text-nowrap scope=row>POWER CONSUMPTION</th><td>~130mA~190mA, 5V input.</td></tr>
+    </tbody>
+   </table>
+
+   <h3>Tutorials</h3>
+   <p><a href="doc/connect_to_power.html">Connect to Power</a></p>
+   <p><a href="doc/setup_ap_sta_mode.html">Setup AP + STA Mode</a></p>
+   <p><a href="doc/setup_develop_linux.html">Develop in Linux</a></p>
+   <p><a href="doc/upload_firmware.html">Upload Firmware</a></p>
+
+   <h3>Sources</h3>
+   <p><b>Hardware: </b><a href="http://vonger.cn/upload/vocore.zip">Download</a></p>
+   <p><b>uBoot: </b><a href="http://vonger.cn/upload/uboot.source.zip">Download</a></p>
+
+   <h3>Downloads</h3>
+   <p><b>Manual: </b><a href="http://vonger.cn/upload/vocore.manual.pdf">Download</a></p>
+
+   <h3>Details</h3>
+   <p>VoCore is the start of the project, it works stable on variours of productions over three years. It is not recommended for the new users, we have new version VoCore2 with video tutorials which is more friendly to new users.</p>
+   <center><img src="img/v1.pins.png" height="600"></img></center>
+   <h4>Pins in left:</h4>
+   <p>GND: connect to GND or battery negative pole.</p>
+   <p>RESET: VoCore reset, default pull to high.</p>
+   <p>G#02/I2C_SD: GPIO 02, or I2C SD.</p>
+   <p>G#01/I2C_CLK: GPIO 01, or I2C Clock.</p>
+   <p>G#18/JTAG_TDI: GPIO 18, or JTAG TDI.</p>
+   <p>G#00: GPIO 00.</p>
+   <p>G#19/JTAG_TMS: GPIO 19, or JTAG TMS.</p>
+   <p>G#20/JTAG_TCLK: GPIO 20, or JTAG Clock.</p>
+   <p>G#21/JTAG_TRST: GPIO 21, or JTAG Reset.</p>
+   <p>G#17/JTAG_TDO: GPIO 17, or JTAG TDO.</p>
+   <p>GND: same GND as first one.</p>
+   <p>+3.5V ~ +6.0V input: power supply, allow 3.5V ~ 6.0V input.</p>
+   <p>+3.5V ~ +6.0V input: power supply, allow 3.5V ~ 6.0V input.</p>
+   <p>GND: same GND as first one.</p>
+   <h4>Pins in bottom:</h4>
+   <p>G#12/PCM_CLK: GPIO 12, or PCM clock.</p>
+   <p>G#09/I2S_SDO: GPIO 09, or I2S SDO.</p>
+   <p>G#22/LED0: GPIO 22, or ethernet LED controller 0.</p>
+   <p>G#08/I2S_WS/TXD: GPIO 08, or I2S WS, or UART full TXD.</p>
+   <p>+1.8V: 1.8V output, max current 300mA, ethernet power supply.</p>
+   <p>G#04/SPI_CLK: GPIO 04, or SPI clock.</p>
+   <p>G#05/SPI_MOSI: GPIO 05, or SPI master out/slave in.</p>
+   <p>G#27/SPI_CS1: GPIO 27, or SPI chip select 1.</p>
+   <p>G#23/LED1: GPIO 23, or ethernet LED controller 1.</p>
+   <p>G#13/PCM_DRX: GPIO 13, or PCM DRX.</p>
+   <p>G#24/LED2: GPIO 24, or ethernet LED controller 2.</p>
+   <p>G#25/LED3: GPIO 25, or ethernet LED controller 3.</p>
+   <p>G#26/LED4: GPIO 26, or ethernet LED controller 4.</p>
+   <p>G#14/PCM_TDX: GPIO 13, or PCM TDX.</p>
+   <h4>Pins in right:</h4>
+   <p>+3.2V ~ +3.5V input/output: If you connect power to +3.5V ~ +6.0V, this port is able to output 3.3V, max 500mA; or use it as input, the voltage should between 3.2V to 3.5V.</p>
+   <p>USB+: USB Data +.</p>
+   <p>USB-: USB Data -.</p>
+   <p>P4RN: Ethernet port 4, R-.</p>
+   <p>P4RP: Ethernet port 4, R+.</p>
+   <p>P4TP: Ethernet port 4, T+.</p>
+   <p>P4TN: Ethernet port 4, T-.</p>
+   <p>P0RN: Ethernet port 0, R-.</p>
+   <p>P0RP: Ethernet port 0, R+.</p>
+   <p>P0TP: Ethernet port 0, T+.</p>
+   <p>P0TN: Ethernet port 0, T-.</p>
+   <p>G#11/PCM_FS: GPIO 11, or PCM FS.</p>
+   <p>G#03/SPI_CS0: GPIO 03, or SPI chip select 0.</p>
+   <p>G#06/SPI_MISO: GPIO 06, or SPI master in/slave out.</p>
+   <p>G#10/I2S_SDI/RXD: GPIO 10, or I2S SDI, or UART full RXD.</p>
+   <p>G#16/RXD2: GPIO 16, UART lite RXD2(default TTL console, 57600,8n1).</p>
+   <p>G#07/I2S_CLK: GPIO 07, I2S Clock.</p>
+   <p>G#15/TXD2: GPIO 15, UART lite TXD2(default TTL console, 57600,8n1).</p>
+   <p>GND: same GND as first one.</p>
+   <center><img src="img/v1.size.png" height="600"></img></center>
+
+  </div>
+
+  <hr/>
+
+  <footer class="container">
+    <center><p class="footer-text"><small><b>VoCore Studio &copy; 2014-2016 &middot; Contact us:  <a href="mailto:support@vocore.io">support@vocore.io</a></b></small></p></center>
+  </footer>
+
+</body>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+</html>

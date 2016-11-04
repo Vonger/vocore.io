@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="utf-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <title>VoCore2 | Coin-sized Linux Computer</title>
+ <link rel="stylesheet" href="css/bootstrap.min.css">
+ <link rel="stylesheet" href="css/vocore.min.css">
+ <link rel="icon" href="favicon.ico">
+</head>
+
+<body>
+
+  <center><h1>VoCore + Dock</h1></center>
+  <center><h2><small>The Coin-sized Linux Computer</small></h2></center>
+
+  <div class="container">
+   <center><img class="thumbnail" src="img/v1d.head.jpg" height="400"></center>
+  </div>
+
+  <hr/>
+
+  <div class="container">
+   <h2>Parameters</h2>
+   <table class="table table-bordered table-striped">
+    <thead><tr><th></th><th>Details</th></tr></thead>
+    <tbody>
+     <tr><th class=text-nowrap scope=row>SIZE</th><td>25.6mm x 25.6mm x 3.0mm</td></tr>
+     <tr><th class=text-nowrap scope=row>CPU</th><td>RT5350, 360 MHz, MIPS 24K</td></tr>
+     <tr><th class=text-nowrap scope=row>MEMORY</th><td>32MB, SDRAM</td></tr>
+     <tr><th class=text-nowrap scope=row>STORAGE</th><td>16M NOR on board</td></tr>
+     <tr><th class=text-nowrap scope=row>WIRELESS</th><td>802.11n, 1T1R, speed up to 75Mbps.</td></tr>
+     <tr><th class=text-nowrap scope=row>ANTENNA</th><td>one on board antenna.</td></tr>
+     <tr><th class=text-nowrap scope=row>ETHERNET</th><td>5 ports, up to 100Mbps.</td></tr>
+     <tr><th class=text-nowrap scope=row>USB</th><td>Support USB 2.0, up to 480MHz.</td></tr>
+     <tr><th class=text-nowrap scope=row>GPIO</th><td>>=30 (pinmux)</td></tr>
+     <tr><th class=text-nowrap scope=row>UART</th><td>x2 (UART1 for debug console)</td></tr>
+     <tr><th class=text-nowrap scope=row>POWER SUPPLY</th><td>3.6V ~ 6.0V</td></tr>
+     <tr><th class=text-nowrap scope=row>SD CARD</th><td>Support(SPI, v1)</td></tr>
+     <tr><th class=text-nowrap scope=row>AUDIO PLAYBACK</th><td>Support(v2), WM8960G</td></tr>
+     <tr><th class=text-nowrap scope=row>AUDIO RECORD</th><td>Support(v2), WM8960G</td></tr>
+     <tr><th class=text-nowrap scope=row>DEBUG CONSOLE</th><td>On board USB2TTL, CP2102(v2)</td></tr>
+     <tr><th class=text-nowrap scope=row>POWER CONSUMPTION</th><td>~130mA~190mA, 5V microUSB input.</td></tr>
+    </tbody>
+   </table>
+
+   <h2>Introduce</h2>
+   <p>VoCore + Dock has two versions, Dock(v1) has SD slots, able to read/write to SD card through SPI, speed is 100KB/s;
+   Dock(v2) has audio and on board USB2TTL. Dock(v1) has stopped production at 2015.10.</p>
+
+   <h3>Tutorials</h3>
+   <p><a href="doc/connect_to_power.html">Connect to Power</a></p>
+   <p><a href="doc/setup_ap_sta_mode.html">Setup AP + STA Mode</a></p>
+   <p><a href="doc/setup_develop_linux.html">Setup Develop Linux</a></p>
+   <p><a href="doc/upload_firmware.html">Upload Firmware</a></p>
+
+   <h2>Sources</h2>
+   <p><b>Manual: </b><a href="http://vonger.cn/upload/vocore.manual.pdf">Download</a></p>
+   <p><b>Dock(v1): </b><a href="http://vonger.cn/upload/vocore.dock.zip">Download</a></p>
+   <p><b>Dock(v2): </b><a href="http://vonger.cn/vocore/VoCore.dock2.zip">Download</a></p>
+
+   <h2>Downloads</h2>
+   <p><b>VoCore + Dock FCC: </b><a href="http://vonger.cn/vocore/VoCore.FCC.pdf">Download</a></p>
+   <p><b>VoCore + Dock CE: </b><a href="http://vonger.cn/vocore/VoCore.CE.pdf">Download</a></p>
+   <p><b>VoCore + Dock RoHS: </b><a href="http://vonger.cn/vocore/VoCore.RoHS.pdf">Download</a></p>
+   <p><b>VoCore + Dock(v1) Shell: </b><a href="http://vonger.cn/upload/vocore.shell.stl">Download</a></p>
+   <p><b>VoCore + Dock(v2) Firmware: </b><a href="http://vonger.cn/upload/vocore.dock2.bin">Download</a></p>
+   <p><b>PL2302 Driver(USB2TTL): </b><a href="http://www.prolific.com.tw/UserFiles/files/PL2303_Prolific_DriverInstaller_v1160.zip">WINDOWS</a>, <a href="http://www.prolific.com.tw/UserFiles/files/md_PL2303_MacOSX_10_6-10_10_v1_5_1.zip">MACOS</a></p>
+   <p><b>CP2102 Driver(USB2TTL): </b><a href="http://vonger.cn/upload/CP210x_VCP_Windows.zip">WINDOWS</a>, <a href="http://vonger.cn/upload/CP2102_MACOS.dmg">MACOS</a></p>
+  </div>
+
+  <hr/>
+
+  <footer class="container">
+    <center><p class="footer-text"><small><b>VoCore Studio &copy; 2014-2016 &middot; Contact us:  <a href="mailto:support@vocore.io">support@vocore.io</a></b></small></p></center>
+  </footer>
+
+</body>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+</html>
