@@ -16,7 +16,7 @@
   <center><h3><small>The Coin-sized Linux Computer - stable since 2014</small></h3></center>
 
   <div class="container">
-   <center><img class="thumbnail" src="img/v1.head.jpg" height="400"></center>
+   <center><img class="thumbnail" src="img/v1/v1.head.jpg" height="400"></center>
   </div>
 
   <hr/>
@@ -41,12 +41,6 @@
     </tbody>
    </table>
 
-   <h3>Tutorials</h3>
-   <p><a href="doc/connect_to_power.html">Connect to Power</a></p>
-   <p><a href="doc/setup_ap_sta_mode.html">Setup AP + STA Mode</a></p>
-   <p><a href="doc/setup_develop_linux.html">Develop in Linux</a></p>
-   <p><a href="doc/upload_firmware.html">Upload Firmware</a></p>
-
    <h3>Sources</h3>
    <p><b>Hardware: </b><a href="http://vonger.cn/upload/vocore.zip">Download</a></p>
    <p><b>uBoot: </b><a href="http://vonger.cn/upload/uboot.source.zip">Download</a></p>
@@ -56,7 +50,7 @@
 
    <h3>Details</h3>
    <p>VoCore is the start of the project, it works stable on variours of productions over three years. It is not recommended for the new users, we have new version VoCore2 with video tutorials which is more friendly to new users.</p>
-   <center><img src="img/v1.pins.png" height="600"></img></center>
+   <center><img src="img/v1/v1.pins.png" height="600"></img></center>
    <h4>Pins in left:</h4>
    <p>GND: connect to GND or battery negative pole.</p>
    <p>RESET: VoCore reset, default pull to high.</p>
@@ -107,8 +101,67 @@
    <p>G#07/I2S_CLK: GPIO 07, I2S Clock.</p>
    <p>G#15/TXD2: GPIO 15, UART lite TXD2(default TTL console, 57600,8n1).</p>
    <p>GND: same GND as first one.</p>
-   <center><img src="img/v1.size.png" height="600"></img></center>
+   <center><img src="img/v1/v1.size.png" height="600"></img></center>
 
+   <h3>Tutorials</h3>
+   <h4>Connect to Power</h4>
+   <center><img src="img/v1/v1.t1.00.png" height="100"></img></center>
+   <p>1. connect to 3.6V~6.0V and GND with a stable power source, such as USB charger.</p>
+   <p><b>note</b>: Be careful, high voltage will damage your VoCore.</p>
+   <p>2. if everything works, after 30 seconds, you will find VoCore in your computer hotspot list.</p>
+   <p>3. connect to VoCore hotspot.</p>
+   <p>4.a using ssh or putty or similar tools login to VoCore(root/vocore).</p>
+   <p>4.b using USB2TTL, please check manual in Download section, UART=57600 8n1.</p>
+   <hr/>
+
+   <h4>Setup AP + STA Mode</h4>
+   <p>1. connect to your VoCore.</p>
+   <p>2. run command in console:</p>
+   <p>uci set wireless.sta.ssid=[AP SSID]</p>
+   <p>uci set wireless.sta.key=[AP PASSWORD]</p>
+   <p>uci set wireless.sta.network=wwan</p>
+   <p>uci set wireless.sta.disabled=0</p>
+   <p>uci commit</p>
+   <p>/etc/init.d/network restart</p>
+   <p>3. wait around 10 seconds, your VoCore is in AP+STA mode</p>
+   <p><b>note</b>: you might need to setup network to enable dhcp(get ip from your hotspot).</p>
+   <p>uci delete network.wwan</p>
+   <p>uci set network.wwan=interface</p>
+   <p>uci set network.wwan.proto=dhcp</p>
+   <p>uci commit</p>
+   <p><b>note</b>: you might need to setup firewall to enable access to internet through your hotspot.</p>
+   <p>uci del_list firewall.@zone[1].network=wwan</p>
+   <p>uci add_list firewall.@zone[1].network=wwan</p>
+   <p>uci set firewall.@zone[1].input=ACCEPT</p>
+   <p>uci set firewall.@zone[1].output=ACCEPT</p>
+   <p>uci set firewall.@zone[1].forward=ACCEPT</p>
+   <p>uci set firewall.@zone[1].masq=1</p>
+   <p>uci set firewall.@zone[1].mtu_fix=1</p>
+   <p>uci commit</p>
+   <hr/>
+
+   <h4>Develop for VoCore</h4>
+   <p>1. Download and install VirtualBox(it supports Ubuntu/Windows/MacOS)</p>
+   <p>2. Download Ubuntu, install on your VirtualBox.</p>
+   <p>3. In virtualbox, we will need install some packages to compile openwrt:</p>
+   <p>sudo apt-get install gcc g++ binutils patch bzip2 flex bison make autoconf gettext texinfo unzip sharutils subversion libncurses5-dev ncurses-term zlib1g-dev</p>
+   <p>4. Download openwrt.</p>
+   <p>git clone -b chaos_calmer git://github.com/openwrt/openwrt.git</p>
+   <p>5. configure openwrt in menu, choose VoCore in menu.</p>
+   <p>make menuconfig</p>
+   <p>6. call "make", start the make process</p>
+   <p><b>note</b>: <a href="https://www.youtube.com/watch?v=NZnWPbmbb6c">video tutorial [youtube]</a></p>
+   <hr/>
+
+   <h4>Upload Firmware</h4>
+   <p>1. upload firmware through luci, please read manual in Download section.</p>
+   <p>2. upload firmware through console, connected to VoCore hotspot.</p>
+   <p>(1) copy from pc to VoCore[operate in PC]: scp [your firmware].bin root@192.168.61.1:/tmp/vocore.bin</p>
+   <p>here is two choices, 2.a will erase all data/config you write to VoCore, 2.b just upgrade the firmware but keep them.</p>
+   <p>(2.a) write to VoCore nor flash[operate in VoCore]: mtd -e firmware write /tmp/vocore.bin firmware</p>
+   <p>(2.b) system upgrade VoCore nor flash[operate in VoCore]: sysupgrade /tmp/vocore.bin firmware</p>
+   <p>(3) wait until mtd done, reboot your VoCore.</p>
+   <p><b>note</b>: if you want set your VoCore back to first time boot up, call "firstboot" in console.</p>
   </div>
 
   <hr/>

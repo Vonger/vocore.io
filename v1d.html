@@ -16,7 +16,7 @@
   <center><h2><small>The Coin-sized Linux Computer</small></h2></center>
 
   <div class="container">
-   <center><img class="thumbnail" src="img/v1d.head.jpg" height="400"></center>
+   <center><img class="thumbnail" src="img/v1d/v1d.head.jpg" height="400"></center>
   </div>
 
   <hr/>
@@ -56,11 +56,13 @@
    <p><a href="doc/upload_firmware.html">Upload Firmware</a></p>
 
    <h2>Sources</h2>
-   <p><b>Manual: </b><a href="http://vonger.cn/upload/vocore.manual.pdf">Download</a></p>
    <p><b>Dock(v1): </b><a href="http://vonger.cn/upload/vocore.dock.zip">Download</a></p>
    <p><b>Dock(v2): </b><a href="http://vonger.cn/vocore/VoCore.dock2.zip">Download</a></p>
+   <p><b>Hardware: </b><a href="http://vonger.cn/upload/vocore.zip">Download</a></p>
+   <p><b>uBoot: </b><a href="http://vonger.cn/upload/uboot.source.zip">Download</a></p>
 
    <h2>Downloads</h2>
+   <p><b>Manual: </b><a href="http://vonger.cn/upload/vocore.manual.pdf">Download</a></p>
    <p><b>VoCore + Dock FCC: </b><a href="http://vonger.cn/vocore/VoCore.FCC.pdf">Download</a></p>
    <p><b>VoCore + Dock CE: </b><a href="http://vonger.cn/vocore/VoCore.CE.pdf">Download</a></p>
    <p><b>VoCore + Dock RoHS: </b><a href="http://vonger.cn/vocore/VoCore.RoHS.pdf">Download</a></p>
@@ -68,6 +70,65 @@
    <p><b>VoCore + Dock(v2) Firmware: </b><a href="http://vonger.cn/upload/vocore.dock2.bin">Download</a></p>
    <p><b>PL2302 Driver(USB2TTL): </b><a href="http://www.prolific.com.tw/UserFiles/files/PL2303_Prolific_DriverInstaller_v1160.zip">WINDOWS</a>, <a href="http://www.prolific.com.tw/UserFiles/files/md_PL2303_MacOSX_10_6-10_10_v1_5_1.zip">MACOS</a></p>
    <p><b>CP2102 Driver(USB2TTL): </b><a href="http://vonger.cn/upload/CP210x_VCP_Windows.zip">WINDOWS</a>, <a href="http://vonger.cn/upload/CP2102_MACOS.dmg">MACOS</a></p>
+
+   <h3>Tutorials</h3>
+   <h4>Connect to Power</h4>
+   <p>1. connect USB wire to microUSB port on VoCore.</p>
+   <p>2. if everything works, after 30 seconds, you will find VoCore in your computer hotspot list.</p>
+   <p>3. connect to VoCore hotspot.</p>
+   <p>4.a using ssh or putty or similar tools login to VoCore(root/vocore).</p>
+   <p>4.b VoCore + Dock has USB2TTL(microUSB), you can directly connect VoCore through serial port, 57600 8n1.</p>
+   <p><b>note:</b>VoCore + Dock is using CP2102, please download its driver at Download section.</p>
+   <hr/>
+
+   <h4>Setup AP + STA Mode</h4>
+   <p>1. connect to your VoCore.</p>
+   <p>2. run command in console:</p>
+   <p>uci set wireless.sta.ssid=[AP SSID]</p>
+   <p>uci set wireless.sta.key=[AP PASSWORD]</p>
+   <p>uci set wireless.sta.network=wwan</p>
+   <p>uci set wireless.sta.disabled=0</p>
+   <p>uci commit</p>
+   <p>/etc/init.d/network restart</p>
+   <p>3. wait around 10 seconds, your VoCore is in AP+STA mode</p>
+   <p><b>note</b>: you might need to setup network to enable dhcp(get ip from your hotspot).</p>
+   <p>uci delete network.wwan</p>
+   <p>uci set network.wwan=interface</p>
+   <p>uci set network.wwan.proto=dhcp</p>
+   <p>uci commit</p>
+   <p><b>note</b>: you might need to setup firewall to enable access to internet through your hotspot.</p>
+   <p>uci del_list firewall.@zone[1].network=wwan</p>
+   <p>uci add_list firewall.@zone[1].network=wwan</p>
+   <p>uci set firewall.@zone[1].input=ACCEPT</p>
+   <p>uci set firewall.@zone[1].output=ACCEPT</p>
+   <p>uci set firewall.@zone[1].forward=ACCEPT</p>
+   <p>uci set firewall.@zone[1].masq=1</p>
+   <p>uci set firewall.@zone[1].mtu_fix=1</p>
+   <p>uci commit</p>
+   <hr/>
+
+   <h4>Develop for VoCore</h4>
+   <p>1. Download and install VirtualBox(it supports Ubuntu/Windows/MacOS)</p>
+   <p>2. Download Ubuntu, install on your VirtualBox.</p>
+   <p>3. In virtualbox, we will need install some packages to compile openwrt:</p>
+   <p>sudo apt-get install gcc g++ binutils patch bzip2 flex bison make autoconf gettext texinfo unzip sharutils subversion libncurses5-dev ncurses-term zlib1g-dev</p>
+   <p>4. Download openwrt.</p>
+   <p>git clone -b chaos_calmer git://github.com/openwrt/openwrt.git</p>
+   <p>5. configure openwrt in menu, choose VoCore in menu.</p>
+   <p>make menuconfig</p>
+   <p>6. call "make", start the make process</p>
+   <p><b>note</b>: <a href="https://www.youtube.com/watch?v=NZnWPbmbb6c">video tutorial [youtube]</a></p>
+   <hr/>
+
+   <h4>Upload Firmware</h4>
+   <p>1. upload firmware through luci, please read manual in Download section.</p>
+   <p>2. upload firmware through console, connected to VoCore hotspon.</p>
+   <p>(1) copy from pc to VoCore[operate in PC]: scp [your firmware].bin root@192.168.61.1:/tmp/vocore.bin</p>
+   <p>here is two choices, 2.a will erase all data/config you write to VoCore, 2.b just upgrade the firmware but keep them.</p>
+   <p>(2.a) write to VoCore nor flash[operate in VoCore]: mtd -e firmware write /tmp/vocore.bin firmware</p>
+   <p>(2.b) system upgrade VoCore nor flash[operate in VoCore]: sysupgrade /tmp/vocore.bin firmware</p>
+   <p>(3) wait until mtd done, reboot your VoCore.</p>
+   <p><b>note</b>: if you want set your VoCore back to first time boot up, call "firstboot" in console.</p>
   </div>
 
   <hr/>
