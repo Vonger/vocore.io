@@ -123,7 +123,35 @@
    <p>(2.b) system upgrade VoCore nor flash[operate in VoCore]: sysupgrade /tmp/vocore2.bin firmware</p>
    <p>(3) wait until mtd done, reboot your VoCore.</p>
    <p><b>note</b>: if you want set your VoCore back to first time boot up, call "firstboot" in console.</p>
+   <hr/>
 
+   <h4>Fix Bricked VoCore2 (uboot alive)</h4>
+   <p>1. connect your VoCore2 to computer through USB2TTL(UART2 RXD2+TXD2+GND).</p>
+   <p>2. open tty tools(must have kermit protocol), such as kermit, ckermit. </p>
+   <p>3. power up your VoCore, once you find: "7: Entr boot command line interface.", press '7'.</p>
+   <p><b>note</b>: VoCore will show "## Ready for binary (kermit) download to 0x80100000 at 115200 bps..."</p>
+   <p><b>note</b>: kermit: press Ctrl and '\' same time then press 'c', you will switch to kermit command console.</p>
+   <p>5. send upgrade firmware to VoCore, after that, back to VoCore uboot console.</p>
+   <p><b>note</b>: kermit: call "send path/to/your/upgrade/file/on/pc.bin" to send firmware, around 10 minutes, once it finished, call 'c' back to console.</p>
+   <p>6. wait around 20~30 seconds, firmware uploaded, your VoCore will reboot.</p>
+   <hr/>
+
+   <h4>Fix Bricked VoCore2 (uboot dead)</h4>
+   <p>1. You must have another VoCore/VoCore2 or one flash loader and six wires.</p>
+   <p>2.1 using another VoCore/VoCore2 to recover your bricked VoCore2.</p>
+   <p>2.1.a coming soon...</p>
+   <p>2.2 using flash loader to recover your bricked VoCore2.</p>
+   <p>2.2.a disconnect VoCore2 from power; </p>
+   <p>2.2.b connect VoCore2 GND to flash loader GND; </p>
+   <p>2.2.c VoCore2 +3.3V to flash loader +3.3V; </p>
+   <p>2.2.d VoCore2 SPI MISO -> flash loader SPI MOSI; </p>
+   <p>2.2.e VoCore2 SPI MOSI -> flash loader SPI MISO; </p>
+   <p>2.2.g VoCore2 SPI CS0 -> flash loader SPI CS; </p>
+   <p>2.2.h VoCore2 SPI CLK -> flash loader SPI CLOCK; </p>
+   <p>2.2.i VoCore2 PORST -> VoCore2 GND; (keep VoCore2 in reset mode) </p>
+   <p>2.2.j now, download then send "Flash Image" to VoCore2.2.</p>
+   <p>2.2.k remove wires, connect VoCore2 back to power, everything should back normal.</p>
+   <p>3. option: better to upgrade your firmware after recover, Flash Image is out of date.</p>
   </div>
 
   <hr/>

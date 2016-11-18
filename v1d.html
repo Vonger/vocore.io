@@ -129,6 +129,23 @@
    <p>(2.b) system upgrade VoCore nor flash[operate in VoCore]: sysupgrade /tmp/vocore.bin firmware</p>
    <p>(3) wait until mtd done, reboot your VoCore.</p>
    <p><b>note</b>: if you want set your VoCore back to first time boot up, call "firstboot" in console.</p>
+   <hr/>
+
+   <h4>Fix Bricked VoCore</h4>
+   <p>1. connect your VoCore to computer through TTL, please read manual for detail.</p>
+   <p><b>note</b>: new VoCore + Dock has a USB2TTL on board, you can connect through microUSB and your PC USB port directly.</p>
+   <p>2. open tty tools(must have kermit protocol), such as kermit, ckermit. </p>
+   <p>3. power up your VoCore, once you find: "Press 'x' to active console", press 'x', into uboot console.</p>
+   <p>4. call 'loadb', then send the bin file through TTL by kermit.</p>
+   <p><b>note</b>: kermit: after 'loadb', press Ctrl and '\' same time then press 'c', you will switch to kermit command console.</p>
+   <p>5. send upgrade firmware to VoCore, after that, back to VoCore uboot console.</p>
+   <p><b>note</b>: kermit: call "send path/to/your/upgrade/file/on/pc.bin" to send firmware, around 10 minutes, once it finished, call 'c' back to console.</p>
+   <p>6. erase current firmware on VoCore.</p>
+   <p><b>note</b>: kermit: call "erase linux", wait 15~20 seconds to finish.</p>
+   <p>7. copy firmware to flash.</p>
+   <p><b>note</b>: kermit: call "cp.linux [hex size]", hex size is your firmware size in hex format, for example if its size is 3,145,732 bytes it should be 'cp.linux 300004'.</p>
+   <p><b>note</b>: kermit: call 'cp.linux' might report error for wrong file size, please call "tftpboot" then Ctrl + C immediately, aftert that do "cp.linux [hex size]" again, this will clear the wrong file size.</p>
+   <p>8. around 10~12 seconds, firmware uploaded, call "reset" to reboot your VoCore, your VoCore will work again.</p>
   </div>
 
   <hr/>
