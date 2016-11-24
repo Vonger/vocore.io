@@ -58,6 +58,106 @@
    <p>VoCore2 is a successor of VoCore, make it more fast, stable, but still same size.</p>
 
    <center><img src="img/v2/v2.pins.png" height="600"></img></center>
+   <center><h4><span class="label label-default">pin id is same as the one on MT76x8 datasheet in source</span></h4></center>
+
+   <table class="table table-bordered table-striped">
+    <thead><tr><th>Left</th><th>Name</th><th>Mux</th><th>Note</th></tr></thead>
+    <tbody>
+     <tr><th class=text-nowrap scope=row>-</th><td>+3.3VO</td><td>+3.3V output</td><td>max output current 100mA</td></tr>
+     <tr><th class=text-nowrap scope=row>30</th><td>TXD0</td><td>GPIO12, UART0 Lite TXD</td><td>3.3V</td></tr>
+     <tr><th class=text-nowrap scope=row>31</th><td>RXD0</td><td>GPIO13, UART0 Lite RXD</td><td>3.3V</td></tr>
+     <tr><th class=text-nowrap scope=row>29</th><td>REFCLK</td><td>GPIO11, reference clock</td><td></td></tr>
+     <tr><th class=text-nowrap scope=row>33</th><td>P0RP</td><td>10/100 PHY Port #0 RXP</td><td></td></tr>
+     <tr><th class=text-nowrap scope=row>34</th><td>P0RN</td><td>10/100 PHY Port #0 RXN</td><td></td></tr>
+     <tr><th class=text-nowrap scope=row>35</th><td>P0TP</td><td>10/100 PHY Port #0 TXP</td><td></td></tr>
+     <tr><th class=text-nowrap scope=row>36</th><td>P0TN</td><td>10/100 PHY Port #0 TXN</td><td></td></tr>
+     <tr><th class=text-nowrap scope=row>43</th><td>TXD2</td><td>10/100 PHY Port #1 TXN, GPIO15, PWM Channel, SPI Slave Clock</td><td></td></tr>
+     <tr><th class=text-nowrap scope=row>44</th><td>RXD2</td><td>10/100 PHY Port #1 TXP, GPIO14, PWM Channel, SPI Slave Chip Select</td><td></td></tr>
+     <tr><th class=text-nowrap scope=row>40</th><td>PWM0</td><td>10/100 PHY Port #1 RXN, GPIO17, UART2 Lite TXD, SPI Slave MOSI</td><td>4.7K pull down to GND</td></tr>
+     <tr><th class=text-nowrap scope=row>42</th><td>PWM1</td><td>10/100 PHY Port #1 RXP, GPIO16, UART2 Lite RXD, SPI Slave MISO</td><td></td></tr>
+     <tr><th class=text-nowrap scope=row>45</th><td>P2RP</td><td>10/100 PHY Port #2 RXP, GPIO18, PWM Channel</td><td></td></tr>
+     <tr><th class=text-nowrap scope=row>46</th><td>P2RN</td><td>10/100 PHY Port #2 RXN, GPIO19, PWM Channel</td><td></td></tr>
+     <tr><th class=text-nowrap scope=row>47</th><td>P2TP</td><td>10/100 PHY Port #2 TXP, GPIO20, PWM Channel</td><td></td></tr>
+     <tr><th class=text-nowrap scope=row>48</th><td>P2TN</td><td>10/100 PHY Port #2 TXN, GPIO21, PWM Channel</td><td></td></tr>
+     <tr><th class=text-nowrap scope=row>49</th><td>SD WP</td><td>GPIO, 10/100 PHY Port #3 RXN, SDXC Write Protect</td><td></td></tr>
+     <tr><th class=text-nowrap scope=row>50</th><td>SD CD</td><td>GPIO, 10/100 PHY Port #3 RXP, SDXC Card Detect</td><td></td></tr>
+    </tbody>
+   </table>
+
+   <table class="table table-bordered table-striped">
+    <thead><tr><th>Top</th><th>Name</th><th>Mux</th><th>Note</th></tr></thead>
+    <tbody>
+     <tr><th class=text-nowrap scope=row>-</th><td>GND</td><td>Groud</td><td></td></tr>
+     <tr><th class=text-nowrap scope=row>28</th><td>SPI CS0</td><td>GPIO10, SPI Master Chip Select 0</td><td>4.7K pull up to 3.3V</td></tr>
+     <tr><th class=text-nowrap scope=row>25</th><td>SPI CLK</td><td>GPIO7, SPI Master Clock</td><td>4.7K pull up to 3.3V</td></tr>
+     <tr><th class=text-nowrap scope=row>26</th><td>SPI MISO</td><td>GPIO9, SPI Master In Slave Out</td><td></td></tr>
+     <tr><th class=text-nowrap scope=row>27</th><td>SPI MOSI</td><td>GPIO8, SPI Master Out Slave In</td><td>4.7K pull down to GND</td></tr>
+     <tr><th class=text-nowrap scope=row>24</th><td>SPI CS1</td><td>GPIO6, SPI Master Chip Select 1</td><td>4.7K pull down to GND</td></tr>
+     <tr><th class=text-nowrap scope=row>21</th><td>I2C SD</td><td>GPIO5, I2C Data</td><td>4.7K pull up to 3.3V</td></tr>
+     <tr><th class=text-nowrap scope=row>20</th><td>I2C CLK</td><td>GPIO4, I2C Clock</td><td>4.7K pull up to 3.3V</td></tr>
+     <tr><th class=text-nowrap scope=row>19</th><td>I2S CLK</td><td>GPIO3, I2S Bit Clock</td><td></td></tr>
+     <tr><th class=text-nowrap scope=row>18</th><td>I2S WS</td><td>GPIO2, I2S L/R Clock</td><td></td></tr>
+     <tr><th class=text-nowrap scope=row>16</th><td>I2S SDI</td><td>GPIO0, I2S Data In</td><td></td></tr>
+     <tr><th class=text-nowrap scope=row>17</th><td>I2S SDO</td><td>GPIO1, I2S Data Out</td><td>4.7K pull down to GND</td></tr>
+    </tbody>
+   </table>
+
+   <table class="table table-bordered table-striped">
+    <thead><tr><th>Right</th><th>Name</th><th>Mux</th><th>Note</th></tr></thead>
+    <tbody>
+     <tr><th class=text-nowrap scope=row>-</th><td>GND</td><td>Ground</td><td></td></tr>
+     <tr><th class=text-nowrap scope=row>148</th><td>RXD1</td><td>GPIO12, UART1 Lite RXD</td><td>3.3V</td></tr>
+     <tr><th class=text-nowrap scope=row>147</th><td>TXD1</td><td>GPIO13, UART1 Lite TXD</td><td>3.3V</td></tr>
+     <tr><th class=text-nowrap scope=row>141</th><td>GPIO41</td><td>GPIO41, JTAG TMS</td><td>JTAG needs 10K pull up, R9 -> R6</td></tr>
+     <tr><th class=text-nowrap scope=row>140</th><td>GPIO40</td><td>GPIO40, JTAG Clock</td><td>JTAG needs 10K pull up, R9 -> R6</td></tr>
+     <tr><th class=text-nowrap scope=row>139</th><td>GPIO39</td><td>GPIO39, JTAG Reset</td><td>JTAG needs 10K pull up, R9 -> R6</td></tr>
+     <tr><th class=text-nowrap scope=row>143</th><td>GPIO43</td><td>GPIO43, JTAG TDO</td><td>JTAG needs 10K pull up, R9 -> R6</td></tr>
+     <tr><th class=text-nowrap scope=row>142</th><td>GPIO42</td><td>GPIO42, JTAG TDI</td><td>JTAG needs 10K pull up, R9 -> R6</td></tr>
+     <tr><th class=text-nowrap scope=row>138</th><td>RST</td><td>Reset, touch GND to reset</td><td></td></tr>
+     <tr><th class=text-nowrap scope=row>137</th><td>GPIO38</td><td>GPIO38</td><td></td></tr>
+     <tr><th class=text-nowrap scope=row>136</th><td>GPIO37</td><td>GPIO37</td><td></td></tr>
+     <tr><th class=text-nowrap scope=row>-</th><td>+3.3VO</td><td>+3.3V output</td><td>max output current 100mA</td></tr>
+     <tr><th class=text-nowrap scope=row>-</th><td>GND</td><td>Ground</td><td></td></tr>
+     <tr><th class=text-nowrap scope=row>-</th><td>GND</td><td>Ground</td><td></td></tr>
+     <tr><th class=text-nowrap scope=row>-</th><td>+1.8VO</td><td>+1.8V output</td><td>max output current 100mA</td></tr>
+    </tbody>
+   </table>
+
+   <table class="table table-bordered table-striped">
+    <thead><tr><th>Bottom</th><th>Name</th><th>Mux</th><th>Note</th></tr></thead>
+    <tbody>
+     <tr><th class=text-nowrap scope=row>-</th><td>GND</td><td>Ground</td><td></td></tr>
+     <tr><th class=text-nowrap scope=row>51</th><td>SD D1</td><td>GPIO, 10/100 PHY Port #3 RXP, SDXC Data Bit1</td><td></td></tr>
+     <tr><th class=text-nowrap scope=row>52</th><td>SD D0</td><td>GPIO, 10/100 PHY Port #3 RXN, SDXC Data Bit0</td><td></td></tr>
+     <tr><th class=text-nowrap scope=row>54</th><td>SD CLK</td><td>GPIO, 10/100 PHY Port #4 RXP, SDXC Clock</td><td></td></tr>
+     <tr><th class=text-nowrap scope=row>55</th><td>SD CMD</td><td>GPIO, 10/100 PHY Port #4 RXN, SDXC Command</td><td></td></tr>
+     <tr><th class=text-nowrap scope=row>56</th><td>SD D3</td><td>GPIO, 10/100 PHY Port #4 TXP, SDXC Data Bit3</td><td></td></tr>
+     <tr><th class=text-nowrap scope=row>57</th><td>SD D2</td><td>GPIO, 10/100 PHY Port #4 TXN, SDXC Data Bit2</td><td></td></tr>
+     <tr><th class=text-nowrap scope=row>-</th><td>+3.3VO</td><td>+3.3V output</td><td>max output current 100mA</td></tr>
+     <tr><th class=text-nowrap scope=row>61</th><td>USB DP</td><td>USB2.0 Data+</td><td></td></tr>
+     <tr><th class=text-nowrap scope=row>62</th><td>USB DM</td><td>USB2.0 Data-</td><td></td></tr>
+     <tr><th class=text-nowrap scope=row>-</th><td>+5.0VI</td><td>+5.0V output</td><td>min input current 500mA</td></tr>
+     <tr><th class=text-nowrap scope=row>-</th><td>+5.0VI</td><td>+5.0V output</td><td>min input current 500mA</td></tr>
+     <tr><th class=text-nowrap scope=row>-</th><td>GND</td><td>Ground</td><td></td></tr>
+     <tr><th class=text-nowrap scope=row>-</th><td>GND</td><td>Ground</td><td></td></tr>
+    </tbody>
+   </table>
+
+
+   <table class="table table-bordered table-striped">
+    <thead><tr><th>Middle</th><th>Name</th><th>Mux</th><th>Note</th></tr></thead>
+    <tbody>
+     <tr><th class=text-nowrap scope=row>133</th><td>PCI CKP</td><td>PCI Express External Reference Clock Output+</td><td></td></tr>
+     <tr><th class=text-nowrap scope=row>132</th><td>PCI CKN</td><td>PCI Express External Reference Clock Output-</td><td></td></tr>
+     <tr><th class=text-nowrap scope=row>130</th><td>PCI RXN</td><td>PCI Express Differential Receiver RX-</td><td></td></tr>
+     <tr><th class=text-nowrap scope=row>129</th><td>PCI RXP</td><td>PCI Express Differential Receiver RX+</td><td></td></tr>
+     <tr><th class=text-nowrap scope=row>-</th><td>GND</td><td>Ground</td><td></td></tr>
+     <tr><th class=text-nowrap scope=row>127</th><td>PCI TXP</td><td>PCI Express Differential Transmit TX+</td><td></td></tr>
+     <tr><th class=text-nowrap scope=row>126</th><td>PCI TXN</td><td>PCI Express Differential Transmit TX-</td><td></td></tr>
+     <tr><th class=text-nowrap scope=row>135</th><td>PCI RST</td><td>PCI Express Device Reset</td><td></td></tr>
+    </tbody>
+   </table>
+
    <center><img src="img/v2/v2.size.png" height="600"></img></center>
 
    <h3>Tutorials</h3>
