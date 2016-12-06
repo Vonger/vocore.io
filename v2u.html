@@ -56,7 +56,7 @@
    <p><b>Flash Image: </b><a href="http://vonger.cn/misc/vocore2/ultimate.16m.img">Download</a></p>
 
    <h3>Details</h3>
-   <p>Super small router but contails microSD, USB2.0, A/D, D/A, Ethernet Port, audio record/play, up to 300Mbps wireless transfer speed, low power consume. It is a perfect portable router.</p>
+   <p>Super small router but contains microSD, USB2.0, A/D, D/A, Ethernet Port, audio record/play, up to 300Mbps wireless transfer speed, low power consume. It is a perfect portable router.</p>
 
    <center><img src="img/v2/v2.pins.png" height="600"></img></center>
    <center><h4><span class="label label-default">read more from <a href="v2.html">VoCore2</a> description</span></h4></center>
@@ -163,14 +163,14 @@
    <h4>Enable another antenna on VoCore2(standard version only)</h4>
    <p>On VoCore2 standard version we have another antenna, default it is power off status(to avoid two antenna cross-talk to each other), if you have a external U.FL antenna, you can connect it to VoCore2, convert it from a portable router to a full function 802.11n router, maxmize its speed and signal strength.</p>
    <p><b>note</b>: suggest distance between two antennas is > 6cm</p>
-   <p>1. download a <a href="/misc/vocore2/tools/factory">factory setting read/write tool</a> to /tmp/ on VoCore, chmod +x /tmp/factory.</p>
+   <p>1. download a <a href="http://vonger.cn/misc/vocore2/tools/factory">factory setting read/write tool</a> to /tmp/ on VoCore, chmod +x /tmp/factory.</p>
    <p>2. we run the following script to enable second antenna.</p>
    <p>enable second antenna: </p>
    <p><code>/tmp/factory 0x34 0x22 > /tmp/mtd2.tmp</code></p>
-   <p><code>mtd -e facotry write /tmp/mtd2.tmp factory</code></p>
+   <p><code>mtd -e factory write /tmp/mtd2.tmp factory</code></p>
    <p>disable second antenna: </p>
    <p><code>/tmp/factory 0x34 0x11 > /tmp/mtd2.tmp</code></p>
-   <p><code>mtd -e facotry write /tmp/mtd2.tmp factory</code></p>
+   <p><code>mtd -e factory write /tmp/mtd2.tmp factory</code></p>
    <p>3. restart wireless driver is necessary(better to reboot). </p>
    <p>call "wifi" or "reboot" on VoCore2.</p>
    <hr/>
