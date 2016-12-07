@@ -202,16 +202,27 @@
    <p>uci commit</p>
    <hr/>
 
-   <h4>Develop for VoCore2</h4>
-   <p>1. Download and install VirtualBox(it supports Ubuntu/Windows/MacOS)</p>
-   <p>2. Download Ubuntu, install on your VirtualBox.</p>
-   <p>3. In virtualbox, we will need install some packages to compile openwrt:</p>
+   <h4>Compile your App for VoCore2</h4>
+   <p>1. Install Ubuntu 14.04 64bit Server to Virtual Machine(such as VirtualBox, check this <a href="https://www.youtube.com/watch?v=NZnWPbmbb6c">video [youtube]</a>).</p>
+   <p>2. Download <a herf="http://vonger.cn/misc/vocore2/toolchain.tar.bz2">toolchain</a> to the VM, uncompress it.</p>
+   <p>3. Make a simple code in C, compile it in command line.</p>
+   <code>/path.to.your.toolchain/bin/mipsel-openwrt-linux-gcc -g yourcode.c -o yourcode</code>
+   <p>4. After this, you will get an executable file named "yourcode", use scp, copy it to your VoCore2</p>
+   <p>5. In VoCore2, call <code>chmod +x yourcode</code>, after that, you can run it in VoCore2, call <code>./yourcode</code></p>
+   <hr/>
+
+
+   <h4>Compile openwrt for VoCore2</h4>
+   <p><b>note</b>: we still working on this part.</p>
+   <p>1. Install Ubuntu 14.04 64bit Server to Virtual Machine(such as VirtualBox, check this <a href="https://www.youtube.com/watch?v=NZnWPbmbb6c">video [youtube]</a>).</p>
+   <p>2. In virtualbox, we will need install some packages to compile openwrt:</p>
    <p>sudo apt-get install gcc g++ binutils patch bzip2 flex bison make autoconf gettext texinfo unzip sharutils subversion libncurses5-dev ncurses-term zlib1g-dev</p>
-   <p>4. Download openwrt.</p>
-   <p>git clone -b chaos_calmer git://github.com/openwrt/openwrt.git</p>
-   <p>5. configure openwrt in menu, choose MT7688/28/VoCore2 in menu.</p>
+   <p>3. Download openwrt.</p>
+   <p>git clone -b VoCore2 https://github.com/Vonger/openwrt-chaoscalmer.git</p>
+   <p><b>note</b>: later we will merge to git clone -b chaos_calmer git://github.com/openwrt/openwrt.git</p>
+   <p>4. configure openwrt in menu, choose MT7688/28/VoCore2 in menu.</p>
    <p>make menuconfig</p>
-   <p>6. call "make", start the make process</p>
+   <p>5. call "make", start the make process</p>
    <p><b>note</b>: <a href="https://www.youtube.com/watch?v=NZnWPbmbb6c">video tutorial [youtube]</a></p>
    <hr/>
 
