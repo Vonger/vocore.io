@@ -55,6 +55,7 @@
    <p><b>Firmware: </b><a href="http://vonger.cn/misc/vocore2/ultimate.20161114.bin">Download</a></p>
    <p><b>Flash Image: </b><a href="http://vonger.cn/misc/vocore2/ultimate.16m.img">Download</a></p>
    <p><b>Toolchain: </b><a href="http://vonger.cn/misc/vocore2/toolchain.tar.bz2">Download (Ubuntu 14.04 x64)</a></p>
+   <p><b>Datasheet: </b><a href="http://vonger.cn/misc/vocore2/datasheet.zip">Download</a></p>
 
    <h3>Details</h3>
    <p>Super small router but contains microSD, USB2.0, A/D, D/A, Ethernet Port, audio record/play, up to 300Mbps wireless transfer speed, low power consume. It is a perfect portable router.</p>
@@ -175,7 +176,7 @@
    <h4>Enable another antenna on VoCore2(standard version only)</h4>
    <p>On VoCore2 standard version we have another antenna, default it is power off status(to avoid two antenna cross-talk to each other), if you have a external U.FL antenna, you can connect it to VoCore2, convert it from a portable router to a full function 802.11n router, maxmize its speed and signal strength.</p>
    <p><b>note</b>: suggest distance between two antennas is > 6cm</p>
-   <p>1. download a <a href="http://vonger.cn/misc/vocore2/tools/factory">factory setting read/write tool</a> to /tmp/ on VoCore, chmod +x /tmp/factory.</p>
+   <p>1. download a <a href="http://vonger.cn/misc/vocore2/tools/factory.zip">factory setting read/write tool</a> to /tmp/ on VoCore, chmod +x /tmp/factory.</p>
    <p>2. we run the following script to enable second antenna.</p>
    <p>enable second antenna: </p>
    <p><code>/tmp/factory 0x34 0x22 > /tmp/mtd2.tmp</code></p>
@@ -191,6 +192,16 @@
    <p>1. use a paper knife open the box(1-4).</p>
    <p>2. you can simply use a pencel push it out from ethernet port side(5).</p>
    <center><img class="thumbnail" src="img/v2u/v2u.box.jpg" height="260"></center>
+   </hr>
+
+   <h4>Directly write to memory/register</h4>
+   <p>We made a simple tool for this, <a href="http://vonger.cn/misc/vocore2/tools/mem.zip">download here</a>, its name is "mem", put the executable file it to /bin/ in VoCore2.</p>
+   <p>1. read from register/memory, for example: 0x10000060, pin control register</p>
+   <p>call <code>mem 0x10000060</code>, this will show upto 64bytes.</p>
+   <p>2. write to register/memory, must in 32bits(4bytes)</p>
+   <p>call <code>mem 0x10000064 0x05540555</code></p>
+   <p>here is an example bash script flash the LED every second on VoCore2 </p>
+   <code>mem 0x10000064 0x05540555; mem 0x10000604 0x1000; while [ 1 ]; do mem 0x10000634 0x1000; sleep 1; mem 0x10000644 0x1000; sleep 1; done</code>
 
   </div>
 
