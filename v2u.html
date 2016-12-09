@@ -13,6 +13,7 @@
 <body>
 
   <center><h1>VoCore2 Ultimate</h1></center>
+  <center><h3><small>The Coin-sized Linux Computer with external equipment and device</small></h3></center>
   <div class="container">
    <center><img class="thumbnail" src="img/v2u/v2u.head.jpg" width="100%"></center>
   </div>
@@ -156,20 +157,20 @@
    <hr/>
 
    <h4>Fix Bricked VoCore2 (uboot dead)</h4>
-   <p>1. You must have another VoCore/VoCore2 or one flash loader and six wires.</p>
-   <p>2.1 using another VoCore/VoCore2 to recover your bricked VoCore2.</p>
-   <p>2.1.a coming soon...</p>
-   <p>2.2 using flash loader to recover your bricked VoCore2.</p>
-   <p>2.2.a disconnect VoCore2 from power; </p>
-   <p>2.2.b connect VoCore2 GND to flash loader GND; </p>
-   <p>2.2.c VoCore2 +3.3V to flash loader +3.3V; </p>
-   <p>2.2.d VoCore2 SPI MISO -> flash loader SPI MOSI; </p>
-   <p>2.2.e VoCore2 SPI MOSI -> flash loader SPI MISO; </p>
-   <p>2.2.g VoCore2 SPI CS0 -> flash loader SPI CS; </p>
-   <p>2.2.h VoCore2 SPI CLK -> flash loader SPI CLOCK; </p>
-   <p>2.2.i VoCore2 PORST -> VoCore2 GND; (keep VoCore2 in reset mode) </p>
-   <p>2.2.j now, download then send "Flash Image" to VoCore2.2.</p>
-   <p>2.2.k remove wires, connect VoCore2 back to power, everything should back normal.</p>
+   <p>1. prepare <b>another VoCore/VoCore2</b> OR <b>a flash loader</b> and six wires.</p>
+   <p>2.a. using another VoCore/VoCore2 to recover your bricked VoCore2.</p>
+   <p> coming soon...</p>
+   <p>2.b. using flash loader to recover your bricked VoCore2.</p>
+   <p>2.b.1 disconnect VoCore2 from power; </p>
+   <p>2.b.2 connect VoCore2 GND to flash loader GND; </p>
+   <p>2.b.3 VoCore2 +3.3V to flash loader +3.3V; </p>
+   <p>2.b.4 VoCore2 SPI MISO -> flash loader SPI MOSI; </p>
+   <p>2.b.5 VoCore2 SPI MOSI -> flash loader SPI MISO; </p>
+   <p>2.b.6 VoCore2 SPI CS0 -> flash loader SPI CS; </p>
+   <p>2.b.7 VoCore2 SPI CLK -> flash loader SPI CLOCK; </p>
+   <p>2.b.8 VoCore2 PORST -> VoCore2 GND; (keep VoCore2 in reset mode) </p>
+   <p>2.b.9 now, download then send "Flash Image" to VoCore2.2.</p>
+   <p>2.b.10 remove wires, connect VoCore2 back to power, everything should back normal.</p>
    <p>3. option: better to upgrade your firmware after recover, Flash Image is out of date.</p>
    <hr/>
 
@@ -200,7 +201,7 @@
    <p>example: <code>mem 0x10000060</code></p>
    <p>2. write to register/memory, must in 32bits(4bytes)</p>
    <p>example: <code>mem 0x10000064 0x05540555</code></p>
-   <p>here is an example bash script flash the LED every second on VoCore2 </p>
+   <p>here is an example bash script flash the LED every second on VoCore2.(Ctrl+C stop it) </p>
    <code>mem 0x10000064 0x05540555; mem 0x10000604 0x1000; while [ 1 ]; do mem 0x10000634 0x1000; sleep 1; mem 0x10000644 0x1000; sleep 1; done</code>
 
   </div>
