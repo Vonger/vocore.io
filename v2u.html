@@ -13,9 +13,9 @@
 <body>
 
   <center><h1>VoCore2 Ultimate</h1></center>
-  <center><h3><small>The Coin-sized Linux Computer with external equipment and device</small></h3></center>
+  <center><h3><small>The Coin-sized Linux Computer with external equipment and interface</small></h3></center>
   <div class="container">
-   <center><img class="thumbnail" src="img/v2u/v2u.head.jpg" width="100%"></center>
+   <center><img class="thumbnail" src="img/v2u/v2u.head.jpg" width="84%"></center>
   </div>
 
   <hr/>
@@ -61,10 +61,10 @@
    <h3>Details</h3>
    <p>Super small router but contains microSD, USB2.0, A/D, D/A, Ethernet Port, audio record/play, up to 300Mbps wireless transfer speed, low power consume. It is a perfect portable router.</p>
 
-   <center><img src="img/v2/v2.pins.png" width="100%"></img></center>
+   <center><img src="img/v2/v2.pins.png" width="84%"></img></center>
    <center><h4><span class="label label-default">read more from <a href="v2.html">VoCore2</a> description</span></h4></center>
-   <center><img src="img/v2/v2.size.png" width="100%"></img></center>
-   <center><img src="img/v2u/v2u.pins.png" width="100%"></img></center>
+   <center><img src="img/v2/v2.size.png" width="84%"></img></center>
+   <center><img src="img/v2u/v2u.pins.png" width="84%"></img></center>
 
 
    <h3>Tutorials</h3>
@@ -76,6 +76,7 @@
    <p>3. connect to VoCore2 hotspot.</p>
    <p>4.a using ssh or putty or similar tools login to VoCore2(root/vocore).</p>
    <p>4.b using internal USB2TTL, it is driver free, once you connect it to your computer by USB, you will find a serial port in your device list, connect to it. </p>
+   <p><b>note</b>: for windows(>xp, support usb cdc), you can find USB2TTL device at your device manager; for Linux/MacOS, you will find USB2TTL device at /dev/tty.usbmodem_____1</p>
    <p><b><font color="red">IMPORTANT</font></b> : <code>UART speed is 115200bps, 8bits, no even, 1 stop bit</code></p>
    <hr/>
 
@@ -146,9 +147,9 @@
 
    <h4>Fix Bricked VoCore2 (uboot alive)</h4>
    <p>1. connect your VoCore to computer through microUSB, keep your VoCore in reset mode.</p>
-   <p><b>note:</b>: to keep VoCore in reset mode, you need to connect PORST and GND by wire, use this step to wait until USB2TTL ready.</p>
+   <p><b>note:</b>: to keep VoCore in reset mode, you need to connect RST and GND by wire, use this step to wait until USB2TTL ready.</p>
    <p>2. open tty tools(must have kermit protocol), such as kermit, ckermit. </p>
-   <p><b>note:</b>: VoCore2 GD32 USB2TTL is driver free, but have to wait 6~8 seconds until it is ready, once it is ready, we can disconnect PORST and GND, then it is able to boot normally.</p>
+   <p><b>note:</b>: VoCore2 GD32 USB2TTL is driver free, but have to wait 6~8 seconds until it is ready, once it is ready, we can disconnect RST and GND, then it is able to boot normally.</p>
    <p>3. power up your VoCore, once you find: "7: Entr boot command line interface.", press '7'.</p>
    <p><b>note</b>: VoCore will show "## Ready for binary (kermit) download to 0x80100000 at 115200 bps..."</p>
    <p><b>note</b>: kermit: press Ctrl and '\' same time then press 'c', you will switch to kermit command console.</p>
@@ -169,7 +170,7 @@
    <p>2.b.5 VoCore2 SPI MOSI -> flash loader SPI MISO; </p>
    <p>2.b.6 VoCore2 SPI CS0 -> flash loader SPI CS; </p>
    <p>2.b.7 VoCore2 SPI CLK -> flash loader SPI CLOCK; </p>
-   <p>2.b.8 VoCore2 PORST -> VoCore2 GND; (keep VoCore2 in reset mode) </p>
+   <p>2.b.8 VoCore2 RST -> VoCore2 GND; (keep VoCore2 in reset mode) </p>
    <p>2.b.9 now, download then send "Flash Image" to VoCore2.2.</p>
    <p>2.b.10 remove wires, connect VoCore2 back to power, everything should back normal.</p>
    <p>3. option: better to upgrade your firmware after recover, Flash Image is out of date.</p>
@@ -193,7 +194,7 @@
    <h4>Open the plastic shell (Ultimate Version)</h4>
    <p>1. use a paper knife open the box(1-4).</p>
    <p>2. you can simply use a pencil push it out from ethernet port side(5).</p>
-   <center><img class="thumbnail" src="img/v2u/v2u.box.jpg" width="100%"></center>
+   <center><img class="thumbnail" src="img/v2u/v2u.box.jpg" width="84%"></center>
    <hr/>
 
    <h4>Directly write to memory/register</h4>
