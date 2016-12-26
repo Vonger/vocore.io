@@ -99,7 +99,7 @@
    <p>uci set network.wwan=interface</p>
    <p>uci set network.wwan.proto=dhcp</p>
    <p>uci commit</p>
-   <p><b>note</b>: you might need to setup firewall to enable access to internet through your hotspot.</p>
+   <p>4. you need to setup firewall to enable access to internet through your hotspot.</p>
    <p>uci del_list firewall.@zone[1].network=wwan</p>
    <p>uci add_list firewall.@zone[1].network=wwan</p>
    <p>uci set firewall.@zone[1].input=ACCEPT</p>
