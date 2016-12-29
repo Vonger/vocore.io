@@ -52,7 +52,7 @@
    <h3>Sources</h3>
    <p><b>Hardware: </b><a href="http://vonger.cn/misc/vocore2/source.zip">Download</a></p>
 
-   <h3>Downloads</h3>
+   <h3 name="download">Downloads</h3>
    <p><b>Firmware: </b><a href="http://vonger.cn/misc/vocore2/20161224.bin">Download(2016.12.24)</a>&nbsp;&nbsp;&nbsp;<span class="label label-success">md5:2a6b06ee7ec7b3fa6fd3e9eeb5c83531</span></p>
    <p><b>Flash Image: </b><a href="http://vonger.cn/misc/vocore2/ultimate.16m.img">Download</a>&nbsp;&nbsp;&nbsp;<span class="label label-success">md5:f4c527a1e563d0ad7ef9ab0b5e0b35c6</span></p>
    <p><b>Toolchain: </b><a href="http://vonger.cn/misc/vocore2/toolchain.tar.bz2">Download (Ubuntu 14.04 x64)</a></p>
@@ -80,7 +80,17 @@
    <p><b><font color="red">IMPORTANT</font></b> : <code>UART speed is 115200bps, 8bits, no even, 1 stop bit</code></p>
    <hr/>
 
+   <h4>Connect to VoCore2 Console through its MicroUSB Port</h4>
+   <p>VoCore2 Ultimate, VoCore2 Audio have on board USB2TTL, you can directly connect its microUSB and your computer.</p>
+   <p><b>note</b>: early windows except win10, you might need install <a href="http://vonger.cn/misc/vocore2/tools/usb2ttl.zip">usb cdc driver</a>.<p>
+   <p>macos: connect VoCore2 to your computer, you will find it in /dev/tty.usb_______1, then you can use kermit or screen connect to it.</p>
+   <p>linux: connect VoCore2 to your computer, you will find it in /dev/ttyACM0, then you can use kermit or screen or minicom connect to it.</p>
+   <p>windows: connect VoCore2 to your computer, you will find it in your device manager, get serial port in its property, normally it is COM3 or COM4, then use putty or SecureCRT connect to it.</p>
+   <p>usb2ttl parameter: 115200bps, 8 data bits, no even-odd check, 1 stop bit.</p>
+   <hr/>
+
    <h4>Setup AP + STA Mode</h4>
+   <p><b>note</b>: LuCI interface(the web interface) has bugs, better to use console command.</p>
    <p>1. connect to your VoCore.</p>
    <p>2. run command in console:</p>
    <p>uci set wireless.sta.ssid=[HOME AP SSID]</p>
@@ -88,18 +98,15 @@
    <p>uci set wireless.sta.network=wwan</p>
    <p>uci set wireless.sta.disabled=0</p>
    <p>uci commit</p>
+   <p>3. set sta to disabled, so next boot if your hotspot disappear, you still able to connect to VoCore2.</p>
+   <p><b>note:</b>: put the following code to /etc/rc.local</p>
+   <p>uci set wireless.sta.disabled=0</p>
+   <p>uci commit</p>
    <p>/etc/init.d/network restart</p>
-   <p><b>note</b>: better to set sta to disabled, so next boot if you VoCore2 can not connect to your home ap, you will still able to connect to VoCore2 hotspot.</p>
    <p>sleep 10</p>
    <p>uci set wireless.sta.disabled=1</p>
    <p>uci commit</p>
-   <p>3. wait around 10 seconds, your VoCore is in AP+STA mode</p>
-   <p><b>note</b>: you might need to setup network to enable dhcp(get ip from your hotspot).</p>
-   <p>uci delete network.wwan</p>
-   <p>uci set network.wwan=interface</p>
-   <p>uci set network.wwan.proto=dhcp</p>
-   <p>uci commit</p>
-   <p>4. you need to setup firewall to enable access to internet through your hotspot.</p>
+   <p>4. setup firewall to enable access internet through your hotspot.</p>
    <p>uci del_list firewall.@zone[1].network=wwan</p>
    <p>uci add_list firewall.@zone[1].network=wwan</p>
    <p>uci set firewall.@zone[1].input=ACCEPT</p>
@@ -108,7 +115,31 @@
    <p>uci set firewall.@zone[1].masq=1</p>
    <p>uci set firewall.@zone[1].mtu_fix=1</p>
    <p>uci commit</p>
+   <p>5. enable dhcp then it will get ip from your hotspot.</p>
+   <p>uci delete network.wwan</p>
+   <p>uci set network.wwan=interface</p>
+   <p>uci set network.wwan.proto=dhcp</p>
+   <p>uci commit</p>
+   <p>6. reboot VoCore2 or call "/etc/init.d/network restart".</p>
+   <p>7. wait a moment, now it is in AP+STA mode</p>
    <p><b>note</b>: more information please check Vonger's Blog: <a href="http://vonger.cn/?p=2691">VoCore2 AP + STA</a></p>
+   <hr/>
+
+   <h4>Connect Speaker to VoCore2 to Play Music</h4>
+   <p><b>note</b>: please update your firmware to latest version.</p>
+   <p>1. download a <a href="http://vonger.cn/misc/vocore2/tools/test.mp3">music</a> to VoCore2 memory(put it in folder /tmp/).</p>
+   <p>2. connect a standard 3.5mm headphone or speaker to VoCore2.</p>
+   <p>3. in VoCore2 console call "madplay /tmp/test.mp3", the music will be play in seconds.</p>
+   <p><b>note</b>: this is used to test audio, we will update the audio driver to enable more features.</p>
+   <hr/>
+
+   <h4>Connect VoCore Camera to VoCore2(wireless camera)</h4>
+   <p><b>note</b>: please update your firmware to latest version.</p>
+   <p>1. connect usb camera to VoCore2.</p>
+   <p>2. now you find device at /dev/video0, /dev/video1.</p>
+   <p><b>note</b>: /dev/video0 is mjpeg stream, /dev/video1 is h264 stream.</p>
+   <p>3. run mjpg-streamer or setup in LuCI(web ui 192.168.61.1) -> MJPG-STREAMER.</p>
+   <p>4. now you can view the camera video in your browser at http://192.168.61.1:8080/?action=stream</p>
    <hr/>
 
    <h4>Compile your App for VoCore2</h4>
@@ -119,7 +150,6 @@
    <p>4. After this, you will get an executable file named "yourcode", use scp, copy it to your VoCore2</p>
    <p>5. In VoCore2, call <code>chmod +x yourcode</code>, after that, you can run it in VoCore2, call <code>./yourcode</code></p>
    <hr/>
-
 
    <h4>Compile openwrt for VoCore2</h4>
    <p><b>note</b>: we still working on this part.</p>
