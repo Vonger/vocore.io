@@ -114,10 +114,16 @@
     <div class="row">
       <center><h4><span class="label label-default">Click the icon for source, documentation and tutorials</span></h4></center>
       <div class="col-sm-4">
-	<a href="v2.html" target="_blank">
-	  <img class="img-circle" src="img/pic1.jpg" width="140" height="140">
-	</a>
-	<a href="v2.html"><h4 id="lbItem1">VoCore2</h4></a>
+	<a href="v2.html" target="_blank"><img id="imgItem1" class="img-circle" src="img/pic1.jpg" width="140" height="140"></a>
+	<h4><a id="lbItem1" href="v2.html">VoCore2 <span id="lbModName"></span></a>
+	 <!-- button class="btn btn-warning btn-model dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><b>MOD</b><span class="caret"></span></button-->
+	 <ul id="lstMod" class="dropdown-menu">
+	  <li><a><b></b><b>Board only</b> (basic, <span>$17.99</span>)<div path="img/pic1.jpg"></div></a></li>
+	  <li><a><b>+ USB Male Header</b> (+$2.50, total <span>$20.49</span>)<div path="img/pic1a.jpg"></div></a></li>
+	  <li><a><b>+ MicroSD Slot</b> (+$4.00, total <span>$21.99</span>)<div path="img/pic1b.jpg"></div></a></li>
+	  <li><a><b>+ USB &amp; MicroSD</b> (+$5.50, total <span>$24.49</span>)<div path="img/pic1c.jpg"></div></a></li>
+	 </ul>
+	</h4>
 	<p>Ship in 15 days.</p>
 	<p>Free Shipping Worldwide.</p>
         <div class="dropdown">
@@ -127,8 +133,7 @@
 	      <b id="lbPrice1">$17.99</b>
             </button>
 	    <button class="btn btn-default dropdown-toggle" type="button" id="dbCount1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-              &times; <b>0</b>
-              <span class="caret"></span>
+              &times; <b>0</b><span class="caret"></span>
             </button>
 	    <table id="tbCount1" class="table table-responsive dropdown-menu" aria-labelledby="dbCount1"></table>
 	  </div>
@@ -149,8 +154,7 @@
 	      <b id="lbPrice2">$44.99</b>
             </button>
 	    <button class="btn btn-default dropdown-toggle" type="button" id="dbCount2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-              &times; <b>0</b>
-              <span class="caret"></span>
+              &times; <b>0</b><span class="caret"></span>
             </button>
 	    <table id="tbCount2" class="table table-responsive dropdown-menu" aria-labelledby="dbCount2"></table>
           </div>
@@ -171,8 +175,7 @@
 	      <b id="lbPrice3">$39.99</b>
 	    </button>
 	    <button class="btn btn-default dropdown-toggle" type="button" id="dbCount3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-              &times; <b>0</b>
-              <span class="caret"></span>
+	      &times; <b>0</b><span class="caret"></span>
             </button>
 	    <table id="tbCount3" class="table table-responsive dropdown-menu" aria-labelledby="dbCount3"></table>
           </div>
@@ -192,8 +195,7 @@
 	 <b id="lbPrice4">$14.99</b>
 	</button>
 	<button class="btn btn-default dropdown-toggle" type="button" id="dbCount4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-	 &times; <b>0</b>
-	 <span class="caret"></span>
+	 &times; <b>0</b><span class="caret"></span>
 	</button>
 	<table id="tbCount4" class="table table-responsive dropdown-menu" aria-labelledby="dbCount4"></table>
        </div>
@@ -213,8 +215,7 @@
 	<b id="lbPrice5">$36.99</b>
        </button>
        <button class="btn btn-default dropdown-toggle" type="button" id="dbCount5" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-	&times; <b>0</b>
-	<span class="caret"></span>
+	&times; <b>0</b><span class="caret"></span>
        </button>
        <table id="tbCount5" class="table table-responsive dropdown-menu" aria-labelledby="dbCount5"></table>
       </div>
@@ -223,7 +224,7 @@
    </div><!-- /.row -->
 
     <div class="row">
-      <button id="btnCheckOut" class="col-xs-6 col-xs-offset-3 col-md-4 col-md-offset-4 btn btn-lg btn-success btn-checkout" data-toggle="modal" data-target="#mdCheckOut">
+      <button id="btnCheckOut" class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4 btn btn-lg btn-success btn-checkout" data-toggle="modal" data-target="#mdCheckOut">
 	<span class="glyphicon glyphicon-credit-card" aria-hidden=true></span>Checkout Here
       </button>
     </div>
@@ -303,7 +304,7 @@
 
   <div class="container">
    <div class="row">
-    <center><div class="input-group col-xs-6 col-md-4">
+    <center><div class="input-group col-xs-10 col-md-6">
      <span id="btnTrace" class="input-group-btn"><button class="btn btn-success" type="button"><span class="glyphicon glyphicon-screenshot" aria-hidden="true"></span>&nbsp;Trace Package</button></span>
      <input id="edTrace" type="text" class="form-control" placeholder="Type your order email here ..." aria-describedby="basic-addon1">
     </div></center>

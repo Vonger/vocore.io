@@ -81,17 +81,26 @@ color: #29a95c;
 }
 
 .tooltip.top .tooltip-arrow {
-    border-top-color: #5cb85c;
+  border-top-color: #5cb85c;
 }
 
 .tooltip.bottom .tooltip-arrow {
-    border-bottom-color: #5cb85c;
+  border-bottom-color: #5cb85c;
 }
 
 .btn .caret {
   margin-top: 8px;
   margin-left: 5px;
   float:right;
+}
+
+.btn-model {
+  font-size: 11px;
+  margin: 0px 0px 0px 10px;
+  padding: 0px 6px 0px 6px;
+  border-bottom-width: 0px;
+  border-top-width: 0px;
+  display: inline-block;
 }
 
 .glyphicon {
