@@ -214,6 +214,19 @@
    <p>uci commit</p>
    <hr/>
 
+   <h4>Upgrade VoCore2 Firmware</h4>
+   <p>1. download the latest firmware(not the flash image) in this page Download section.</p>
+   <p>2. connect to your VoCore hotspot, open browser view 192.168.1.1 or 192.168.61.1.</p>
+   <center><img class="thumbnail" src="img/v2/v2.update.jpg" width="84%"></center>
+   <p>3. LuCI console using username: root, password: vocore, click on "Login" (picture part 1).</p>
+   <p>4. select "System" -> "Backup/Flash Firmware" (picture part 2).</p>
+   <p>5. click on "Choose File", choose your downloaded firmware(again, not the flash image, picture part 3), then click "Flash Image".</p>
+   <p>6. it will upload the firmware to your VoCore2, takes a few seconds, check if the md5 matched. (picture part 4)</p>
+   <p>7. if everything ok, press "Process".</p>
+   <p>8. normally it will take 2~3 minutes, please wait until it is ready.</p>
+   <p><b>note</b>: if power cut off during the upgrade process, your VoCore2 will brick, check "Fix Bricked VoCore2"</p>
+   <hr/>
+
    <h4>Compile your App for VoCore2</h4>
    <p>1. Install Ubuntu 14.04 64bit Server to Virtual Machine(such as VirtualBox, check this <a href="https://www.youtube.com/watch?v=NZnWPbmbb6c">video [youtube]</a>).</p>
    <p>2. Download <a href="http://vonger.cn/misc/vocore2/toolchain.tar.bz2">toolchain</a> to the VM, uncompress it.</p>

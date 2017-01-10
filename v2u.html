@@ -126,15 +126,28 @@
    <p><b>note</b>: more information please check Vonger's Blog: <a href="http://vonger.cn/?p=2691">VoCore2 AP + STA</a></p>
    <hr/>
 
+   <h4>Upgrade VoCore2 Firmware</h4>
+   <p>1. download the latest firmware(not the flash image) in this page Download section.</p>
+   <p>2. connect to your VoCore hotspot, open browser view 192.168.1.1 or 192.168.61.1.</p>
+   <center><img class="thumbnail" src="img/v2/v2.update.jpg" width="84%"></center>
+   <p>3. LuCI console using username: root, password: vocore, click on "Login" (picture part 1).</p>
+   <p>4. select "System" -> "Backup/Flash Firmware" (picture part 2).</p>
+   <p>5. click on "Choose File", choose your downloaded firmware(again, not the flash image, picture part 3), then click "Flash Image".</p>
+   <p>6. it will upload the firmware to your VoCore2, takes a few seconds, check if the md5 matched. (picture part 4)</p>
+   <p>7. if everything ok, press "Process".</p>
+   <p>8. normally it will take 2~3 minutes, please wait until it is ready.</p>
+   <p><b>note</b>: if power cut off during the upgrade process, your VoCore2 will brick, check "Fix Bricked VoCore2"</p>
+   <hr/>
+
    <h4>Connect Speaker to VoCore2 to Play Music</h4>
    <p><b>note</b>: please update your firmware to latest version.</p>
    <p>1. download a <a href="http://vonger.cn/misc/vocore2/tools/test.mp3">music</a> to VoCore2 memory(put it in folder /tmp/).</p>
    <p>2. connect a standard 3.5mm headphone or speaker to VoCore2.</p>
-   <p>3. in VoCore2 console call "madplay /tmp/test.mp3", the music will be play in seconds.</p>
+   <p>3. in VoCore2 console call "madplay /tmp/test.mp3", the music will play in seconds.</p>
    <p><b>note</b>: this is used to test audio, we will update the audio driver to enable more features.</p>
    <hr/>
 
-   <h4>Connect VoCore Camera to VoCore2(wireless camera)</h4>
+   <h4>Connect VoCore Camera to VoCore2(DIY Wireless Camera)</h4>
    <p><b>note</b>: please update your firmware to latest version.</p>
    <p>1. connect usb camera to VoCore2.</p>
    <p>2. now you find device at /dev/video0, /dev/video1.</p>
