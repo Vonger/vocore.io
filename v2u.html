@@ -79,7 +79,7 @@
    <p>4.a using ssh or putty or similar tools login to VoCore2(root/vocore).</p>
    <p>4.b using internal USB2TTL, it is driver free, once you connect it to your computer by USB, you will find a serial port in your device list, connect to it. </p>
    <p><b>note</b>: for windows(>xp, support usb cdc), you can find USB2TTL device at your device manager; for Linux/MacOS, you will find USB2TTL device at /dev/tty.usbmodem_____1</p>
-   <p><b><font color="red">IMPORTANT</font></b> : <code>UART speed is 115200bps, 8bits, no even, 1 stop bit</code></p>
+   <p><b><font color="red">important</font></b> : <code>UART speed is 115200bps, 8bits, no even, 1 stop bit</code></p>
    <hr/>
 
    <h4>Connect to VoCore2 Console through its MicroUSB Port</h4>
@@ -87,15 +87,16 @@
    <p>windows: please download and follow this tutorial: <a href="http://vonger.cn/misc/vocore2/tools/usb2ttl.zip">install usb cdc driver</a>.</p>
    <p>macos: connect VoCore2 to your computer, you will find it in /dev/tty.usb_______1, then you can use kermit or screen connect to it.</p>
    <p>linux: connect VoCore2 to your computer, you will find it in /dev/ttyACM0, then you can use kermit or screen or minicom connect to it.</p>
-   <p>usb2ttl parameter: 115200bps, 8 data bits, no even-odd check, 1 stop bit.</p>
+   <p>USB2TTL parameter: 115200bps, 8 data bits, no even-odd check, 1 stop bit.</p>
    <hr/>
 
    <h4>Setup AP + STA Mode</h4>
-   <p><b>note</b>: LuCI interface(the web interface) has bugs, better to use console command.</p>
-   <p>1. connect to your VoCore.</p>
-   <p>2. run command in console:</p>
-   <p>uci set wireless.sta.ssid=[HOME AP SSID]</p>
-   <p>uci set wireless.sta.key=[AP PASSWORD]</p>
+   <p><b>note</b>: LuCI interface(the web interface) has bugs, MUST use console command.</p>
+   <p>1. connect to your VoCore through USB2TTL.</p>
+   <p>2. run command in console(replace [TARGET AP SSID] to the target ap ssid you want to connect to, [TARGET AP PASSWORD] is its password).</p>
+   <p><b>important</b>: this setup MUST run in UART console. SSH console through wireless or ethernet will be disconnected during the setup.</p>
+   <p>uci set wireless.sta.ssid=[TARGET AP SSID]</p>
+   <p>uci set wireless.sta.key=[TARGET AP PASSWORD]</p>
    <p>uci set wireless.sta.network=wwan</p>
    <p>uci set wireless.sta.disabled=0</p>
    <p>uci commit</p>

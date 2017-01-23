@@ -181,29 +181,25 @@
    <p>3. connect to VoCore2 hotspot.</p>
    <p>4.a using ssh or putty or similar tools login to VoCore2(root/vocore).</p>
    <p>4.b using USB2TTL, please check manual in Download section.</p>
-   <p><b><font color="red">IMPORTANT</font></b> : <code>UART speed is 115200bps, 8bits, no even, 1 stop bit</code></p>
+   <p><b><font color="red">important</font></b> : <code>UART speed is 115200bps, 8bits, no even, 1 stop bit</code></p>
+   <hr/>
+
+   <h4>Connect to VoCore through USB2TTL</h4>
+   <center><img src="img/v2/v2.usb2ttl.png" width="84%"></img></center>
+   <p>1. connect USB2TTL.TXD to VoCore2.RXD2, USB2TTL.RXD to VoCore2.TXD2, USB2TTL.GND to VoCore2.GND.</p>
+   <p>2. setup your serial application(such as putty for windows, kermit for mac,linux) in your computer to 115200bps, 8 data bits, no even, 1 stop bit.</p>
+   <p>3. power on your VoCore2, no you should find some text output.</p>
    <hr/>
 
    <h4>Setup AP + STA Mode</h4>
-   <p>1. connect to your VoCore.</p>
-   <p>2. run command in console:</p>
-   <p>uci set wireless.sta.ssid=[HOME AP SSID]</p>
-   <p>uci set wireless.sta.key=[AP PASSWORD]</p>
-   <p>uci set wireless.sta.network=wwan</p>
-   <p>uci set wireless.sta.disabled=0</p>
-   <p>uci commit</p>
-   <p>/etc/init.d/network restart</p>
-   <p><b>note</b>: better to set sta to disabled, so next boot if you VoCore2 can not connect to your home ap, you will still able to connect to VoCore2 hotspot.</p>
-   <p>sleep 10</p>
-   <p>uci set wireless.sta.disabled=1</p>
-   <p>uci commit</p>
-   <p>3. wait around 10 seconds, your VoCore is in AP+STA mode</p>
-   <p><b>note</b>: you might need to setup network to enable dhcp(get ip from your hotspot).</p>
+   <p>1. connect to your VoCore through USB2TTL.</p>
+   <p>2. run command in console(UART console).</p>
+   <p>3. setup network to enable dhcp(get ip from your hotspot).</p>
    <p>uci delete network.wwan</p>
    <p>uci set network.wwan=interface</p>
    <p>uci set network.wwan.proto=dhcp</p>
    <p>uci commit</p>
-   <p><b>note</b>: you might need to setup firewall to enable access to internet through your hotspot.</p>
+   <p>4. setup firewall to enable access to internet through your hotspot.</p>
    <p>uci del_list firewall.@zone[1].network=wwan</p>
    <p>uci add_list firewall.@zone[1].network=wwan</p>
    <p>uci set firewall.@zone[1].input=ACCEPT</p>
@@ -212,6 +208,20 @@
    <p>uci set firewall.@zone[1].masq=1</p>
    <p>uci set firewall.@zone[1].mtu_fix=1</p>
    <p>uci commit</p>
+   <p>5. setup wireless to enable ap+sta mode.</p>
+   <p>uci set wireless.sta.ssid=[TARGET AP SSID]</p>
+   <p>uci set wireless.sta.key=[TARGET AP PASSWORD]</p>
+   <p>uci set wireless.sta.network=wwan</p>
+   <p>uci set wireless.sta.disabled=0</p>
+   <p>uci commit</p>
+   <p><b>note</b>:replace [TARGET AP SSID] to the target ap ssid you want to connect to, [TARGET AP PASSWORD] is its password.</p>
+   <p>5. restart your network, it will work.</p>
+   <p>/etc/init.d/network restart</p>
+   <p>6.(option) once ap+sta is totally up, disable it in config, so if next time your target ap is missing, you still able to connect to VoCore2.</p>
+   <p>sleep 10</p>
+   <p>uci set wireless.sta.disabled=1</p>
+   <p>uci commit</p>
+   <p><b>note</b>: better copy the three lines to /etc/rc.local</p>
    <hr/>
 
    <h4>Upgrade VoCore2 Firmware</h4>
