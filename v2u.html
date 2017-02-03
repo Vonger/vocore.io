@@ -33,7 +33,7 @@
      <tr><th class=text-nowrap scope=row>WIRELESS</th><td>802.11n, 2T2R, speed up to 300Mbps.</td></tr>
      <tr><th class=text-nowrap scope=row>ANTENNA</th><td>One U.FL slot, one on board antenna.</td></tr>
      <tr><th class=text-nowrap scope=row>ETHERNET</th><td>1 port/5 ports, up to 100Mbps.</td></tr>
-     <tr><th class=text-nowrap scope=row>USB</th><td>Support USB 2.0, up to 480MHz.</td></tr>
+     <tr><th class=text-nowrap scope=row>USB</th><td>Support USB 2.0, up to 480MBit/s.</td></tr>
      <tr><th class=text-nowrap scope=row>PCIe 1.1</th><td>Supported</td></tr>
      <tr><th class=text-nowrap scope=row>GPIO</th><td>>=40 (pinmux)</td></tr>
      <tr><th class=text-nowrap scope=row>UART</th><td>x3 (UART2 for debug console)</td></tr>
@@ -84,20 +84,22 @@
    <hr/>
 
    <h4>Connect to VoCore2 Console through its MicroUSB Port</h4>
+   <p>video tutorial: <a href="https://youtu.be/W3UVXb5YM2k">youtube</a></p>
    <p>VoCore2 Ultimate, VoCore2 Audio have on board USB2TTL, you can directly connect its microUSB and your computer.</p>
-   <p>windows: please download and follow this tutorial: <a href="http://vonger.cn/misc/vocore2/tools/usb2ttl.zip">install usb cdc driver</a>.</p>
+   <p>windows: if you need to install driver manually, please follow tutorial in the package: <a href="http://vonger.cn/misc/vocore2/tools/usb2ttl.zip">install usb cdc driver</a>.</p>
    <p>macos: connect VoCore2 to your computer, you will find it in /dev/tty.usb_______1, then you can use kermit or screen connect to it.</p>
    <p>linux: connect VoCore2 to your computer, you will find it in /dev/ttyACM0, then you can use kermit or screen or minicom connect to it.</p>
    <p>USB2TTL parameter: 115200bps, 8 data bits, no even-odd check, 1 stop bit.</p>
    <hr/>
 
    <h4>Setup AP + STA Mode</h4>
+   <p>video tutorial: <a href="https://youtu.be/IPt5cxg5K98">youtube</a></p>
    <p><b>note</b>: LuCI interface(the web interface) has bugs, MUST use console command.</p>
-   <p>1. connect to your VoCore through USB2TTL.</p>
+   <p>1. connect to your VoCore to your computer through its microUSB.</p>
    <p>2. run command in console(replace [TARGET AP SSID] to the target ap ssid you want to connect to, [TARGET AP PASSWORD] is its password).</p>
    <p><b>important</b>: this setup MUST run in UART console. SSH console through wireless or ethernet will be disconnected during the setup.</p>
-   <p>uci set wireless.sta.ssid=[TARGET AP SSID]</p>
-   <p>uci set wireless.sta.key=[TARGET AP PASSWORD]</p>
+   <p>uci set wireless.sta.ssid="[TARGET AP SSID]"</p>
+   <p>uci set wireless.sta.key="[TARGET AP PASSWORD]"</p>
    <p>uci set wireless.sta.network=wwan</p>
    <p>uci set wireless.sta.disabled=0</p>
    <p>uci commit</p>
@@ -158,23 +160,22 @@
    <p>4. now you can view the camera video in your browser at http://192.168.61.1:8080/?action=stream</p>
    <hr/>
 
-   <h4>Compile your App for VoCore2</h4>
-   <p>1. Install Ubuntu 14.04 64bit Server to Virtual Machine(such as VirtualBox, check this <a href="https://www.youtube.com/watch?v=NZnWPbmbb6c">video [youtube]</a>).</p>
-   <p>2. Download <a href="http://vonger.cn/misc/vocore2/toolchain.tar.bz2">toolchain</a> to the VM, uncompress it.</p>
-   <p>3. Make a simple code in C, compile it in command line.</p>
-   <code>/path.to.your.toolchain/bin/mipsel-openwrt-linux-gcc -g yourcode.c -o yourcode</code>
-   <p>4. After this, you will get an executable file named "yourcode", use scp, copy it to your VoCore2</p>
-   <p>5. In VoCore2, call <code>chmod +x yourcode</code>, after that, you can run it in VoCore2, call <code>./yourcode</code></p>
-   <hr/>
-
    <h4>Compile OpenWRT for VoCore2</h4>
    <p>1. install Ubuntu 14.04 64bit Server to Virtual Machine.</p>
    <p>2. in virtualbox, we will need install some packages to compile openwrt:</p>
-   <p>sudo apt-get install gcc g++ binutils patch bzip2 flex bison make autoconf gettext texinfo unzip sharutils subversion libncurses5-dev ncurses-term zlib1g-dev</p>
+   <p>sudo apt-get install gcc g++ binutils patch bzip2 flex bison make autoconf gettext texinfo unzip sharutils subversion libncurses5-dev ncurses-term zlib1g-dev libssl-dev python</p>
    <p>3. download openwrt at "Sources" section in this page, software part.</p>
    <p>4. call "tar -jxvf openwrt.tar.bz2" to uncompress the package.</p>
    <p>5. call "make menuconfig" in the openwrt folder, configure openwrt in menu, choose MT7688/28/VoCore2 in menu.</p>
    <p>6. call "make" in the openwrt folder, start the make process</p>
+   <hr/>
+
+   <h4>Compile your App for VoCore2</h4>
+   <p>1. compile openwrt for VoCore2, it will create toolchain or download it at Downloads/Toolchain(for Ubuntu 14.04 64bit).
+   <p>2. make a simple code in C, compile it in command line.</p>
+   <code>/path.to.your.toolchain/bin/mipsel-openwrt-linux-gcc -g yourcode.c -o yourcode</code>
+   <p>3. after this, you will get an executable file named "yourcode", use scp, copy it to your VoCore2</p>
+   <p>4. in VoCore2, call <code>chmod +x yourcode</code>, after that, you can run it in VoCore2, call <code>./yourcode</code></p>
    <hr/>
 
    <h4>Upload Firmware</h4>

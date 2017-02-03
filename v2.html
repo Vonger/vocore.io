@@ -42,7 +42,7 @@
      <tr><th class=text-nowrap scope=row>WIRELESS</th><td>802.11n, 2T2R, speed up to 300Mbps.</td></tr>
      <tr><th class=text-nowrap scope=row>ANTENNA</th><td>One U.FL slot, one on board antenna.</td></tr>
      <tr><th class=text-nowrap scope=row>ETHERNET</th><td>1 port/5 ports, up to 100Mbps.</td></tr>
-     <tr><th class=text-nowrap scope=row>USB</th><td>Support USB 2.0, up to 480MHz.</td></tr>
+     <tr><th class=text-nowrap scope=row>USB</th><td>Support USB 2.0, up to 480MBit/s.</td></tr>
      <tr><th class=text-nowrap scope=row>PCIe 1.1</th><td>Supported</td></tr>
      <tr><th class=text-nowrap scope=row>GPIO</th><td>>=40 (pinmux)</td></tr>
      <tr><th class=text-nowrap scope=row>UART</th><td>x3 (UART2 for debug console)</td></tr>
@@ -187,12 +187,14 @@
 
    <h4>Connect to VoCore through USB2TTL</h4>
    <center><img src="img/v2/v2.usb2ttl.png" width="84%"></img></center>
+   <p>video tutorial: <a href="https://youtu.be/W3UVXb5YM2k">youtube</a></p>
    <p>1. connect USB2TTL.TXD to VoCore2.RXD2, USB2TTL.RXD to VoCore2.TXD2, USB2TTL.GND to VoCore2.GND.</p>
    <p>2. setup your serial application(such as putty for windows, kermit for mac,linux) in your computer to 115200bps, 8 data bits, no even, 1 stop bit.</p>
    <p>3. power on your VoCore2, no you should find some text output.</p>
    <hr/>
 
    <h4>Setup AP + STA Mode</h4>
+   <p>video tutorial(require USB2TTL): <a href="https://youtu.be/IPt5cxg5K98">youtube</a></p>
    <p>1. connect to your VoCore through USB2TTL.</p>
    <p>2. run command in console(UART console).</p>
    <p>3. setup network to enable dhcp(get ip from your hotspot).</p>
@@ -210,8 +212,8 @@
    <p>uci set firewall.@zone[1].mtu_fix=1</p>
    <p>uci commit</p>
    <p>5. setup wireless to enable ap+sta mode.</p>
-   <p>uci set wireless.sta.ssid=[TARGET AP SSID]</p>
-   <p>uci set wireless.sta.key=[TARGET AP PASSWORD]</p>
+   <p>uci set wireless.sta.ssid="[TARGET AP SSID]"</p>
+   <p>uci set wireless.sta.key="[TARGET AP PASSWORD]"</p>
    <p>uci set wireless.sta.network=wwan</p>
    <p>uci set wireless.sta.disabled=0</p>
    <p>uci commit</p>
@@ -238,24 +240,23 @@
    <p><b>note</b>: if power cut off during the upgrade process, your VoCore2 will brick, check "Fix Bricked VoCore2"</p>
    <hr/>
 
-   <h4>Compile your App for VoCore2</h4>
-   <p>1. Install Ubuntu 14.04 64bit Server to Virtual Machine(such as VirtualBox, check this <a href="https://www.youtube.com/watch?v=NZnWPbmbb6c">video [youtube]</a>).</p>
-   <p>2. Download <a href="http://vonger.cn/misc/vocore2/toolchain.tar.bz2">toolchain</a> to the VM, uncompress it.</p>
-   <p>3. Make a simple code in C, compile it in command line.</p>
-   <code>/path.to.your.toolchain/bin/mipsel-openwrt-linux-gcc -g yourcode.c -o yourcode</code>
-   <p>4. After this, you will get an executable file named "yourcode", use scp, copy it to your VoCore2</p>
-   <p>5. In VoCore2, call <code>chmod +x yourcode</code>, after that, you can run it in VoCore2, call <code>./yourcode</code></p>
-   <hr/>
-
-
    <h4>Compile OpenWRT for VoCore2</h4>
+   <p>video tutorial: <a href="https://youtu.be/ocl6yFtKSNs">youtube</a></p>
    <p>1. install Ubuntu 14.04 64bit Server to Virtual Machine.</p>
    <p>2. in virtualbox, we will need install some packages to compile openwrt:</p>
-   <p>sudo apt-get install gcc g++ binutils patch bzip2 flex bison make autoconf gettext texinfo unzip sharutils subversion libncurses5-dev ncurses-term zlib1g-dev</p>
+   <p>sudo apt-get install gcc g++ binutils patch bzip2 flex bison make autoconf gettext texinfo unzip sharutils subversion libncurses5-dev ncurses-term zlib1g-dev libssl-dev python</p>
    <p>3. download openwrt at "Sources" section in this page, software part.</p>
    <p>4. call "tar -jxvf openwrt.tar.bz2" to uncompress the package.</p>
    <p>5. call "make menuconfig" in the openwrt folder, configure openwrt in menu, choose MT7688/28/VoCore2 in menu.</p>
    <p>6. call "make" in the openwrt folder, start the make process</p>
+   <hr/>
+
+   <h4>Compile your App for VoCore2</h4>
+   <p>1. compile openwrt for VoCore2, it will create toolchain or download it at Downloads/Toolchain(for Ubuntu 14.04 64bit).
+   <p>2. make a simple code in C, compile it in command line.</p>
+   <code>/path.to.your.toolchain/bin/mipsel-openwrt-linux-gcc -g yourcode.c -o yourcode</code>
+   <p>3. after this, you will get an executable file named "yourcode", use scp, copy it to your VoCore2</p>
+   <p>4. in VoCore2, call <code>chmod +x yourcode</code>, after that, you can run it in VoCore2, call <code>./yourcode</code></p>
    <hr/>
 
    <h4>Upload Firmware</h4>
