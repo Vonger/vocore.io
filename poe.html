@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="utf-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <title>VoCore2 | Coin-sized Linux Computer</title>
+ <link rel="stylesheet" href="css/bootstrap.min.css">
+ <link rel="stylesheet" href="css/vocore.min.css">
+ <link rel="icon" href="favicon.ico">
+</head>
+
+<body>
+
+  <center><h1>VoCore2 + PoE Dock</h1></center>
+  <center><h3><small>Power supply + data transfer, just one ethernet cable.</small></h3></center>
+
+  <div class="container">
+   <center><img class="thumbnail" src="img/poe/poe.head.jpg" width="84%"></center>
+  </div>
+
+  <hr/>
+
+  <div class="container">
+   <h3>Sources</h3>
+   <p><b>Hardware: </b><a href="http://vonger.cn/misc/vocore2/vocore2.poe.zip">Download</a>&nbsp;&nbsp;&nbsp;<span class="label label-success">md5:3b98f2642b1b4d1e8f97dd80b89cc47b</span></p>
+
+   <h3>Parameters</h3>
+   <table class="table table-bordered table-striped">
+    <thead><tr><th></th><th>Details</th></tr></thead>
+    <tbody>
+	 <tr><th class=text-nowrap scope=row>SIZE</th><td>25.6mm x 25.6mm x 20.5mm</td></tr>
+	 <tr><th class=text-nowrap scope=row>ETHERNET</th><td>2 ports, up to 100Mbps.</td></tr>
+	 <tr><th class=text-nowrap scope=row>POWER SUPPLY</th><td>PoE: IEEE 802.3af, Class2</td></tr>
+	 <tr><th class=text-nowrap scope=row>MAX POWER OUTPUT</th><td>~3.0Watt</td></tr>
+    </tbody>
+   </table>
+
+   <h3>Details</h3>
+   <p>VoCore2 + PoE Dock is designed for enhancing exists network, it must work with a 802.11af PSE(power supply equipment, normally voltage output to ethernet is 50V). It can not directly power up by USB adaptor or common ethernet. Typically it used as wireless hotspot, IP camera.</p>
+
+   <center><img src="img/poe/poe.pins.png" width="84%"></img></center>
+
+   <table class="table table-bordered table-striped">
+    <thead><tr><th></th><th>Name</th><th>Mux</th><th>Note</th></tr></thead>
+    <tbody>
+	 <tr><th class=text-nowrap scope=row>1</th><td>NC</td><td>Not Connected</td><td>do not use this pin.</td></tr>
+	 <tr><th class=text-nowrap scope=row>2</th><td>P2-RXP</td><td>Ethernet Port2, RXP</td><td>internal transformer</td></tr>
+	 <tr><th class=text-nowrap scope=row>3</th><td>P2-RXN</td><td>Ethernet Port2, RXN</td><td>internal transformer</td></tr>
+	 <tr><th class=text-nowrap scope=row>4</th><td>P2-TXP</td><td>Ethernet Port2, TXP</td><td>internal transformer</td></tr>
+	 <tr><th class=text-nowrap scope=row>5</th><td>P2-TXN</td><td>Ethernet Port2, TXN</td><td>internal transformer</td></tr>
+    </tbody>
+   </table>
+
+   <center><img src="img/poe/poe.connect.png" width="84%"></img></center>
+
+   <h3>Tutorials</h3>
+   <h4>Connect to Power</h4>
+   <p>1. check if VoCore2 and its dock are well connected.</p>
+   <p>2. make sure one side of the ethernet cable is connected to PSE.</p>
+   <p>3. plug the other side of the cable into PoE dock RJ45 interface.</p>
+   <p><b>note</b>: be careful, the bare metal might hurt you.(PoE voltage is around 50V)</p>
+   <p>4. if everything works, the LED on VoCore2 will light, wait around 30s, you will find VoCore2 hotspot.</p>
+   <hr/>
+
+  </div>
+
+  <hr/>
+
+  <footer class="container">
+    <center><p class="footer-text"><small><b>VoCore Studio &copy; 2014-2016 &middot; Contact us:  <a href="mailto:support@vocore.io">support@vocore.io</a></b></small></p></center>
+  </footer>
+
+</body>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+</html>
