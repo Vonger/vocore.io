@@ -1,326 +1,304 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>VoCore | Coin-sized Linux Computer</title>
-<link rel="stylesheet" href="css/bootstrap.min.css">
-<link rel="stylesheet" href="css/vocore.min.css">
-<link rel="icon" href="favicon.ico">
+ <meta charset="utf-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <title>VoCore | Coin-sized Linux Computer</title>
+ <link rel="stylesheet" href="css/bootstrap.min.css">
+ <link rel="stylesheet" href="css/vocore.min.css">
+ <link rel="icon" href="favicon.ico">
 </head>
 
 <body>
-<div class="navbar-wrapper">
-<div class="container">
-<nav class="navbar">
-<a href="/"><img alt="VOCORE" src="img/logo.png" width="113" height="32"></a>
-<a class="pull-right" href="http://vonger.cn"><b>BLOG</b></a>
-<a class="pull-right" href="wiki.html"><b>WIKI</b></a>
-<a class="pull-right" href="http://forum.vocore.io"><b>FORUM</b></a>
-<a class="pull-right" href="#store"><b>STORE</b></a>
-<a class="pull-right" href="https://www.hackster.io/vocore"><b>PROJECT</b></a>
-</nav>
-</div>
-</div>
+  <div class="navbar-wrapper">
+    <div class="container">
+      <nav class="navbar">
+	<a href="/"><img alt="VOCORE" src="img/logo.png" width="113" height="32"></a>
+	<a class="pull-right" href="http://vonger.cn"><b>BLOG</b></a>
+	<a class="pull-right" href="wiki.html"><b>WIKI</b></a>
+	<a class="pull-right" href="http://forum.vocore.io"><b>FORUM</b></a>
+	<a class="pull-right" href="#store"><b>STORE</b></a>
+        <a class="pull-right" href="https://www.hackster.io/vocore"><b>PROJECT</b></a>
+      </nav>
+    </div>
+  </div>
 
-<!-- VoCore Carousel Section
-================================================== -->
+  <!-- VoCore Carousel Section
+  ================================================== -->
 
-<div id="vocoreCarousel" class="carousel slide" data-ride="carousel">
+  <div id="vocoreCarousel" class="carousel slide" data-ride="carousel">
 
-<ol class="carousel-indicators">
-<li data-target="#vocoreCarousel" data-slide-to="0" class="active"></li>
-<li data-target="#vocoreCarousel" data-slide-to="1"></li>
-<li data-target="#vocoreCarousel" data-slide-to="2"></li>
-</ol>
+    <ol class="carousel-indicators">
+      <li data-target="#vocoreCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#vocoreCarousel" data-slide-to="1"></li>
+      <li data-target="#vocoreCarousel" data-slide-to="2"></li>
+    </ol>
 
-<div class="carousel-inner" role="listbox">
+    <div class="carousel-inner" role="listbox">
 
-<div class="item active">
-<div class="container">
-<div class="carousel-caption">
-<h1>VoCore2</h1>
-<a href="https://igg.me/at/vocore2"><h3>Crowdfunding on Indiegogo!</h3></a>
-<img src="img/split1.png" height="208">
-</div>
-</div>
-</div>
+      <div class="item active">
+       <div class="container">
+	<div class="carousel-caption">
+	 <h1>VoCore2</h1>
+	 <a href="https://igg.me/at/vocore2"><h3>Crowdfunding on Indiegogo!</h3></a>
+	 <img src="img/split1.png" height="208">
+        </div>
+       </div>
+      </div>
 
-<div class="item">
-<div class="container">
-<div class="carousel-caption">
-<img src="img/split2.png" height="240">
-<h2>VoCore2 Ultimate</h2>
-<h4>All-In-One 28mm Box!</h4>
-</div>
-</div>
-</div>
+      <div class="item">
+       <div class="container">
+        <div class="carousel-caption">
+	 <img src="img/split2.png" height="240">
+	 <h2>VoCore2 Ultimate</h2>
+	 <h4>All-In-One 28mm Box!</h4>
+	</div>
+       </div>
+      </div>
 
-<div class="item">
-<div class="container">
-<div class="carousel-caption">
-<div class="col-xs-6">
-<div class="vertical-center">
-<h1>&nbsp;</h1>
-<h3>Full source code</h3>
-<h3>Full layout design</h3>
-<h3>Open for Everyone</h3>
-</div>
-</div>
-<div class="col-xs-6">
-<img src="img/split3.png" width="280" height="280">
-</div>
-</div>
-</div>
-</div>
+      <div class="item">
+       <div class="container">
+        <div class="carousel-caption">
+	 <div class="col-xs-6">
+	  <div class="vertical-center">
+	   <h1>&nbsp;</h1>
+	   <h3>Full source code</h3>
+	   <h3>Full layout design</h3>
+	   <h3>Open for Everyone</h3>
+	  </div>
+	 </div>
+	 <div class="col-xs-6">
+	  <img src="img/split3.png" width="280" height="280">
+	 </div>
+        </div>
+       </div>
+      </div>
 
-</div>
+    </div>
 
-</div><!-- /.carousel -->
+  </div><!-- /.carousel -->
 
-<div class="container">
-<div class="col-md-6">
-<h2>Welcome to <b class="head-text">VoCore</b></h2>
-<p><small>VoCore is open hardware and runs OpenWrt/LEDE. It has WIFI, USB, UART, 20+ GPIOs but is only one inch square. It will help you to make a smart house, study embedded system or even make the tiniest router in the world.</small></p>
-<p><small>You will not only get the VoCore but also its full hardware design including schematic, circuit board, bill of materials; full source code (including boot loader), operating system (openwrt) and applications. You are able to control <b>EVERY BIT</b> of your VoCore. </small></p>
-<p><small>We invite you join us, help our community improve this open source hardware and use your creative skills to make a more wonderful <b>Internet of Things</b>!</small></p>
-</div>
-<div class="col-md-6"><img src="img/head1.png" height=240></img></div>
-<p>&nbsp;</p>
-</div>
+  <div class="container">
+   <div class="col-md-6">
+    <h2>Welcome to <b class="head-text">VoCore</b></h2>
+    <p><small>VoCore is open hardware and runs OpenWrt/LEDE. It has WIFI, USB, UART, 20+ GPIOs but is only one inch square. It will help you to make a smart house, study embedded system or even make the tiniest router in the world.</small></p>
+    <p><small>You will not only get the VoCore but also its full hardware design including schematic, circuit board, bill of materials; full source code (including boot loader), operating system (openwrt) and applications. You are able to control <b>EVERY BIT</b> of your VoCore. </small></p>
+    <p><small>We invite you join us, help our community improve this open source hardware and use your creative skills to make a more wonderful <b>Internet of Things</b>!</small></p>
+   </div>
+   <div class="col-md-6"><img src="img/head1.png" height=240></img></div>
+   <p>&nbsp;</p>
+  </div>
 
-<hr/>
+  <hr/>
 
-<div class="container">
-<div class="col-md-6"><img src="img/head2.png" height=240></img></div>
-<div class="col-md-6">
-<h2>Why <b class="head-text">VoCore</b></h2>
-<p><small><b>Tiny Size:</b> One square inch, easy to embed to devices.</small></p>
-<p><small><b>OpenWrt/LEDE:</b> Easy to code, compile; stable system.</small></p>
-<p><small><b>Low Cost:</b> $4~$18 for each, unmatched performance.</small></p>
-<p><small><b>Interfaces:</b> Hardware support USB, Ethernet, I2C, SPI etc.</small></p>
-<p><small><b>OpenSource:</b> Both software and hardware, totally <b>FREE</b></small></p>
-</div>
-<p>&nbsp;</p>
-</div>
+  <div class="container">
+   <div class="col-md-6"><img src="img/head2.png" height=240></img></div>
+   <div class="col-md-6">
+    <h2>Why <b class="head-text">VoCore</b></h2>
+    <p><small><b>Tiny Size:</b> One square inch, easy to embed to devices.</small></p>
+    <p><small><b>OpenWrt/LEDE:</b> Easy to code, compile; stable system.</small></p>
+    <p><small><b>Low Cost:</b> $4~$18 for each, unmatched performance.</small></p>
+    <p><small><b>Interfaces:</b> Hardware support USB, Ethernet, I2C, SPI etc.</small></p>
+    <p><small><b>OpenSource:</b> Both software and hardware, totally <b>FREE</b></small></p>
+   </div>
+   <p>&nbsp;</p>
+  </div>
 
-<hr/>
+  <hr/>
 
-<!-- VoCore Store Section
-================================================== -->
-<a name="store"></a>
-<div id="tbStore" class="container store">
-<div class="row">
-<center><h4><span class="label label-default">Click the icon for source, documentation and tutorials</span></h4></center>
-<div class="col-sm-4">
-<a href="v2.html" target="_blank"><img id="imgItem1" class="img-circle" src="img/pic1.jpg" width="140" height="140"></a>
-<h4><a id="lbItem1" href="v2.html">VoCore2 <span id="lbModName"></span></a>
-<button class="btn btn-warning btn-model dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><b>MOD</b><span class="caret"></span></button>
-<ul id="lstMod" class="dropdown-menu">
-<li><a><b></b><b>Board only</b> (basic, <span>$17.99</span>)<div path="img/pic1.jpg"></div></a></li>
-<li><a><b>+ USB Head</b> (+$2.50, total <span>$20.49</span>)<div path="img/pic1a.jpg"></div></a></li>
-<li><a><b>+ MicroSD Slot</b> (+$4.00, total <span>$21.99</span>)<div path="img/pic1b.jpg"></div></a></li>
-<li><a><b>+ USB &amp; MicroSD</b> (+$6.50, total <span>$24.49</span>)<div path="img/pic1c.jpg"></div></a></li>
-</ul>
-</h4>
-<p>Free Shipping Worldwide.</p>
-<p>PCB is white or green.</p>
-<div class="dropdown">
-<div class="btn-group">
-<button id="btnPrice1" class="btn btn-default">
-<span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
-<b id="lbPrice1">$17.99</b>
-</button>
-<button class="btn btn-default dropdown-toggle" type="button" id="dbCount1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-&times; <b>0</b><span class="caret"></span>
-</button>
-<table id="tbCount1" class="table table-responsive dropdown-menu" aria-labelledby="dbCount1"></table>
-</div>
-</div>
-</div><!-- /.col-sm-4 -->
+  <!-- VoCore Store Section
+  ================================================== -->
+  <a name="store"></a>
+  <div id="tbStore" class="container store">
+    <div class="row">
+      <center><h4><span class="label label-default">Click the icon for source, documentation and tutorials</span></h4></center>
+      <div class="col-sm-4">
+	<a href="v2.html" target="_blank"><img id="imgItem1" class="img-circle" src="img/pic1.jpg" width="140" height="140"></a>
+	<h4><a id="lbItem1" href="v2.html">VoCore2 <span id="lbModName"></span></a>
+         <button class="btn btn-warning btn-model dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><b>MOD</b><span class="caret"></span></button>
+	 <ul id="lstMod" class="dropdown-menu">
+	  <li><a><b></b><b>Board only</b> (basic, <span>$17.99</span>)<div path="img/pic1.jpg"></div></a></li>
+	  <li><a><b>+ USB Head</b> (+$2.50, total <span>$20.49</span>)<div path="img/pic1a.jpg"></div></a></li>
+	  <li><a><b>+ MicroSD Slot</b> (+$4.00, total <span>$21.99</span>)<div path="img/pic1b.jpg"></div></a></li>
+	  <li><a><b>+ USB &amp; MicroSD</b> (+$6.50, total <span>$24.49</span>)<div path="img/pic1c.jpg"></div></a></li>
+	 </ul>
+	</h4>
+	<p>Free Shipping Worldwide.</p>
+	<p>PCB is white or green.</p>
+        <div class="dropdown">
+          <div class="btn-group">
+            <button id="btnPrice1" class="btn btn-default">
+              <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
+	      <b id="lbPrice1">$17.99</b>
+            </button>
+	    <button class="btn btn-default dropdown-toggle" type="button" id="dbCount1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+              &times; <b>0</b><span class="caret"></span>
+            </button>
+	    <table id="tbCount1" class="table table-responsive dropdown-menu" aria-labelledby="dbCount1"></table>
+	  </div>
+        </div>
+      </div><!-- /.col-sm-4 -->
 
-<div class="col-sm-4">
-<a href="v2u.html" target="_blank" >
-<img class="img-circle" src="img/pic2.jpg" width="140" height="140">
-</a>
-<a href="v2u.html"><h4 id="lbItem2">VoCore2 Ultimate</h4></a>
-<p>Ship in 8 days.</p>
-<p>Free Shipping Worldwide.</p>
-<div class="dropdown">
-<div class="btn-group">
-<button id="btnPrice2" class="btn btn-default">
-<span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
-<b id="lbPrice2">$44.99</b>
-</button>
-<button class="btn btn-default dropdown-toggle" type="button" id="dbCount2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-&times; <b>0</b><span class="caret"></span>
-</button>
-<table id="tbCount2" class="table table-responsive dropdown-menu" aria-labelledby="dbCount2"></table>
-</div>
-</div>
-</div><!-- /.col-sm-4 -->
+      <div class="col-sm-4">
+	<a href="v2u.html" target="_blank" >
+	  <img class="img-circle" src="img/pic2.jpg" width="140" height="140">
+	</a>
+	<a href="v2u.html"><h4 id="lbItem2">VoCore2 Ultimate</h4></a>
+	<p>Free Shipping Worldwide.</p>
+	<p>Click icon for more details.</p>
+        <div class="dropdown">
+          <div class="btn-group">
+            <button id="btnPrice2" class="btn btn-default">
+              <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
+	      <b id="lbPrice2">$44.99</b>
+            </button>
+	    <button class="btn btn-default dropdown-toggle" type="button" id="dbCount2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+              &times; <b>0</b><span class="caret"></span>
+            </button>
+	    <table id="tbCount2" class="table table-responsive dropdown-menu" aria-labelledby="dbCount2"></table>
+          </div>
+        </div>
+      </div><!-- /.col-sm-4 -->
 
-<div class="col-sm-4">
-<a href="camera.html" target="_blank" >
-<img class="img-circle" src="img/pic3.jpg" width="140" height="140">
-</a>
-<a href="camera.html"><h4 id="lbItem3">VoCore Camera</h4></a>
-<p>Ship in 5 days.</p>
-<p>Free Shipping Worldwide.</p>
-<div class="dropdown">
-<div class="btn-group">
-<button id="btnPrice3" class="btn btn-default">
-<span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
-<b id="lbPrice3">$39.99</b>
-</button>
-<button class="btn btn-default dropdown-toggle" type="button" id="dbCount3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-&times; <b>0</b><span class="caret"></span>
-</button>
-<table id="tbCount3" class="table table-responsive dropdown-menu" aria-labelledby="dbCount3"></table>
-</div>
-</div>
-</div><!-- /.col-sm-4 -->
+      <div class="col-sm-4">
+	<a href="camera.html" target="_blank" >
+	  <img class="img-circle" src="img/pic3.jpg" width="140" height="140">
+	</a>
+	<a href="camera.html"><h4 id="lbItem3">VoCore Camera</h4></a>
+	<p>Free Shipping Worldwide.</p>
+	<p>With 1.8mm high resolution lens.</p>
+        <div class="dropdown">
+          <div class="btn-group">
+	    <button id="btnPrice3" class="btn btn-default">
+	      <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
+	      <b id="lbPrice3">$39.99</b>
+	    </button>
+	    <button class="btn btn-default dropdown-toggle" type="button" id="dbCount3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+	      &times; <b>0</b><span class="caret"></span>
+            </button>
+	    <table id="tbCount3" class="table table-responsive dropdown-menu" aria-labelledby="dbCount3"></table>
+          </div>
+        </div>
+      </div><!-- /.col-sm-4 -->
 
-<div class="col-sm-4">
-<a href="v1.html" target="_blank" >
-<img class="img-circle" src="img/pic4.jpg" width="140" height="140">
-</a>
-<a href="v1.html"><h4 id="lbItem4">VoCore</h4></a>
-<p>Free Shipping Worldwide.</p>
-<p>Stable working over 3 years.</p>
-<div class="dropdown">
-<div class="btn-group">
-<button id="btnPrice4" class="btn btn-default">
-<span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
-<b id="lbPrice4">$14.99</b>
-</button>
-<button class="btn btn-default dropdown-toggle" type="button" id="dbCount4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-&times; <b>0</b><span class="caret"></span>
-</button>
-<table id="tbCount4" class="table table-responsive dropdown-menu" aria-labelledby="dbCount4"></table>
-</div>
-</div>
-</div><!-- /.col-sm-4 -->
+    <div class="col-sm-4">
+      <a href="v1.html" target="_blank" >
+	<img class="img-circle" src="img/pic4.jpg" width="140" height="140">
+      </a>
+      <a href="v1.html"><h4 id="lbItem4">VoCore</h4></a>
+      <p>Free Shipping Worldwide.</p>
+      <div class="dropdown">
+       <div class="btn-group">
+	<button id="btnPrice4" class="btn btn-default">
+	 <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
+	 <b id="lbPrice4">$14.99</b>
+	</button>
+	<button class="btn btn-default dropdown-toggle" type="button" id="dbCount4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+	 &times; <b>0</b><span class="caret"></span>
+	</button>
+	<table id="tbCount4" class="table table-responsive dropdown-menu" aria-labelledby="dbCount4"></table>
+       </div>
+      </div>
+     </div><!-- /.col-sm-4 -->
 
-<div class="col-sm-4">
-<a href="v2u.html" target="_blank" >
-<img class="img-circle" src="img/pic5.jpg" width="140" height="140">
-</a>
-<a href="v2u.html"><h4 id="lbItem5">VoCore2 + Audio</h4></a>
-<p>Free Shipping Worldwide.</p>
-<p>Limited version, never MP.</p>
-<div class="dropdown">
-<div class="btn-group">
-<button id="btnPrice5" class="btn btn-default">
-<span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
-<b id="lbPrice5">$29.99</b>
-</button>
-<button class="btn btn-default dropdown-toggle" type="button" id="dbCount5" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-&times; <b>0</b><span class="caret"></span>
-</button>
-<table id="tbCount5" class="table table-responsive dropdown-menu" aria-labelledby="dbCount4"></table>
-</div>
-</div>
-</div><!-- /.col-sm-4 -->
+   </div><!-- /.row --> 
 
-</div><!-- /.row -->
+    <div class="row">
+      <button id="btnCheckOut" class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4 btn btn-lg btn-success btn-checkout" data-toggle="modal" data-target="#mdCheckOut">
+	<span class="glyphicon glyphicon-credit-card" aria-hidden=true></span>Checkout Here
+      </button>
+    </div>
 
-<div class="row">
-<button id="btnCheckOut" class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4 btn btn-lg btn-success btn-checkout" data-toggle="modal" data-target="#mdCheckOut">
-<span class="glyphicon glyphicon-credit-card" aria-hidden=true></span>Checkout Here
-</button>
-</div>
+    <div class="modal fade" id="mdCheckOut" tabindex="-1" role="dialog" aria-labelledby="checkoutModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
 
-<div class="modal fade" id="mdCheckOut" tabindex="-1" role="dialog" aria-labelledby="checkoutModalLabel">
-<div class="modal-dialog" role="document">
-<div class="modal-content">
+          <div class="modal-body">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          </div>
 
-<div class="modal-body">
-<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-</div>
+      <div class="modal-header">
+	<h4 class="modal-title" id="myModalLabel"><span class="glyphicon glyphicon-lock" aria-hidden="true"></span>&nbsp;Shipping to</h4>
+	<div id="divExpress">
+	  <div id="tbCountry" class="btn-group" data-toggle="tooltip" data-placement="top" data-title="If your country/region is not in the list, please contact us.">
+	    <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-globe"></span></button>
+	    <button id="edCountry" type="button" class="btn btn-default fixed-width-button dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	      Your Country/Region<span class="caret"></span>
+	    </button>
+	    <ul id="lstCountry" class="dropdown-menu"></ul>
+	  </div><!-- /btn-group-->
+	  <p><small id="lbCountryNote"></small></p>
+	</div>
+      </div><!-- /modal-header -->
 
-<div class="modal-header">
-<h4 class="modal-title" id="myModalLabel"><span class="glyphicon glyphicon-lock" aria-hidden="true"></span>&nbsp;Shipping to</h4>
-<div id="divExpress">
-<div id="tbCountry" class="btn-group" data-toggle="tooltip" data-placement="top" data-title="If your country/region is not in the list, please contact us.">
-<button type="button" class="btn btn-default"><span class="glyphicon glyphicon-globe"></span></button>
-<button id="edCountry" type="button" class="btn btn-default fixed-width-button dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-Your Country/Region<span class="caret"></span>
-</button>
-<ul id="lstCountry" class="dropdown-menu"></ul>
-</div><!-- /btn-group-->
-<p><small id="lbCountryNote"></small></p>
-</div>
-</div><!-- /modal-header -->
+          <div class="modal-header">
+	    <h4 class="modal-title" id="myModalLabel"><span class="glyphicon glyphicon-plane" aria-hidden="true"></span>&nbsp;Carrier</h4>
+            <div class="radio">
+	      <label><input id="rbShipping1" type="radio" name="optionsRadios" value="option1" checked>Shipping by Post.(50% packages delivered in 7~20 days)</label>
+            </div>
+            <div class="radio">
+	      <label><input id="rbShipping2" type="radio" name="optionsRadios" value="option2">Shipping by Express.(90% packages delivered 2~5 days)</label>
+              <p><small>express might charge you tax, please check your country clearance regulations.</small></p>
+            </div>
+          </div><!-- /modal-header -->
 
-<div class="modal-header">
-<h4 class="modal-title" id="myModalLabel"><span class="glyphicon glyphicon-plane" aria-hidden="true"></span>&nbsp;Carrier</h4>
-<div class="radio">
-<label><input id="rbShipping1" type="radio" name="optionsRadios" value="option1" checked>Shipping by Post.(7~20 bussiness days)</label>
-</div>
-<div class="radio">
-<label><input id="rbShipping2" type="radio" name="optionsRadios" value="option2">Shipping by Express.(2~5 bussiness days)</label>
-<p><small>express might charge you tax, please check your local customs regulations about clearance.</small></p>
-</div>
-</div><!-- /modal-header -->
+          <div class="modal-header">
+            <h4 class="modal-title" id="myModalLabel"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>&nbsp;Cart</h4>
+            <table id="tbCartList" class=table>
+              <thead><tr><th>Description</th><th>Unit Price</th><th>Qty</th><th>Amount</th></tr></thead>
+              <tbody></tbody>
+            </table>
 
-<div class="modal-header">
-<h4 class="modal-title" id="myModalLabel"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>&nbsp;Cart</h4>
-<table id="tbCartList" class=table>
-<thead><tr><th>Description</th><th>Unit Price</th><th>Qty</th><th>Amount</th></tr></thead>
-<tbody></tbody>
-</table>
+            <h4 id="lbTotal" class="pull-left"><strong>Total: $</strong><b></b></h4>
+	    <form id="fmPaypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+	      <button id="btnContinue" type="submit" class="btn btn-success pull-right">
+		<span class="glyphicon glyphicon-ok" aria-hidden=true></span> Proceed to PayPal
+	      </button>
+            </form>
+          </div><!-- /modal-header -->
+	  <p class="pull-right email-link"><small><font color="white">Can not pay with PayPal? We also accept <b>BitCoin</b>! <a href="mailto:support@vocore.io">Contact us!</a></font></small></p>
 
-<h4 id="lbTotal" class="pull-left"><strong>Total: $</strong><b></b></h4>
-<form id="fmPaypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
-<button id="btnContinue" type="submit" class="btn btn-success pull-right">
-<span class="glyphicon glyphicon-ok" aria-hidden=true></span> Proceed to PayPal
-</button>
-</form>
-</div><!-- /modal-header -->
-<p class="pull-right email-link"><small><font color="white">Can not pay with PayPal? We also accept <b>BitCoin</b>! <a href="mailto:support@vocore.io">Contact us!</a></font></small></p>
+        </div>
+      </div>
+    </div><!-- /.modal -->
+  </div><!-- /.store -->
 
-</div>
-</div>
-</div><!-- /.modal -->
-</div><!-- /.store -->
+  <div class="modal fade" id="mdSuccess" tabindex="-1" role="dialog" aria-labelledby="modalSuccess">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
 
-<div class="modal fade" id="mdSuccess" tabindex="-1" role="dialog" aria-labelledby="modalSuccess">
-<div class="modal-dialog" role="document">
-<div class="modal-content">
+        <div class="modal-body">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        </div>
 
-<div class="modal-body">
-<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-</div>
+        <div class="modal-header">
+          <h1 class="text-center"><span class="glyphicon glyphicon-check" aria-hidden="true"></span>&nbsp;Thank you !</h1>
+          <p class="text-center">We are preparing your package, it will be shipped in two bussiness days. Once it is shipped, we will send the trace number to your email.</p>
+        </div><!-- /modal-header -->
 
-<div class="modal-header">
-<h1 class="text-center"><span class="glyphicon glyphicon-check" aria-hidden="true"></span>&nbsp;Thank you !</h1>
-<p class="text-center">We are preparing your package, it will be shipped in two bussiness days. Once it is shipped, we will send the trace number to your email.</p>
-</div><!-- /modal-header -->
+      </div>
+    </div>
+  </div>
 
-</div>
-</div>
-</div>
+  <center><h5><small>Want >= 25pcs? Please contact our support for discount.</small></h5></center>
+  <hr/>
 
-<center><h5><small>Want >= 25pcs? Please contact our support for discount.</small></h5></center>
-<hr/>
+  <div class="container">
+   <div class="row">
+    <center><div class="input-group col-xs-10 col-md-6">
+     <span id="btnTrace" class="input-group-btn"><button class="btn btn-success" type="button"><span class="glyphicon glyphicon-screenshot" aria-hidden="true"></span>&nbsp;Trace Package</button></span>
+     <input id="edTrace" type="text" class="form-control" placeholder="Type your order email here ..." aria-describedby="basic-addon1">
+    </div></center>
+   </div>
+   <center id="lbTraceInfo"></center>
+  </div>
 
-<div class="container">
-<div class="row">
-<center><div class="input-group col-xs-10 col-md-6">
-<span id="btnTrace" class="input-group-btn"><button class="btn btn-success" type="button"><span class="glyphicon glyphicon-screenshot" aria-hidden="true"></span>&nbsp;Trace Package</button></span>
-<input id="edTrace" type="text" class="form-control" placeholder="Type your order email here ..." aria-describedby="basic-addon1">
-</div></center>
-</div>
-<center id="lbTraceInfo"></center>
-</div>
+  <hr/>
 
-<hr/>
-
-<footer class="container">
-<center><p class="footer-text"><small><b>VoCore Studio &copy; 2014-2016 &middot; Contact us (reply in 24hours):  <span class="email-link"><a href="mailto:support@vocore.io">support@vocore.io</a></span></b></small></p></center>
-</footer>
+  <footer class="container">
+    <center><p class="footer-text"><small><b>VoCore Studio &copy; 2014-2016 &middot; Contact us (reply in 24hours):  <span class="email-link"><a href="mailto:support@vocore.io">support@vocore.io</a></span></b></small></p></center>
+  </footer>
 
 </body>
 
