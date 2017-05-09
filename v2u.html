@@ -205,7 +205,7 @@
    <h4>Fix Bricked VoCore2 (uboot dead)</h4>
    <p>1. prepare <b>another VoCore/VoCore2</b> OR <b>a flash loader</b> and six wires.</p>
    <p>2.a. using another VoCore/VoCore2 to recover your bricked VoCore2.</p>
-   <p> coming soon...</p>
+   <p>2.a.1 check blog http://vonger.cn/?p=8054</p>
    <p>2.b. using flash loader to recover your bricked VoCore2.</p>
    <p>2.b.1 disconnect VoCore2 from power; </p>
    <p>2.b.2 connect VoCore2 GND to flash loader GND; </p>
@@ -215,6 +215,7 @@
    <p>2.b.6 VoCore2 SPI CS0 -> flash loader SPI CS; </p>
    <p>2.b.7 VoCore2 SPI CLK -> flash loader SPI CLOCK; </p>
    <p>2.b.8 VoCore2 RST -> VoCore2 GND; (keep VoCore2 in reset mode) </p>
+   <p><b>note</b>: if not work, swap MISO/MOSI.</p>
    <p>2.b.9 now, download then send "Flash Image" to VoCore2.2.</p>
    <p>2.b.10 remove wires, connect VoCore2 back to power, everything should back normal.</p>
    <p>3. option: better to upgrade your firmware after recover, Flash Image is out of date.</p>
