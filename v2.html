@@ -223,6 +223,9 @@
    <p>5. restart your network, it will work.</p>
    <p>/etc/init.d/network restart</p>
    <p>6.(option) once ap+sta is totally up, disable it in config, so if next time your target ap is missing, you still able to connect to VoCore2.</p>
+   <p>uci set wireless.sta.disabled=0</p>
+   <p>uci commit</p>
+   <p>/etc/init.d/network restart</p>
    <p>sleep 10</p>
    <p>uci set wireless.sta.disabled=1</p>
    <p>uci commit</p>
