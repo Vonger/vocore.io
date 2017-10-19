@@ -117,13 +117,6 @@
     <div class="col-sm-4">
 	<a href="v2.html" target="_blank"><img id="imgItem1" class="img-circle" src="img/pic1.jpg" width="140" height="140"></a>
 	<h4><a id="lbItem1" href="v2.html">VoCore2 <span id="lbModName"></span></a>
-	 <!-- <button class="btn btn-warning btn-model dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><b>MOD</b><span class="caret"></span></button>
-	 <ul id="lstMod" class="dropdown-menu">
-	  <li><a><b></b><b>Board only</b> (basic, <span>$17.99</span>)<div path="img/pic1.jpg"></div></a></li>
-	  <li><a><b>+ USB Head</b> (+$2.50, total <span>$20.49</span>)<div path="img/pic1a.jpg"></div></a></li>
-	  <li><a><b>+ MicroSD Slot</b> (+$4.00, total <span>$21.99</span>)<div path="img/pic1b.jpg"></div></a></li>
-	  <li><a><b>+ USB &amp; MicroSD</b> (+$6.50, total <span>$24.49</span>)<div path="img/pic1c.jpg"></div></a></li>
-	 </ul> -->
 	</h4>
 	<p>Free Shipping Worldwide.</p>
 	<p>PCB is white or green.</p>
@@ -273,11 +266,11 @@
           <div class="modal-header">
 	    <h4 class="modal-title" id="myModalLabel"><span class="glyphicon glyphicon-plane" aria-hidden="true"></span>&nbsp;Carrier</h4>
             <div class="radio">
-	      <label><input id="rbShipping1" type="radio" name="optionsRadios" value="option1" checked>Shipping by Post.(70% packages delivered in 10~20 days)</label>
+	      <label><input id="rbShipping1" type="radio" name="optionsRadios" value="option1" checked>Shipping by Post.(delievered in three monthes)</label>
               <p><small id="lbPostNote"></small></p>
             </div>
             <div class="radio">
-	      <label><input id="rbShipping2" type="radio" name="optionsRadios" value="option2">Shipping by Express.(90% packages delivered 2~5 days)</label>
+	      <label><input id="rbShipping2" type="radio" name="optionsRadios" value="option2">Shipping by Express.(delivered 2~5 days)</label>
               <p><small>express might charge you tax, please check your country clearance regulations.</small></p>
             </div>
           </div><!-- /modal-header -->
@@ -342,5 +335,30 @@
 <script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/vocore.min.js"></script>
+
+<!-- Start of Async Drift Code -->
+<script>
+!function() {
+  var t;
+  if (t = window.driftt = window.drift = window.driftt || [], !t.init) return t.invoked ? void (window.console && console.error && console.error("Drift snippet included twice.")) : (t.invoked = !0, 
+  t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ], 
+  t.factory = function(e) {
+    return function() {
+      var n;
+      return n = Array.prototype.slice.call(arguments), n.unshift(e), t.push(n), t;
+    };
+  }, t.methods.forEach(function(e) {
+    t[e] = t.factory(e);
+  }), t.load = function(t) {
+    var e, n, o, i;
+    e = 3e5, i = Math.ceil(new Date() / e) * e, o = document.createElement("script"), 
+    o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + i + "/" + t + ".js", 
+    n = document.getElementsByTagName("script")[0], n.parentNode.insertBefore(o, n);
+  });
+}();
+drift.SNIPPET_VERSION = '0.3.1';
+drift.load('kuy8y7mx7dng');
+</script>
+<!-- End of Async Drift Code -->
 
 </html>
