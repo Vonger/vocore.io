@@ -26,6 +26,7 @@
    <center><img class="thumbnail" src="img/v2/v2.t1b.jpg" width="42%"></center>
    <center><h4>VoCore2 + USB Header + MicroSD</h4></center>
    <center><img class="thumbnail" src="img/v2/v2.t1c.jpg" width="42%"></center>
+   <p>note: DDR2 is ESD sencitive, better to use hot air solder without touch</p>
   </div>
 
   <hr/>
@@ -183,7 +184,7 @@
    <p>2. if everything works, after 30 seconds, you will find VoCore2 in your computer hotspot list.</p>
    <p>3. connect to VoCore2 hotspot.</p>
    <p>4.a using ssh or putty or similar tools login to VoCore2(root/vocore).</p>
-   <p>4.b using USB2TTL, please check manual in Download section.</p>
+   <p>4.b using USB2TTL, please check "Connect to VoCore through USB2TTL" section.</p>
    <p><b><font color="red">important</font></b> : <code>UART speed is 115200bps, 8bits, no even, 1 stop bit</code></p>
    <hr/>
 
@@ -265,7 +266,7 @@
    <hr/>
 
    <h4>Upload Firmware</h4>
-   <p>1. upload firmware through luci, please read manual in Download section.</a></p>
+   <p>1. upload firmware through luci, please read "Upgrade Firmware" section.</a></p>
    <p>2. upload firmware through console, connected to VoCore hotspot.</p>
    <p>(1) copy from pc to VoCore[operate in PC]: scp [your firmware].bin root@192.168.61.1:/tmp/vocore2.bin</p>
    <p>here is two choices, 2.a will erase all data/config you write to VoCore, 2.b just upgrade the firmware but keep them.</p>
@@ -328,6 +329,14 @@
    <p>example: <code>mem 0x10000064 0x05540555</code></p>
    <p>here is an example bash script flash the LED every second on VoCore2 </p>
    <code>mem 0x10000064 0x05540555; mem 0x10000604 0x1000; while [ 1 ]; do mem 0x10000634 0x1000; sleep 1; mem 0x10000644 0x1000; sleep 1; done</code>
+   <hr/>
+
+   <h4>Mount VoCore2 onto customized PCB(ASMT)</h4>
+   <center><img class="thumbnail" src="img/v2/v2.clr.png" width="84%"></center>   
+   <p>1. on customized PCB, please keep 16mm x 16mm rectangle clearance(no copper) for on board antenna.</p>
+   <p>2. better to use hot air instead of iron, DDR2 is a ESD sencetive part, might cause permanent damage.</p>
+   <p>3. better to use middle level temprature paste(180C, Sn-Bi-Ag), VoCore2 is using high-temprature paste(220C, Sn-Cu-Ag)</p>
+
   </div>
 
   <hr/>
