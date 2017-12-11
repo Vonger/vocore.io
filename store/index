@@ -1,0 +1,6 @@
+<html>
+<head><title>Redirect to new VoCore store...</title></head>
+<body>
+<script language='javascript'>document.location = 'http://vocore.io/#store'</script>
+</body>
+</html>

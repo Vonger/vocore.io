@@ -48,7 +48,7 @@
      <tr><th class=text-nowrap scope=row>GPIO</th><td>>=40 (pinmux)</td></tr>
      <tr><th class=text-nowrap scope=row>UART</th><td>x3 (UART2 for debug console)</td></tr>
      <tr><th class=text-nowrap scope=row>PWM</th><td>x4</td></tr>
-     <tr><th class=text-nowrap scope=row>POWER SUPPLY</th><td>3.6V ~ 6.0V</td></tr>
+     <tr><th class=text-nowrap scope=row>POWER SUPPLY</th><td>3.6V ~ 6.0V, 500mA</td></tr>
      <tr><th class=text-nowrap scope=row>POWER CONSUMPTION</th><td>74mA wifi standby, 230mA wifi full speed, 5V input.</td></tr>
     </tbody>
    </table>
@@ -315,6 +315,7 @@
    <p><code>sh /tmp/ant2.sh</code></p>
    <p>disable second antenna: </p>
    <p><code>sh /tmp/ant1.sh</code></p>
+   <p>3. call firstboot -y(all your setting will lost!), then reboot.</p>
    <hr/>
 
    <h4>Directly write to memory/register</h4>
