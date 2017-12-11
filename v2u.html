@@ -235,6 +235,14 @@
    <p>3. call firstboot -y(all your setting will lost!), then reboot.</p>
    <hr/>
 
+   <h4>Recover factory setting</h4>
+   <p>Sometimes, we might mess the factory setting section on VoCore2 flash(address can be find by "cat /proc/mtd"), that will cause wifi driver failed to start. To recover it, we need the following steps:<p>
+   <p>1. get into VoCore console, by ehternet or serial port(TTL).</p>
+   <p>2. copy <a href="http://vonger.cn/misc/vocore2/tools/mt7628.sh">mt7628.sh</a> to your VoCore2 /tmp, or directly copy the txt in the script and run in console.</p>
+   <p>3. run mt7628.sh by "sh /tmp/mt7628.sh", then reboot.</p>
+   <p>note: your mac address will be fixed to b8:d8:12:67:01:73, you can change this to modify your VoCore2 mac address.</p>
+   <hr/>
+
    <h4>Open the plastic shell (Ultimate Version)</h4>
    <p>1. use a paper knife open the box(1-4).</p>
    <p>2. you can simply use a pencil push it out from ethernet port side(5).</p>
