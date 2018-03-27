@@ -82,7 +82,7 @@
      <tr><th class=text-nowrap scope=row>-</th><td>+3.3VO</td><td>+3.3V output</td><td>max output current 100mA</td></tr>
      <tr><th class=text-nowrap scope=row>30</th><td>TXD0</td><td>GPIO12, UART0 Lite TXD</td><td>3.3V</td></tr>
      <tr><th class=text-nowrap scope=row>31</th><td>RXD0</td><td>GPIO13, UART0 Lite RXD</td><td>3.3V</td></tr>
-     <tr><th class=text-nowrap scope=row>29</th><td>REFCLK</td><td>GPIO11, reference clock</td><td></td></tr>
+     <tr><th class=text-nowrap scope=row>29</th><td>REFCLK</td><td>GPIO11, reference clock</td><td>SD_CLK@5*eth</td></tr>
      <tr><th class=text-nowrap scope=row>33</th><td>P0RP</td><td>10/100 PHY Port #0 RXP</td><td></td></tr>
      <tr><th class=text-nowrap scope=row>34</th><td>P0RN</td><td>10/100 PHY Port #0 RXN</td><td></td></tr>
      <tr><th class=text-nowrap scope=row>35</th><td>P0TP</td><td>10/100 PHY Port #0 TXP</td><td></td></tr>
@@ -109,11 +109,11 @@
      <tr><th class=text-nowrap scope=row>26</th><td>SPI MISO</td><td>GPIO9, SPI Master In Slave Out</td><td></td></tr>
      <tr><th class=text-nowrap scope=row>27</th><td>SPI MOSI</td><td>GPIO8, SPI Master Out Slave In</td><td>4.7K pull down to GND</td></tr>
      <tr><th class=text-nowrap scope=row>24</th><td>SPI CS1</td><td>GPIO6, SPI Master Chip Select 1</td><td>4.7K pull down to GND</td></tr>
-     <tr><th class=text-nowrap scope=row>21</th><td>I2C SD</td><td>GPIO5, I2C Data</td><td>4.7K pull up to 3.3V</td></tr>
-     <tr><th class=text-nowrap scope=row>20</th><td>I2C CLK</td><td>GPIO4, I2C Clock</td><td>4.7K pull up to 3.3V</td></tr>
-     <tr><th class=text-nowrap scope=row>19</th><td>I2S CLK</td><td>GPIO3, I2S Bit Clock</td><td></td></tr>
-     <tr><th class=text-nowrap scope=row>18</th><td>I2S WS</td><td>GPIO2, I2S L/R Clock</td><td></td></tr>
-     <tr><th class=text-nowrap scope=row>16</th><td>I2S SDI</td><td>GPIO0, I2S Data In</td><td></td></tr>
+     <tr><th class=text-nowrap scope=row>21</th><td>I2C SD</td><td>GPIO5, I2C Data</td><td>SD_D2@5*eth, 4.7K->3.3V</td></tr>
+     <tr><th class=text-nowrap scope=row>20</th><td>I2C CLK</td><td>GPIO4, I2C Clock</td><td>SD_D3@5*eth, 4.7K->3.3V</td></tr>
+     <tr><th class=text-nowrap scope=row>19</th><td>I2S CLK</td><td>GPIO3, I2S Bit Clock</td><td>SD_CMD@5*eth</td></tr>
+     <tr><th class=text-nowrap scope=row>18</th><td>I2S WS</td><td>GPIO2, I2S L/R Clock</td><td>SD_D0@5*eth</td></tr>
+     <tr><th class=text-nowrap scope=row>16</th><td>I2S SDI</td><td>GPIO0, I2S Data In</td><td>SD_D1@5*eth</td></tr>
      <tr><th class=text-nowrap scope=row>17</th><td>I2S SDO</td><td>GPIO1, I2S Data Out</td><td>4.7K pull down to GND</td></tr>
     </tbody>
    </table>
