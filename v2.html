@@ -44,10 +44,10 @@
      <tr><th class=text-nowrap scope=row>ANTENNA</th><td>One U.FL slot, one on board antenna.</td></tr>
      <tr><th class=text-nowrap scope=row>ETHERNET</th><td>1 port/5 ports, up to 100Mbps.</td></tr>
      <tr><th class=text-nowrap scope=row>USB</th><td>Support USB 2.0, up to 480MBit/s.</td></tr>
-     <tr><th class=text-nowrap scope=row>PCIe 1.1</th><td>Supported</td></tr>
-     <tr><th class=text-nowrap scope=row>GPIO</th><td>>=40 (pinmux)</td></tr>
+     <tr><th class=text-nowrap scope=row>GPIO</th><td> around 40 (pinmux)</td></tr>
      <tr><th class=text-nowrap scope=row>UART</th><td>x3 (UART2 for debug console)</td></tr>
      <tr><th class=text-nowrap scope=row>PWM</th><td>x4</td></tr>
+     <tr><th class=text-nowrap scope=row>TEMPERATURE</th><td>0 ~ 40C, indoor only</td></tr>
      <tr><th class=text-nowrap scope=row>POWER SUPPLY</th><td>3.6V ~ 6.0V, 500mA</td></tr>
      <tr><th class=text-nowrap scope=row>POWER CONSUMPTION</th><td>74mA wifi standby, 230mA wifi full speed, 5V input.</td></tr>
     </tbody>
@@ -64,6 +64,7 @@
    <p><b>Firmware(64MB, for Lite): </b><a href="http://vonger.cn/misc/vocore2/20170211L.bin">Download</a>&nbsp;&nbsp;&nbsp;<span class="label label-success">md5:2162ef05b5232154d4f20dee57561da7</span></p>
    <p><b>Flash Image: </b><a href="http://vonger.cn/misc/vocore2/ultimate.16m.img">Download</a>&nbsp;&nbsp;&nbsp;<span class="label label-success">md5:f4c527a1e563d0ad7ef9ab0b5e0b35c6</span></p>
    <p><b>Toolchain: </b><a href="http://vonger.cn/misc/vocore2/toolchain.tar.bz2">Download (Ubuntu 14.04 x64)</a></p>
+   <p><b>UBoot: </b><a href="http://vonger.cn/misc/vocore2/uboot.20180427.bin">Download</a>&nbsp;&nbsp;&nbsp;<span class="label label-success">md5:47166dd2acae029b072ad7fe735c7bc9</span></p>
    <p><b>Datasheet: </b><a href="http://vonger.cn/misc/vocore2/datasheet.zip">Download</a></p>
 
    <h3>Links</h3>
@@ -325,6 +326,13 @@
    <p>2. copy <a href="http://vonger.cn/misc/vocore2/tools/mt7628.sh">mt7628.sh</a> to your VoCore2 /tmp, or directly copy the txt in the script and run in console.</p>
    <p>3. run mt7628.sh by "sh /tmp/mt7628.sh", then reboot.</p>
    <p>note: your mac address will be fixed to b8:d8:12:67:01:73, you can change this to modify your VoCore2 mac address.</p>
+   <hr/>
+
+   <h4>Update UBOOT from serial port</h4>
+   <p> 1. reboot vocore2 at serial console, check "Connect to VoCore through USB2TTL"</p>
+   <p> 2. once reboot, it will show "7: Load Boot Loader code then write to Flash via Serial.", now we are ready to send the data.</p>
+   <p> 3. use kermit or compatible tools send uboot.bin, uboot.bin can be get from from Download section.</p>
+   <p> 4. wait until it reboot. </p>
    <hr/>
 
    <h4>Directly write to memory/register</h4>
