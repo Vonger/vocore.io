@@ -26,7 +26,8 @@
    <center><img class="thumbnail" src="img/v2/v2.t1b.jpg" width="42%"></center>
    <center><h4>VoCore2 + USB Header + MicroSD</h4></center>
    <center><img class="thumbnail" src="img/v2/v2.t1c.jpg" width="42%"></center>
-   <p>note: DDR2 is ESD sencitive, better to use hot air solder without touch</p>
+   <p>note1: DDR2 is ESD sencitive, better to use hot air solder without touch</p>
+   <p>note2: in order to increase antenna sencitive, RF parts change to 0201.</p>
   </div>
 
   <hr/>
@@ -47,6 +48,7 @@
      <tr><th class=text-nowrap scope=row>GPIO</th><td> around 40 (pinmux)</td></tr>
      <tr><th class=text-nowrap scope=row>UART</th><td>x3 (UART2 for debug console)</td></tr>
      <tr><th class=text-nowrap scope=row>PWM</th><td>x4</td></tr>
+     <tr><th class=text-nowrap scope=row>PCIe(option)</th><td>x1(option)</td></tr>
      <tr><th class=text-nowrap scope=row>TEMPERATURE</th><td>0 ~ 40C, indoor only</td></tr>
      <tr><th class=text-nowrap scope=row>POWER SUPPLY</th><td>3.6V ~ 6.0V, 500mA</td></tr>
      <tr><th class=text-nowrap scope=row>POWER CONSUMPTION</th><td>74mA wifi standby, 230mA wifi full speed, 5V input.</td></tr>
@@ -68,6 +70,7 @@
    <p><b>Toolchain: </b><a href="http://vonger.cn/misc/vocore2/toolchain.tar.bz2">Download (Ubuntu 14.04 x64)</a></p>
    <p><b>UBoot: </b><a href="http://vonger.cn/misc/vocore2/uboot.20180427.bin">Download</a>&nbsp;&nbsp;&nbsp;<span class="label label-success">md5:47166dd2acae029b072ad7fe735c7bc9</span></p>
    <p><b>Datasheet: </b><a href="http://vonger.cn/misc/vocore2/datasheet.zip">Download</a></p>
+   <p><b>FCC: </b><a href="http://vonger.cn/misc/vocore2/FCC-2AC4RVOCOREV2.pdf">2AC4RVOCOREV2</a></p>
 
    <h3>Links</h3>
    <p><a href="v2u.html">VoCore2 + Dock</a>&nbsp;&nbsp;&nbsp;<small>Ultimate version makes it easy to use.</small></p>
@@ -179,6 +182,7 @@
    <p><small>* five ethernet port mode, sdcard mux to i2s/i2c.</small></p>
 
    <center><img src="img/v2/v2.size.png" width="84%"></img></center>
+   <p><small>* hole diameter is 0.6mm.</small></p>
 
    <h3>Tutorials</h3>
    <h4>Connect to Power</h4>
@@ -196,11 +200,12 @@
    <center><img src="img/v2/v2.usb2ttl.png" width="84%"></img></center>
    <p>video tutorial: <a href="https://youtu.be/W3UVXb5YM2k">youtube</a></p>
    <p>1. connect USB2TTL.TXD to VoCore2.RXD2, USB2TTL.RXD to VoCore2.TXD2, USB2TTL.GND to VoCore2.GND.</p>
-   <p>2. setup your serial application(such as putty for windows, kermit for mac,linux) in your computer to 115200bps, 8 data bits, no even, 1 stop bit.</p>
-   <p>3. power on your VoCore2, no you should find some text output.</p>
+   <p>2. setup your serial application(such as putty/teraterm for windows, kermit for mac,linux) in your computer to 115200bps, 8 data bits, no even, 1 stop bit.</p>
+   <p>3. power on your VoCore2, now you should find some text output.</p>
    <hr/>
 
    <h4>Setup AP + STA Mode</h4>
+   <p>note: this is for the old firmware 20150427, better to use github/openwrt and github/vonger/vocore2 make your new firmware, enable STA by uci directly</p>
    <p>video tutorial(require USB2TTL): <a href="https://youtu.be/IPt5cxg5K98">youtube</a></p>
    <p>1. connect to your VoCore through USB2TTL.</p>
    <p>2. run command in console(UART console).</p>
@@ -282,7 +287,7 @@
 
    <h4>Fix Bricked VoCore2 (uboot alive)</h4>
    <p>1. connect your VoCore2 to computer through USB2TTL(UART2 RXD2+TXD2+GND).</p>
-   <p>2. open tty tools(must have kermit protocol), such as kermit, ckermit. </p>
+   <p>2. open tty tools(must have kermit protocol), such as kermit, ckermit, teraterm. </p>
    <p>3. power up your VoCore, once you find: "0: Load system code then write to Flash via SERIAL.", press '0'.</p>
    <p><b>note</b>: VoCore will show "## Ready for binary (kermit) download to 0x80100000 at 115200 bps..."</p>
    <p><b>note</b>: kermit: press Ctrl and '\' same time then press 'c', you will switch to kermit command console.</p>

@@ -17,6 +17,7 @@
   <div class="container">
    <center><img class="thumbnail" src="img/v2u/v2u.head.jpg" width="84%"></center>
    <center><iframe width="84%" height="480" src="http://www.youtube.com/embed/LnjfesAr2fk"></iframe></center>
+   <small>note: power input is from microusb, careful if usb head is too big, it will block you plugin tf/sd card.</small>
   </div>
 
   <hr/>
@@ -65,6 +66,7 @@
    <p><b>Toolchain: </b><a href="http://vonger.cn/misc/vocore2/toolchain.tar.bz2">Download (Ubuntu 14.04 x64)</a></p>
    <p><b>UBoot: </b><a href="http://vonger.cn/misc/vocore2/uboot.20180427.bin">Download</a>&nbsp;&nbsp;&nbsp;<span class="label label-success">md5:47166dd2acae029b072ad7fe735c7bc9</span></p>
    <p><b>Datasheet: </b><a href="http://vonger.cn/misc/vocore2/datasheet.zip">Download</a></p>
+   <p><b>FCC: </b><a href="http://vonger.cn/misc/vocore2/FCC-2AC4RVOCOREV2.pdf">2AC4RVOCOREV2</a></p>
 
 
    <h3>Details</h3>
@@ -83,9 +85,9 @@
    <p><b>note</b>: be careful, high voltage will damage your VoCore.</p>
    <p>2. if everything works, after 30 seconds, you will find VoCore2 in your computer hotspot list.</p>
    <p>3. connect to VoCore2 hotspot.</p>
-   <p>4.a using ssh or putty or similar tools login to VoCore2(root/vocore).</p>
+   <p>4.a using ssh or putty/teraterm or similar tools login to VoCore2(root/vocore).</p>
    <p>4.b using internal USB2TTL, it is driver free, once you connect it to your computer by USB, you will find a serial port in your device list, connect to it. </p>
-   <p><b>note</b>: for windows(>xp, support usb cdc), you can find USB2TTL device at your device manager; for Linux/MacOS, you will find USB2TTL device at /dev/tty.usbmodem_____1</p>
+   <p><b>note</b>: for windows(xp or win7 or win10, support usb cdc), you can find USB2TTL device at your device manager; for Linux/MacOS, you will find USB2TTL device at /dev/tty.usbmodem_____1</p>
    <p><b><font color="red">important</font></b> : <code>UART speed is 115200bps, 8bits, no even, 1 stop bit</code></p>
    <hr/>
 
@@ -100,6 +102,8 @@
 
    <h4>Setup AP + STA Mode</h4>
    <p>video tutorial: <a href="https://youtu.be/IPt5cxg5K98">youtube</a></p>
+   <p>note: this is for the old firmware 20150427, better to use github/openwrt and github/vonger/vocore2 make your new firmware, enable STA by uci directly</p>
+
    <p><b>note</b>: LuCI interface(the web interface) has bugs, MUST use console command.</p>
    <p>1. connect to your VoCore to your computer through its microUSB.</p>
    <p>2. run command in console(replace [TARGET AP SSID] to the target ap ssid you want to connect to, [TARGET AP PASSWORD] is its password).</p>
@@ -167,6 +171,7 @@
    <hr/>
 
    <h4>Compile OpenWRT for VoCore2</h4>
+   <p>video tutorial: <a href="https://youtu.be/ocl6yFtKSNs">youtube</a></p>
    <p>1. install Ubuntu 14.04 64bit Server to Virtual Machine.</p>
    <p>2. in virtualbox, we will need install some packages to compile openwrt:</p>
    <p>sudo apt-get install gcc g++ binutils patch bzip2 flex bison make autoconf gettext texinfo unzip sharutils subversion libncurses5-dev ncurses-term zlib1g-dev libssl-dev python</p>
@@ -198,7 +203,7 @@
    <h4>Fix Bricked VoCore2 (uboot alive)</h4>
    <p>1. connect your VoCore to computer through microUSB, keep your VoCore in reset mode.</p>
    <p><b>note:</b>: to keep VoCore in reset mode, you need to connect RST and GND by wire, use this step to wait until USB2TTL ready.</p>
-   <p>2. open tty tools(must have kermit protocol), such as kermit, ckermit. </p>
+   <p>2. open tty tools(must have kermit protocol), such as kermit, ckermit, teraterm. </p>
    <p><b>note:</b>: VoCore2 GD32 USB2TTL is driver free, but have to wait 6~8 seconds until it is ready, once it is ready, we can disconnect RST and GND, then it is able to boot normally.</p>
    <p>3. power up your VoCore, once you find: "0: Load system code then write to Flash via SERIAL.", press '0'.</p>
    <p><b>note</b>: VoCore will show "## Ready for binary (kermit) download to 0x80100000 at 115200 bps..."</p>
