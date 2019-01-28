@@ -22,7 +22,7 @@
   <div class="container">
    <center><h4>VoCore2 + USB Header (Power Supply Only)</h4></center>
    <center><img class="thumbnail" src="img/v2/v2.t1a.jpg" width="42%"></center>
-   <center><h4>VoCore2 + MicroSD</h4></center>
+   <center><h4>VoCore2 + MicroSD(stop production)</h4></center>
    <center><img class="thumbnail" src="img/v2/v2.t1b.jpg" width="42%"></center>
    <center><h4>VoCore2 + USB Header + MicroSD</h4></center>
    <center><img class="thumbnail" src="img/v2/v2.t1c.jpg" width="42%"></center>
@@ -65,11 +65,13 @@
 
    <h3>Downloads</h3>
    <p><b>note</b>: normally, we upgrade or fix brick are using Firmware. Flash Image is a clone of the full flash, for professional usage only. </p>
-   <p><b>Firmware(128MB): </b><a href="http://vonger.cn/misc/vocore2/20170527V.bin">Download</a>&nbsp;&nbsp;&nbsp;<span class="label label-success">md5:6f7c4b019577a7cec077562b75bc838b</span></p>
+   <p><b>Firmware(128MB, 20170527): </b><a href="http://vonger.cn/misc/vocore2/20170527V.bin">Download</a>&nbsp;&nbsp;&nbsp;<span class="label label-success">md5:6f7c4b019577a7cec077562b75bc838b</span></p>
+   <p><b>Firmware(128MB, 20190127): </b><a href="http://vonger.cn/misc/vocore2/20190127.bin">Download</a>&nbsp;&nbsp;&nbsp;<span class="label label-success">md5:f4d08cca2b944abd4e4bedd273f1d3d8</span></p>
    <p><b>Firmware(64MB, for Lite): </b><a href="http://vonger.cn/misc/vocore2/20170211L.bin">Download</a>&nbsp;&nbsp;&nbsp;<span class="label label-success">md5:2162ef05b5232154d4f20dee57561da7</span></p>
    <p><b>Flash Image: </b><a href="http://vonger.cn/misc/vocore2/ultimate.16m.img">Download</a>&nbsp;&nbsp;&nbsp;<span class="label label-success">md5:f4c527a1e563d0ad7ef9ab0b5e0b35c6</span></p>
    <p><b>Toolchain: </b><a href="http://vonger.cn/misc/vocore2/toolchain.tar.bz2">Download (Ubuntu 14.04 x64)</a></p>
-   <p><b>UBoot: </b><a href="http://vonger.cn/misc/vocore2/uboot.20180427.bin">Download</a>&nbsp;&nbsp;&nbsp;<span class="label label-success">md5:47166dd2acae029b072ad7fe735c7bc9</span></p>
+   <p><b>UBoot(128MB): </b><a href="http://vonger.cn/misc/vocore2/uboot128m.20190128.bin">Download</a>&nbsp;&nbsp;&nbsp;<span class="label label-success">md5:5167715c0c7732352ed12c666f29f648</span></p>
+   <p><b>UBoot(64MB): </b><a href="http://vonger.cn/misc/vocore2/uboot64m.20190128.bin">Download</a>&nbsp;&nbsp;&nbsp;<span class="label label-success">md5:c32cef8850e378e36928281b3439414f</span></p>
    <p><b>Datasheet: </b><a href="http://vonger.cn/misc/vocore2/datasheet.zip">Download</a></p>
    <p><b>FCC: </b><a href="http://vonger.cn/misc/vocore2/FCC-2AC4RVOCOREV2.pdf">2AC4RVOCOREV2</a></p>
 
@@ -205,8 +207,11 @@
    <p>3. power on your VoCore2, now you should find some text output.</p>
    <hr/>
 
-   <h4>Setup AP + STA Mode</h4>
-   <p>note: this is for the old firmware 20150427, better to use github/openwrt and github/vonger/vocore2 make your new firmware, enable STA by uci directly</p>
+   <h4>Connect to your local wireless network(AP + STA Mode)</h4>
+   <p><b>This is for firmware 20190127 which based on openwrt 18.06.1.</b></p>
+   <p>tutorial please check at <a href="http://vonger.cn/?p=14633">Beginner: OpenWrt 18.06 stable version</a></p>
+   <p><b>This is for ßfirmware 20170527 which based on openwrt cc.</b></p>
+   <p>note: please upgrade your firmware to 20190127, this version is out of date.</p>
    <p>video tutorial(require USB2TTL): <a href="https://youtu.be/IPt5cxg5K98">youtube</a></p>
    <p>1. connect to your VoCore through USB2TTL.</p>
    <p>2. run command in console(UART console).</p>
@@ -265,6 +270,7 @@
    <p>4. call "tar -jxvf openwrt.tar.bz2" to uncompress the package.</p>
    <p>5. call "make menuconfig" in the openwrt folder, configure openwrt in menu, choose MT7688/28/VoCore2 in menu.</p>
    <p>6. call "make" in the openwrt folder, start the make process</p>
+   <p>note: for full tutorials, please check <a href="http://vonger.cn/?s=Beginner%3A+OpenWrt+18.06+stable+version">Beginner Tutorials</a></p>
    <hr/>
 
    <h4>Compile your App for VoCore2</h4>
@@ -355,7 +361,7 @@
    <hr/>
 
    <h4>Mount VoCore2 onto customized PCB(ASMT)</h4>
-   <center><img class="thumbnail" src="img/v2/v2.clr.png" width="84%"></center>   
+   <center><img class="thumbnail" src="img/v2/v2.clr.png" width="84%"></center>
    <p>1. on customized PCB, <strong>suggest</strong> keeping 16mm x 16mm rectangle clearance(no copper) for better signal on board antenna.</p>
    <p>2. <strong>suggest</strong> using hot air instead of iron, DDR2 is a ESD sencetive part, might cause permanent damage.</p>
    <p>3. <strong>must</strong> use middle level temprature paste(180C, Sn-Bi-Ag) or lower one, VoCore2 is using high-temprature paste(220C, Sn-Cu-Ag), same temprature level might cause damage to VoCore.</p>

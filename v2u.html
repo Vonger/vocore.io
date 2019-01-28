@@ -16,8 +16,7 @@
   <center><h3><small>The Coin-sized Linux Computer with external equipment and interface</small></h3></center>
   <div class="container">
    <center><img class="thumbnail" src="img/v2u/v2u.head.jpg" width="84%"></center>
-   <center><iframe width="84%" height="480" src="http://www.youtube.com/embed/LnjfesAr2fk"></iframe></center>
-   <small>note: power input is from microusb, careful if usb head is too big, it will block you plugin tf/sd card.</small>
+   <small>note: if microusb connector head is too big, it will block you plugin tf/sd card.</small>
   </div>
 
   <hr/>
@@ -61,10 +60,10 @@
 
    <h3 name="download">Downloads</h3>
    <p><b>note</b>: normally, we upgrade or fix brick are using Firmware. Flash Image is a clone of the full flash, for professional usage only. </p>
-   <p><b>Firmware: </b><a href="http://vonger.cn/misc/vocore2/20170527.bin">Download(2017.05.27)</a>&nbsp;&nbsp;&nbsp;<span class="label label-success">md5:a2eaf168855d74ea7a70b65ebf4fea90</span></p>
+   <p><b>Firmware: </b><a href="http://vonger.cn/misc/vocore2/20190127.bin">Download(2019.01.27)</a>&nbsp;&nbsp;&nbsp;<span class="label label-success">md5:f4d08cca2b944abd4e4bedd273f1d3d8</span></p>
    <p><b>Flash Image: </b><a href="http://vonger.cn/misc/vocore2/ultimate.16m.img">Download</a>&nbsp;&nbsp;&nbsp;<span class="label label-success">md5:f4c527a1e563d0ad7ef9ab0b5e0b35c6</span></p>
    <p><b>Toolchain: </b><a href="http://vonger.cn/misc/vocore2/toolchain.tar.bz2">Download (Ubuntu 14.04 x64)</a></p>
-   <p><b>UBoot: </b><a href="http://vonger.cn/misc/vocore2/uboot.20180427.bin">Download</a>&nbsp;&nbsp;&nbsp;<span class="label label-success">md5:47166dd2acae029b072ad7fe735c7bc9</span></p>
+   <p><b>UBoot: </b><a href="http://vonger.cn/misc/vocore2/uboot128m.20190128.bin">Download</a>&nbsp;&nbsp;&nbsp;<span class="label label-success">md5:5167715c0c7732352ed12c666f29f648</span></p>
    <p><b>Datasheet: </b><a href="http://vonger.cn/misc/vocore2/datasheet.zip">Download</a></p>
    <p><b>FCC: </b><a href="http://vonger.cn/misc/vocore2/FCC-2AC4RVOCOREV2.pdf">2AC4RVOCOREV2</a></p>
 
@@ -100,10 +99,11 @@
    <p>USB2TTL parameter: 115200bps, 8 data bits, no even-odd check, 1 stop bit.</p>
    <hr/>
 
-   <h4>Setup AP + STA Mode</h4>
-   <p>video tutorial: <a href="https://youtu.be/IPt5cxg5K98">youtube</a></p>
-   <p>note: this is for the old firmware 20150427, better to use github/openwrt and github/vonger/vocore2 make your new firmware, enable STA by uci directly</p>
-
+   <h4>Connect to your local wireless network(AP + STA Mode)</h4>
+   <p><b>This is for firmware 20190127(latest) which based on openwrt 18.06.1.</b></p>
+   <p>tutorial please check at <a href="http://vonger.cn/?p=14633">Beginner: OpenWrt 18.06 stable version</a></p>
+   <p><b>This is for firmware 20170527(default) which based on openwrt cc.</b></p>
+   <p>note: please upgrade your firmware to 20190127, this version is out of date.</p>
    <p><b>note</b>: LuCI interface(the web interface) has bugs, MUST use console command.</p>
    <p>1. connect to your VoCore to your computer through its microUSB.</p>
    <p>2. run command in console(replace [TARGET AP SSID] to the target ap ssid you want to connect to, [TARGET AP PASSWORD] is its password).</p>
@@ -155,6 +155,7 @@
 
    <h4>Connect Speaker to VoCore2 to Play Music</h4>
    <p><b>note</b>: please update your firmware to latest version.</p>
+   <p>0. use opkg install madplay-alsa.</p>
    <p>1. download a <a href="http://vonger.cn/misc/vocore2/tools/test.mp3">music</a> to VoCore2 memory(put it in folder /tmp/).</p>
    <p>2. connect a standard 3.5mm headphone or speaker to VoCore2.</p>
    <p>3. in VoCore2 console call "madplay /tmp/test.mp3", the music will play in seconds.</p>
@@ -163,6 +164,7 @@
 
    <h4>Connect VoCore Camera to VoCore2(DIY Wireless Camera)</h4>
    <p><b>note</b>: please update your firmware to latest version.</p>
+   <p>0. use opkg install mjpeg-streamer.</p>
    <p>1. connect usb camera to VoCore2.</p>
    <p>2. now you find device at /dev/video0, /dev/video1.</p>
    <p><b>note</b>: /dev/video0 is mjpeg stream, /dev/video1 is h264 stream.</p>
@@ -179,6 +181,7 @@
    <p>4. call "tar -jxvf openwrt.tar.bz2" to uncompress the package.</p>
    <p>5. call "make menuconfig" in the openwrt folder, configure openwrt in menu, choose MT7688/28/VoCore2 in menu.</p>
    <p>6. call "make" in the openwrt folder, start the make process</p>
+   <p>note: for full tutorials, please check <a href="http://vonger.cn/?s=Beginner%3A+OpenWrt+18.06+stable+version">Beginner Tutorials</a></p>
    <hr/>
 
    <h4>Compile your App for VoCore2</h4>
