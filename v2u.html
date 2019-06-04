@@ -28,24 +28,24 @@
     <thead><tr><th></th><th>Details</th></tr></thead>
     <tbody>
      <tr><th class=text-nowrap scope=row>SIZE</th><td>28mm x 30mm x 30mm</td></tr>
-     <tr><th class=text-nowrap scope=row>CPU</th><td>MT7628AN, 580 MHz, MIPS 24K</td></tr>
+     <tr><th class=text-nowrap scope=row>CPU</th><td>MT7628, 580 MHz, MIPS 24K</td></tr>
      <tr><th class=text-nowrap scope=row>MEMORY</th><td>128MB, DDR2, 166MHz</td></tr>
      <tr><th class=text-nowrap scope=row>STORAGE</th><td>16M NOR on board, support SDXC up to 2TB</td></tr>
      <tr><th class=text-nowrap scope=row>WIRELESS</th><td>802.11n, 2T2R, speed up to 300Mbps.</td></tr>
      <tr><th class=text-nowrap scope=row>ANTENNA</th><td>One U.FL slot, one on board antenna.</td></tr>
-     <tr><th class=text-nowrap scope=row>ETHERNET</th><td>1 port/5 ports, up to 100Mbps.</td></tr>
+     <tr><th class=text-nowrap scope=row>ETHERNET</th><td>1 port, up to 100Mbps.</td></tr>
      <tr><th class=text-nowrap scope=row>USB</th><td>Support USB 2.0, up to 480MBit/s.</td></tr>
-     <tr><th class=text-nowrap scope=row>PCIe 1.1</th><td>Supported</td></tr>
+     <tr><th class=text-nowrap scope=row>PCIe 1.1</th><td>Supported(option)</td></tr>
      <tr><th class=text-nowrap scope=row>GPIO</th><td>>=40 (pinmux)</td></tr>
      <tr><th class=text-nowrap scope=row>UART</th><td>x3 (UART2 for debug console)</td></tr>
      <tr><th class=text-nowrap scope=row>PWM</th><td>x4</td></tr>
      <tr><th class=text-nowrap scope=row>A/D CONVERT</th><td>4 channels</td></tr>
      <tr><th class=text-nowrap scope=row>D/A CONVERT</th><td>1 channels</td></tr>
-     <tr><th class=text-nowrap scope=row>AUDIO PLAYBACK</th><td>Support</td></tr>
-     <tr><th class=text-nowrap scope=row>AUDIO RECORD</th><td>Support</td></tr>
-     <tr><th class=text-nowrap scope=row>DEBUG CONSOLE</th><td>On board driver-free USB2TTL</td></tr>
+     <tr><th class=text-nowrap scope=row>AUDIO PLAYBACK</th><td>Support(3.5mm jack)</td></tr>
+     <tr><th class=text-nowrap scope=row>AUDIO RECORD</th><td>Support(3.5mm jack)</td></tr>
+     <tr><th class=text-nowrap scope=row>DEBUG CONSOLE</th><td>USB2TTL(microUSB, for power and console)</td></tr>
      <tr><th class=text-nowrap scope=row>SHELL</th><td>Included</td></tr>
-     <tr><th class=text-nowrap scope=row>POWER SUPPLY</th><td>3.6V ~ 6.0V, 500mA</td></tr>
+     <tr><th class=text-nowrap scope=row>POWER SUPPLY</th><td>3.6V ~ 5.5V, 500mA</td></tr>
      <tr><th class=text-nowrap scope=row>POWER CONSUMPTION</th><td>74mA wifi standby, 230mA wifi full speed, 5V input.</td></tr>
     </tbody>
    </table>
@@ -53,14 +53,14 @@
 
    <h3>Sources</h3>
    <p><b>Hardware: </b><a href="http://vonger.cn/misc/vocore2/source.zip">Download</a>&nbsp;&nbsp;&nbsp;<span class="label label-success">md5:710ce05e5f95076b5e42b2feaf8a4de4</span></p>
-   <p><b>OpenWrt 1505: </b><a href="http://vonger.cn/misc/vocore2/openwrt.tar.bz2">Download</a>&nbsp;&nbsp;&nbsp;<span class="label label-success">md5:613621b833102e7ccde7b50c5f5ef6a7</span></p>
+   <p><b>OpenWrt 18.06.2: </b><a href="http://vonger.cn/misc/vocore2/openwrt.18062.tar.xz">Download</a>&nbsp;&nbsp;&nbsp;<span class="label label-success">md5:3389b84aafe25c0281c4d798078b4d1d</span></p>
    <p><b>MediaTek SDK: </b><a href="http://vonger.cn/misc/vocore2/mtksdk-openwrt-3.10.14-20141127-30965ec3.tar.bz2">Download</a>&nbsp;&nbsp;&nbsp;<span class="label label-success">md5:4591c418ba6599920337859633d2aa18</span></p>
    <p><b>UBoot: </b><a href="https://github.com/Vonger/Das-U-boot">Download (Github) </a></p>
    <p><b>WiFi Driver: </b><a href="https://github.com/Vonger/vocore2">Download (Github) </a><span class="label label-default">support latest openwrt</span></p>
 
    <h3 name="download">Downloads</h3>
    <p><b>note</b>: normally, we upgrade or fix brick are using Firmware. Flash Image is a clone of the full flash, for professional usage only. </p>
-   <p><b>Firmware: </b><a href="http://vonger.cn/misc/vocore2/20190127.bin">Download(2019.01.27)</a>&nbsp;&nbsp;&nbsp;<span class="label label-success">md5:f4d08cca2b944abd4e4bedd273f1d3d8</span></p>
+   <p><b>Firmware (20190604): </b><a href="http://vonger.cn/misc/vocore2/20190604.bin">Download</a>&nbsp;&nbsp;&nbsp;<span class="label label-success">md5:e519efcf765b19b59a9f793fff2b9f05</span></p>
    <p><b>Flash Image: </b><a href="http://vonger.cn/misc/vocore2/ultimate.16m.img">Download</a>&nbsp;&nbsp;&nbsp;<span class="label label-success">md5:f4c527a1e563d0ad7ef9ab0b5e0b35c6</span></p>
    <p><b>Toolchain: </b><a href="http://vonger.cn/misc/vocore2/toolchain.tar.bz2">Download (Ubuntu 14.04 x64)</a></p>
    <p><b>UBoot: </b><a href="http://vonger.cn/misc/vocore2/uboot128m.20190128.bin">Download</a>&nbsp;&nbsp;&nbsp;<span class="label label-success">md5:5167715c0c7732352ed12c666f29f648</span></p>
@@ -100,7 +100,7 @@
    <hr/>
 
    <h4>Connect to your local wireless network(AP + STA Mode)</h4>
-   <p><b>This is for firmware 20190127(latest) which based on openwrt 18.06.1.</b></p>
+   <p><b>This is for firmware 20190316 or later which based on openwrt 18.06.2.</b></p>
    <p>tutorial please check at <a href="http://vonger.cn/?p=14633">Beginner: OpenWrt 18.06 stable version</a></p>
    <p><b>This is for firmware 20170527(default) which based on openwrt cc.</b></p>
    <p>note: please upgrade your firmware to 20190127, this version is out of date.</p>
@@ -176,11 +176,10 @@
    <p>video tutorial: <a href="https://youtu.be/ocl6yFtKSNs">youtube</a></p>
    <p>1. install Ubuntu 14.04 64bit Server to Virtual Machine.</p>
    <p>2. in virtualbox, we will need install some packages to compile openwrt:</p>
-   <p>sudo apt-get install gcc g++ binutils patch bzip2 flex bison make autoconf gettext texinfo unzip sharutils subversion libncurses5-dev ncurses-term zlib1g-dev libssl-dev python</p>
-   <p>3. download openwrt at "Sources" section in this page, software part.</p>
-   <p>4. call "tar -jxvf openwrt.tar.bz2" to uncompress the package.</p>
-   <p>5. call "make menuconfig" in the openwrt folder, configure openwrt in menu, choose MT7688/28/VoCore2 in menu.</p>
-   <p>6. call "make" in the openwrt folder, start the make process</p>
+   <p>sudo apt-get install gcc g++ binutils patch bzip2 flex bison make autoconf gettext texinfo unzip sharutils subversion libncurses5-dev ncurses-term zlib1g-dev libssl-dev python python-dev</p>
+   <p>3. download openwrt, check github.com/vonger/vocore2 README.md .</p>
+   <p>4. call "make menuconfig" in the openwrt folder, configure openwrt in menu, choose MT7688/28/VoCore2 in menu.</p>
+   <p>5. call "make" in the openwrt folder, start the make process</p>
    <p>note: for full tutorials, please check <a href="http://vonger.cn/?s=Beginner%3A+OpenWrt+18.06+stable+version">Beginner Tutorials</a></p>
    <hr/>
 
@@ -190,6 +189,7 @@
    <code>/path.to.your.toolchain/bin/mipsel-openwrt-linux-gcc -g yourcode.c -o yourcode</code>
    <p>3. after this, you will get an executable file named "yourcode", use scp, copy it to your VoCore2</p>
    <p>4. in VoCore2, call <code>chmod +x yourcode</code>, after that, you can run it in VoCore2, call <code>./yourcode</code></p>
+   <p> note: setup a develop environment, please check <a href="http://vonger.cn/?p=14657">Develop and Debug on Qt Creator</a></p>
    <hr/>
 
    <h4>Upload Firmware</h4>
