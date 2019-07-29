@@ -14,6 +14,8 @@
   <center><h1>VoCore2 Screen</h1></center>
   <div class="container">
    <center><img class="thumbnail" src="img/screen.head.jpg" width="84%"></center>
+   <center><img class="thumbnail" src="img/scr/1.jpg" width="84%"></center>
+   <center><img class="thumbnail" src="img/scr/2.jpg" width="84%"></center>
   </div>
 
   <hr/>
@@ -43,11 +45,33 @@
    <hr/>
    <h3>How It Works</h3>
    <p>The screen has memory to store the picture, so you can directly send data through USB, data format is R-G-B-R-G-...in SDK the API has packaged all necessary functions, please also check the demo of DOOM to study how it works.</p>
-   <p>Current version support framebuffer driver for VoCore2, we are trying to port it to raspberryPi</p>
+   <p>Current version support framebuffer driver for VoCore2 and Raspberry, please download SDK and try fbusb.ko</p>
 
    <h3>Sources</h3>
    <p><b>SDK: </b><a href="http://vonger.cn/misc/screen/v2screen.tar.xz">Download</a></p>
    <p><b>OLD VERSION: </b><a href="http://vonger.cn/misc/screen/">LINK</a></p>
+
+   <h3>Tutorials</h3>
+   <h4>Connect to VoCore2</h4>
+   <p>1. prepare a common USB 2.0 cable with microUSB port, make sure the cable has data wires(some USB cables are only for power charge and do not have data wires, it does not work with this screen). </p>
+   <p>note: screen type is on the FPC of screen, currently we have two types, 'vocore2' for big endian, 'djn1522' for little endian.</p>
+   <p>2. copy vocore2/fbusb.xxxx.ko in SDK to your VoCore2 /lib/modules/4.14.95/fbusb.ko (xxxx is the screen type, rename it to fbusb.ko)</p>
+   <p>3. call 'echo fbusb > /etc/modules.d/01-fbusb' in VoCore2 console.</p>
+   <p>4. power off VoCore2 and connect the screen with USB cable to VoCore2's USB port.</p>
+   <p>5. connect VoCore2 to 5V power, then around 10~15 seconds, you can find VoCore2 logo on the screen, also a cursor flash at screen corner, then we know it works.</p>
+   <p>note: fbusb will map screen to /dev/fb0.</p>
+
+   <h4>Connect to Raspberry Pi</h4>
+   <p>1. prepare a common USB 2.0 cable with microUSB port(make sure it has data cable)</p>
+   <p>2. copy raspi/fbusb.xxxx.ko in SDK to your Raspberry Pi(xxxx is the screen type)</p>
+   <p>3. call 'sudo insmod fbusb.xxxx.ko', if success, you can find fbusb log in dmesg, and the screen will show logo.</p>
+   <p>note: fbusb will map screen to /dev/fb1.</p>
+
+   <h4>Try framebuffer</h4>
+   <p>fbusb is using 16bit color.</p>
+   <p>1. set screen to black: dd if=/dev/zero of=/dev/fb0 bs=1000 count=768</p>
+   <p>2. set screen to random pixel: dd if=/dev/urandom of=/dev/fb0 bs=1000 count=768</p>
+   <p>note: on vocore, it is /dev/fb0; on raspi, it is /dev/fb1.</p>
 
   </div>
 
