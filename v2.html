@@ -22,9 +22,7 @@
   <div class="container">
    <center><h4>VoCore2 + USB Header (Power Supply Only)</h4></center>
    <center><img class="thumbnail" src="img/v2/v2.t1a.jpg" width="42%"></center>
-   <center><h4>VoCore2 + MicroSD(stop production)</h4></center>
-   <center><img class="thumbnail" src="img/v2/v2.t1b.jpg" width="42%"></center>
-   <center><h4>VoCore2 + USB Header + MicroSD</h4></center>
+   <center><h4>VoCore2 + USB Header + MicroSD Slot</h4></center>
    <center><img class="thumbnail" src="img/v2/v2.t1c.jpg" width="42%"></center>
    <p>note1: DDR2 is ESD sencitive, better to use hot air solder without touch</p>
    <p>note2: in order to increase antenna sencitive, RF parts change to 0201.</p>
@@ -56,8 +54,8 @@
    </table>
 
    <h3>Sources</h3>
-   <p><b>Hardware: </b><a href="http://vonger.cn/misc/vocore2/source.zip">Download</a>&nbsp;&nbsp;&nbsp;<span class="label label-success">md5:710ce05e5f95076b5e42b2feaf8a4de4</span></p>
-   <p><b>OpenWrt 18.06.2: </b><a href="http://vonger.cn/misc/vocore2/openwrt.18062.tar.xz">Download</a>&nbsp;&nbsp;&nbsp;<span class="label label-success">md5:3389b84aafe25c0281c4d798078b4d1d</span></p>
+   <p><b>Hardware: </b><a href="http://vonger.cn/misc/vocore2/vocore2.hd.zip">Download</a>&nbsp;&nbsp;&nbsp;<span class="label label-success">md5:9d8d182fbd06aa3c6de5c1f7d37a5542</span></p>
+   <p><b>OpenWrt 18.06.4: </b><a href="http://vonger.cn/misc/vocore2/openwrt.18064.tar.xz">Download</a>&nbsp;&nbsp;&nbsp;<span class="label label-success">md5:2ecb340b1683ba92595f277b14cb09d1</span></p>
    <p><b>MediaTek SDK: </b><a href="http://vonger.cn/misc/vocore2/mtksdk-openwrt-3.10.14-20141127-30965ec3.tar.bz2">Download</a>&nbsp;&nbsp;&nbsp;<span class="label label-success">md5:4591c418ba6599920337859633d2aa18</span></p>
    <p><b>UBoot: </b><a href="https://github.com/Vonger/Das-U-boot">Download (Github) </a></p>
    <p><b>WiFi Driver: </b><a href="https://github.com/Vonger/vocore2">Download (Github) </a><span class="label label-default">support latest openwrt</span></p>
@@ -65,15 +63,17 @@
 
    <h3>Downloads</h3>
    <p><b>note</b>: normally, we upgrade or fix brick are using Firmware. Flash Image is a clone of the full flash, for professional usage only. </p>
-   <p><b>Firmware(64MB+128MB, 20190604): </b><a href="http://vonger.cn/misc/vocore2/20190604.bin">Download</a>&nbsp;&nbsp;&nbsp;<span class="label label-success">md5:f99589aa7827407d4a1c66a277317234</span></p>
+   <p><b>Firmware(64MB+128MB, 20190802): </b><a href="http://vonger.cn/misc/vocore2/20190802.bin">Download</a>&nbsp;&nbsp;&nbsp;<span class="label label-success">md5:f0da1754b2325497c0b84d86fe542223</span></p>
+   <p><b>Firmware(64MB+128MB, with screen driver): </b><a href="http://vonger.cn/misc/vocore2/20191127.bin">Download</a>&nbsp;&nbsp;&nbsp;<span class="label label-success">md5:c8c63380b89fae3745a91e79a1575729</span></p>
+   <p><small>note: screen driver can be  change at /lib/modules/4.14.*/fbusb.ko</small></p>
    <p><b>Firmware(128MB, 20170527, old version): </b><a href="http://vonger.cn/misc/vocore2/20170527V.bin">Download</a>&nbsp;&nbsp;&nbsp;<span class="label label-success">md5:6f7c4b019577a7cec077562b75bc838b</span></p>
    <p><b>Firmware(64MB, for Lite, old version): </b><a href="http://vonger.cn/misc/vocore2/20170211L.bin">Download</a>&nbsp;&nbsp;&nbsp;<span class="label label-success">md5:2162ef05b5232154d4f20dee57561da7</span></p>
    <p><b>Flash Image: </b><a href="http://vonger.cn/misc/vocore2/ultimate.16m.img">Download</a>&nbsp;&nbsp;&nbsp;<span class="label label-success">md5:f4c527a1e563d0ad7ef9ab0b5e0b35c6</span></p>
-   <p><b>Toolchain: </b><a href="http://vonger.cn/misc/vocore2/toolchain.tar.bz2">Download (Ubuntu 14.04 x64)</a></p>
-   <p><b>UBoot(128MB): </b><a href="http://vonger.cn/misc/vocore2/uboot128m.20190128.bin">Download</a>&nbsp;&nbsp;&nbsp;<span class="label label-success">md5:5167715c0c7732352ed12c666f29f648</span></p>
-   <p><b>UBoot(64MB): </b><a href="http://vonger.cn/misc/vocore2/uboot64m.20190128.bin">Download</a>&nbsp;&nbsp;&nbsp;<span class="label label-success">md5:c32cef8850e378e36928281b3439414f</span></p>
+   <p><b>UBoot(128MB): </b><a href="http://vonger.cn/misc/vocore2/uboot128m.20190625.bin">Download</a>&nbsp;&nbsp;&nbsp;<span class="label label-success">md5:69335f57c44bb6d7c6901c260689cc94</span></p>
+   <p><b>UBoot(64MB): </b><a href="http://vonger.cn/misc/vocore2/uboot64m.20190625.bin">Download</a>&nbsp;&nbsp;&nbsp;<span class="label label-success">md5:2f00b3029f60df99f926781b582f9a35</span></p>
    <p><b>Datasheet: </b><a href="http://vonger.cn/misc/vocore2/datasheet.zip">Download</a></p>
    <p><b>FCC: </b><a href="http://vonger.cn/misc/vocore2/FCC-2AC4RVOCOREV2.pdf">2AC4RVOCOREV2</a></p>
+   <p>note: To get toolchain, please check github.com/vonger/vocore2, after compile openwrt you will get it.</p>
 
    <h3>Links</h3>
    <p><a href="v2u.html">VoCore2 + Dock</a>&nbsp;&nbsp;&nbsp;<small>Ultimate version makes it easy to use.</small></p>
@@ -208,10 +208,10 @@
    <hr/>
 
    <h4>Connect to your local wireless network(AP + STA Mode)</h4>
-   <p><b>This is for firmware 20190316 or later which based on openwrt 18.06.2.</b></p>
+   <p><b>This tutorial is for firmware 20190316(default) or later which based on openwrt 18.06.2.</b></p>
    <p>tutorial please check at <a href="http://vonger.cn/?p=14633">Beginner: OpenWrt 18.06 stable version</a></p>
-   <p><b>This is for ßfirmware 20170527 which based on openwrt cc.</b></p>
-   <p>note: please upgrade your firmware to 20190127, this version is out of date.</p>
+   <p><b>This tutorial is for firmware 20170527(obsoleted) which based on openwrt cc.</b></p>
+   <p>note: please upgrade your firmware to 20190316 or later version, this version is out of date.</p>
    <p>video tutorial(require USB2TTL): <a href="https://youtu.be/IPt5cxg5K98">youtube</a></p>
    <p>1. connect to your VoCore through USB2TTL.</p>
    <p>2. run command in console(UART console).</p>
@@ -263,7 +263,7 @@
 
    <h4>Compile OpenWRT for VoCore2</h4>
    <p>video tutorial: <a href="https://youtu.be/ocl6yFtKSNs">youtube</a></p>
-   <p>1. install Ubuntu 14.04 64bit Server to Virtual Machine.</p>
+   <p>1. install Ubuntu 14.04 64bit Server to Virtual Machine(2GB memory, 20GB disk space).</p>
    <p>2. in virtualbox, we will need install some packages to compile openwrt:</p>
    <p>sudo apt-get install gcc g++ binutils patch bzip2 flex bison make autoconf gettext texinfo unzip sharutils subversion libncurses5-dev ncurses-term zlib1g-dev libssl-dev python python-dev</p>
    <p>3. download openwrt, check github.com/vonger/vocore2 README.md</p>
@@ -298,6 +298,7 @@
    <p>3. power up your VoCore, once you find: "0: Load system code then write to Flash via SERIAL.", press '0'.</p>
    <p><b>note</b>: VoCore will show "## Ready for binary (kermit) download to 0x80100000 at 115200 bps..."</p>
    <p><b>note</b>: kermit: press Ctrl and '\' same time then press 'c', you will switch to kermit command console.</p>
+   <p>4. use kermit send function in teraterm/ckermit.
    <p>5. send upgrade firmware to VoCore, after that, back to VoCore uboot console.</p>
    <p><b>note</b>: kermit: call "send path/to/your/upgrade/file/on/pc.bin" to send firmware, around 10 minutes, once it finished, call 'c' back to console.</p>
    <p>6. wait around 20~30 seconds, firmware uploaded, your VoCore will reboot.</p>
@@ -365,6 +366,7 @@
    <p>1. on customized PCB, <strong>suggest</strong> keeping 16mm x 16mm rectangle clearance(no copper) for better signal on board antenna.</p>
    <p>2. <strong>suggest</strong> using hot air instead of iron, DDR2 is a ESD sencetive part, might cause permanent damage.</p>
    <p>3. <strong>must</strong> use middle level temprature paste(180C, Sn-Bi-Ag) or lower one, VoCore2 is using high-temprature paste(220C, Sn-Cu-Ag), same temprature level might cause damage to VoCore.</p>
+   <p>note: better not set reflow oven temperature over 220C.</p>
 
   </div>
 
