@@ -42,7 +42,7 @@
      <tr><th class=text-nowrap scope=row>WIRELESS</th><td>802.11n, 2T2R, speed up to 300Mbps.</td></tr>
      <tr><th class=text-nowrap scope=row>ANTENNA</th><td>One U.FL slot, one on board antenna.</td></tr>
      <tr><th class=text-nowrap scope=row>ETHERNET</th><td>1 port/5 ports, up to 100Mbps.</td></tr>
-     <tr><th class=text-nowrap scope=row>USB</th><td>Support USB 2.0, up to 480MBit/s.</td></tr>
+     <tr><th class=text-nowrap scope=row>USB</th><td>Support USB 2.0(host only), up to 480MBit/s.</td></tr>
      <tr><th class=text-nowrap scope=row>GPIO</th><td> around 40 (pinmux)</td></tr>
      <tr><th class=text-nowrap scope=row>UART</th><td>x3 (UART2 for debug console)</td></tr>
      <tr><th class=text-nowrap scope=row>PWM</th><td>x4</td></tr>
@@ -50,11 +50,13 @@
      <tr><th class=text-nowrap scope=row>TEMPERATURE</th><td>0C ~ 40C(full load) or -10C ~ 70C</td></tr>
      <tr><th class=text-nowrap scope=row>POWER SUPPLY</th><td>3.6V ~ 5.5V, 500mA</td></tr>
      <tr><th class=text-nowrap scope=row>POWER CONSUMPTION</th><td>74mA wifi standby, 230mA wifi full speed, 5V input.</td></tr>
+     <tr><th class=text-nowrap scope=row>LOGIC LEVEL</th><td>all logic pins are 3.3V, current 4mA/8mA</td></tr>
     </tbody>
    </table>
 
    <h3>Sources</h3>
-   <p><b>Hardware: </b><a href="http://vonger.cn/misc/vocore2/vocore2.hd.zip">Download</a>&nbsp;&nbsp;&nbsp;<span class="label label-success">md5:9d8d182fbd06aa3c6de5c1f7d37a5542</span></p>
+   <p><b>PCB&SCH: </b><a href="http://vonger.cn/misc/vocore2/vocore2.hd.zip">Download</a>&nbsp;&nbsp;&nbsp;<span class="label label-success">md5:9d8d182fbd06aa3c6de5c1f7d37a5542</span></p>
+   <p><b>SMT Mount Footprint: </b><a href="http://vonger.cn/misc/vocore2/vocore2.smt.kicad_pcb">Download</a></p>
    <p><b>OpenWrt 18.06.5: </b><a href="http://vonger.cn/misc/vocore2/openwrt.18065.tar.xz">Download</a>&nbsp;&nbsp;&nbsp;<span class="label label-success">md5:641a804d4ec78ae0be8841d313b06a87</span></p>
    <p><b>MediaTek SDK: </b><a href="http://vonger.cn/misc/vocore2/mtksdk-openwrt-3.10.14-20141127-30965ec3.tar.bz2">Download</a>&nbsp;&nbsp;&nbsp;<span class="label label-success">md5:4591c418ba6599920337859633d2aa18</span></p>
    <p><b>UBoot: </b><a href="https://github.com/Vonger/Das-U-boot">Download (Github) </a></p>
@@ -90,7 +92,7 @@
     <thead><tr><th>Left</th><th>Name</th><th>Mux</th><th>Note</th></tr></thead>
     <tbody>
      <tr><th class=text-nowrap scope=row>-</th><td>+3.3VO</td><td>+3.3V output</td><td>max output current 100mA</td></tr>
-     <tr><th class=text-nowrap scope=row>30</th><td>TXD0</td><td>GPIO12, UART0 Lite TXD</td><td>3.3V</td></tr>
+     <tr><th class=text-nowrap scope=row>30</th><td>TXD0</td><td>GPIO12, UART0 Lite TXD</td><td>pull down to GND, Test/Normal mode pin.</td></tr>
      <tr><th class=text-nowrap scope=row>31</th><td>RXD0</td><td>GPIO13, UART0 Lite RXD</td><td>3.3V</td></tr>
      <tr><th class=text-nowrap scope=row>29</th><td>REFCLK</td><td>GPIO11, reference clock, SDXC CLK*</td><td></td></tr>
      <tr><th class=text-nowrap scope=row>33</th><td>P0RP</td><td>10/100 PHY Port #0 RXP</td><td></td></tr>
@@ -114,11 +116,11 @@
     <thead><tr><th>Top</th><th>Name</th><th>Mux</th><th>Note</th></tr></thead>
     <tbody>
      <tr><th class=text-nowrap scope=row>-</th><td>GND</td><td>Groud</td><td></td></tr>
-     <tr><th class=text-nowrap scope=row>28</th><td>SPI CS0</td><td>GPIO10, SPI Master Chip Select 0</td><td>4.7K pull up to 3.3V</td></tr>
-     <tr><th class=text-nowrap scope=row>25</th><td>SPI CLK</td><td>GPIO7, SPI Master Clock</td><td>4.7K pull up to 3.3V</td></tr>
-     <tr><th class=text-nowrap scope=row>26</th><td>SPI MISO</td><td>GPIO9, SPI Master In Slave Out</td><td></td></tr>
-     <tr><th class=text-nowrap scope=row>27</th><td>SPI MOSI</td><td>GPIO8, SPI Master Out Slave In</td><td>4.7K pull down to GND</td></tr>
-     <tr><th class=text-nowrap scope=row>24</th><td>SPI CS1</td><td>GPIO6, SPI Master Chip Select 1</td><td>4.7K pull down to GND</td></tr>
+     <tr><th class=text-nowrap scope=row>28</th><td>SPI CS0</td><td>SPI Master Chip Select 0</td><td>4.7K pull up to 3.3V</td></tr>
+     <tr><th class=text-nowrap scope=row>25</th><td>SPI CLK</td><td>SPI Master Clock</td><td>4.7K pull up to 3.3V</td></tr>
+     <tr><th class=text-nowrap scope=row>26</th><td>SPI MISO</td><td>SPI Master In Slave Out</td><td></td></tr>
+     <tr><th class=text-nowrap scope=row>27</th><td>SPI MOSI</td><td>SPI Master Out Slave In</td><td>4.7K pull down to GND</td></tr>
+     <tr><th class=text-nowrap scope=row>24</th><td>SPI CS1</td><td>SPI Master Chip Select 1</td><td>4.7K pull down to GND</td></tr>
      <tr><th class=text-nowrap scope=row>21</th><td>I2C SD</td><td>GPIO5, I2C Data, SDXC D2*</td><td>4.7K pull up to 3.3V</td></tr>
      <tr><th class=text-nowrap scope=row>20</th><td>I2C CLK</td><td>GPIO4, I2C Clock, SDXC D3*</td><td>4.7K pull up to 3.3V</td></tr>
      <tr><th class=text-nowrap scope=row>19</th><td>I2S CLK</td><td>GPIO3, I2S Bit Clock, SDXC CMD*</td><td></td></tr>
@@ -132,8 +134,8 @@
     <thead><tr><th>Right</th><th>Name</th><th>Mux</th><th>Note</th></tr></thead>
     <tbody>
      <tr><th class=text-nowrap scope=row>-</th><td>GND</td><td>Ground</td><td></td></tr>
-     <tr><th class=text-nowrap scope=row>148</th><td>RXD1</td><td>GPIO12, UART1 Lite RXD</td><td>3.3V</td></tr>
-     <tr><th class=text-nowrap scope=row>147</th><td>TXD1</td><td>GPIO13, UART1 Lite TXD</td><td>3.3V</td></tr>
+     <tr><th class=text-nowrap scope=row>148</th><td>RXD1</td><td>GPIO12, UART1 Lite RXD</td><td></td></tr>
+     <tr><th class=text-nowrap scope=row>147</th><td>TXD1</td><td>GPIO13, UART1 Lite TXD</td><td>pull up to 3.3V, GPIO/JTAG mode pin</td></tr>
      <tr><th class=text-nowrap scope=row>141</th><td>GPIO41</td><td>GPIO41, JTAG TMS</td><td>JTAG needs 10K pull up, R9 -> R6</td></tr>
      <tr><th class=text-nowrap scope=row>140</th><td>GPIO40</td><td>GPIO40, JTAG Clock</td><td>JTAG needs 10K pull up, R9 -> R6</td></tr>
      <tr><th class=text-nowrap scope=row>139</th><td>GPIO39</td><td>GPIO39, JTAG Reset</td><td>JTAG needs 10K pull up, R9 -> R6</td></tr>
@@ -191,6 +193,7 @@
    <h3>Tutorials</h3>
    <h4>Connect to Power</h4>
    <center><img src="img/v2/v2.t1.00.png" width="40%"></img></center>
+   <p>GIF: fast power up with USB cable <a href="http://i.giphy.com/3oz8xDwE7xJzUsYdI4.gif">Link</a></p>
    <p>1. connect to 3.6V~6.0V and GND with a stable power source, such as USB charger.</p>
    <p><b>note</b>: be careful, high voltage will damage your VoCore.</p>
    <p>2. if everything works, after 30 seconds, you will find VoCore2 in your computer hotspot list.</p>
@@ -364,10 +367,11 @@
 
    <h4>Mount VoCore2 onto customized PCB(ASMT)</h4>
    <center><img class="thumbnail" src="img/v2/v2.clr.png" width="84%"></center>
+   <center><img class="thumbnail" src="img/SMT.png" width="84%"></center>
    <p>1. on customized PCB, <strong>suggest</strong> keeping 16mm x 16mm rectangle clearance(no copper) for better signal on board antenna.</p>
    <p>2. <strong>suggest</strong> using hot air instead of iron, DDR2 is a ESD sencetive part, might cause permanent damage.</p>
    <p>3. <strong>must</strong> use middle level temprature paste(180C, Sn-Bi-Ag) or lower one, VoCore2 is using high-temprature paste(220C, Sn-Cu-Ag), same temprature level might cause damage to VoCore.</p>
-   <p>note: better not set reflow oven temperature over 220C.</p>
+   <p>4. in order to use castle hole on VoCore, milling a hole(the yellow border in second picture) on your mount board is necessary. Check Sources/SMT Mount Footprint for KiCAD file.
 
   </div>
 
